@@ -6,7 +6,7 @@ module.exports = {
   i18n: {
     locales: ['ru', 'fi', 'en'],
     defaultLocale: 'fi',
-    localeDetection: false,
+    localeDetection: true,
   },
   images: {
     domains: ['www.datocms-assets.com'],
