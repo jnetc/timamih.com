@@ -6,7 +6,7 @@ import Document, {
   DocumentContext,
 } from 'next/document';
 
-import { setInitialTheme } from '@Helpers/critical';
+import { setInitialTheme, extraCSS } from '@Helpers/critical';
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -19,6 +19,7 @@ class MyDocument extends Document {
       <Html>
         <Head>
           <script dangerouslySetInnerHTML={{ __html: setInitialTheme }} />
+          <style dangerouslySetInnerHTML={{ __html: extraCSS }} />
         </Head>
         <body id="home">
           <Main />

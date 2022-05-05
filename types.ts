@@ -55,10 +55,11 @@ export interface AboutType<T> extends ArticleType<T> {}
 
 export interface DataType {
   _site: SEO<string>;
-  home: HomeType<string>;
-  project: ProjectsType<string>;
-  service: ServiceType<string>;
-  about: AboutType<string>;
+  navigation: Array<string>;
+  // home: HomeType<string>;
+  // project: ProjectsType<string>;
+  // service: ServiceType<string>;
+  // about: AboutType<string>;
 }
 
 export interface NavMobLinksProps {

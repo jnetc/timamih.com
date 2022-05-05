@@ -5,7 +5,7 @@
 }
 :root {
   --light: 32 100% 97%; /* hsl(32, 100%, 97%) */
-  --dark: 0, 0%, 22%; /* hsl(0, 0%, 22%) */
+  --dark: 0 0% 22%; /* hsl(0, 0%, 22%) */
   --rose: 315 100% 70%; /* hsl(315, 100%, 70%) */
   --violet: 265 85% 63%; /* hsl(265, 85%, 63%) */
   --blue: 201 84% 55%; /* hsl(201, 84%, 55%) */
@@ -24,6 +24,8 @@ html[data-theme='light'] {
   --card-color: hsl(24, 100%, 99%);
   --accent-color: hsl(var(--violet));
   --accent-shadow: hsla(var(--violet) / 0.1);
+
+  --switch-button-bg: var(--green);
 }
 html[data-theme='dark'] {
   --primary: hsl(var(--dark));
@@ -32,6 +34,8 @@ html[data-theme='dark'] {
   --card-color: hsl(0, 0%, 33%);
   --accent-color: hsl(var(--rose));
   --accent-shadow: hsla(var(--rose) / 0.1);
+
+  --switch-button-bg: var(--red);
 }
 
 *,
@@ -43,6 +47,7 @@ html[data-theme='dark'] {
   text-size-adjust: none;
 }
 html {
+  background-color: var(--primary);
   transition: all 0.2s ease-in-out;
   scrollbar-gutter: stable;
 }
@@ -103,6 +108,9 @@ main {
   row-gap: 10rem;
   margin-inline: auto;
   position: relative;
+}
+.click {
+  transform: scale(0.9);
 }
 
 @media (max-width: 960px) {

@@ -1,0 +1,72 @@
+.module {
+  --size: 3rem;
+  width: var(--size);
+  aspect-ratio: 1 / 1;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: hsl(var(--red));
+  box-shadow: 10px 10px 0 hsla(var(--switch-button-bg) / 0.1),
+    15px 15px 30px hsla(var(--switch-button-bg) / 0.1);
+  transition: all 0.2s ease-in-out;
+}
+.background {
+  width: var(--size);
+  aspect-ratio: 1 / 1;
+  position: absolute;
+  bottom: -2rem;
+  right: -2rem;
+  background-color: hsl(var(--green));
+  border-radius: 50%;
+  transition: all 0.5s linear;
+  transform: scale(0);
+  z-index: 1;
+  opacity: 0;
+}
+html[data-theme='light'] .background {
+  transform: scale(5);
+  opacity: 1;
+  transition: all 0.5s linear;
+}
+.module:active {
+  transform: scale(0.8);
+}
+
+.icon {
+  width: calc(var(--size) - 1rem);
+  aspect-ratio: 1 / 1;
+  position: absolute;
+  top: 54%;
+  left: 48%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+.line_one,
+.line_two {
+  fill: none;
+  stroke: hsl(var(--light));
+  stroke-width: 3;
+  stroke-miterlimit: 10;
+}
+.line_one {
+  stroke-linecap: round;
+  stroke-dasharray: 10;
+  stroke-dashoffset: -16;
+  transition: all 0.3s linear;
+  transition-delay: 0.5s;
+}
+.line_two {
+  transition: all 0.5s linear;
+  stroke-dasharray: 52;
+  stroke-dashoffset: 0;
+}
+html[data-theme='light'] .line_one {
+  stroke-dashoffset: -10;
+  transition-delay: 0.1s;
+}
+html[data-theme='light'] .line_two {
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-dasharray: 63;
+  stroke-dashoffset: -60;
+}

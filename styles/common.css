@@ -56,6 +56,20 @@
 }
 /* buttons styles*/
 
+.circle-button {
+  width: 3rem;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background-color: var(--switch-button-bg);
+  box-shadow: 10px 10px 0 hsla(var(--red) / 0.1),
+    15px 15px 30px hsla(var(--red) / 0.1);
+}
+.circle-button-96 {
+  width: 6rem;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+}
+
 /* Modal base */
 .modal {
   width: 100vw;
