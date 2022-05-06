@@ -1,12 +1,46 @@
-import styles from './switch-theme.module.css';
-export const OnOffIcon = () => (
-  <div className={styles.icon}>
-    <svg viewBox="0 0 28 28">
-      <path className={styles.line_one} d="M14,8.6v-7" />
-      <path
-        className={styles.line_two}
-        d="M19.1,5.3c3,1.7,5,5,5,8.7c0,5.5-4.5,10-10,10s-10-4.5-10-10C4.1,8.5,8.5,4,14,4v14.8"
-      />
-    </svg>
-  </div>
-);
+import { useRouter } from 'next/router';
+import { useState, useRef } from 'react';
+// Hooks
+import { useStore } from '@Hooks/useStore';
+import { useOutsideClick } from '@Hooks/useOutsideClick';
+// Component
+import { LanguageButton } from './LanguageButton';
+// Styles
+import styles from './switch-language.module.css';
+// Types
+import { LanguagesType } from '@Types';
+
+export const SwitchLanguageButton = () => {
+  const { asPath, locale } = useRouter();
+  const { languages } = useStore();
+  const ref = useRef(null);
+  const [showLangMenu, setShowLangMenu] = useState(false);
+
+  const langMenuHandler = () => setShowLangMenu(true);
+  useOutsideClick(ref, setShowLangMenu);
+
+  const buttonsOrder = languages.map(order => {
+    const reType = order as LanguagesType;
+    return <LanguageButton key={order} path={asPath} lang={reType} />;
+  });
+
+  return (
+    <>
+      <div
+        role="button"
+        aria-label="language switcher"
+        title="language switcher"
+        onClick={langMenuHandler}
+        className={styles.module}
+      >
+        {locale}
+      </div>
+      {showLangMenu && (
+        <div className={styles.buttons} ref={ref}>
+          {buttonsOrder}
+        </div>
+      )}
+      {/* <div className={styles.buttons}>{buttonsOrder}</div> */}
+    </>
+  );
+};

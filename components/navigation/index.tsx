@@ -4,7 +4,8 @@ import styles from './navigation.module.css';
 import { useStore } from '@Hooks/useStore';
 
 // Components
-import { ThemeButton } from '@Components/buttons/switch-theme';
+import { SwitchLanguageButton } from '@Components/buttons/switch-language';
+import { SwitchThemeButton } from '@Components/buttons/switch-theme';
 
 const Navigation = () => {
   const { language } = useStore();
@@ -19,9 +20,10 @@ const Navigation = () => {
 
   return (
     <header className={styles.module}>
-      <div>Logo</div>
+      <div className={styles.logo}>Logo</div>
       <nav>{links}</nav>
-      <ThemeButton />
+      <SwitchLanguageButton />
+      <SwitchThemeButton />
     </header>
   );
 };
@@ -29,12 +31,12 @@ const Navigation = () => {
 export default Navigation;
 
 export const nav_urls = [
-  {
-    fi: 'Etusivu',
-    ru: 'Начальная',
-    en: 'Home',
-    anchor: '/',
-  },
+  // {
+  //   fi: 'Etusivu',
+  //   ru: 'Начальная',
+  //   en: 'Home',
+  //   anchor: '/',
+  // },
   {
     fi: 'Mita ja Miten',
     ru: 'Как и Что',

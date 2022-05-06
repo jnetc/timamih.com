@@ -29,7 +29,9 @@ html[data-theme='light'] .background {
   transition: all 0.5s linear;
 }
 .module:active {
-  transform: scale(0.8);
+  transform: scale(0.9);
+  box-shadow: 5px 5px 0 hsla(var(--switch-button-bg) / 0.2),
+    10px 10px 20px hsla(var(--switch-button-bg) / 0.2);
 }
 
 .icon {

@@ -6,7 +6,7 @@ import { OnOffIcon } from './on-off-icon';
 const DARK_SCHEME = 'dark';
 const LIGHT_SCHEME = 'light';
 
-export const ThemeButton = () => {
+export const SwitchThemeButton = () => {
   const [themeState, setThemeState] = useState(LIGHT_SCHEME);
   const toggleTheme = () => {
     const hasSameValue =

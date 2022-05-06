@@ -1,3 +1,9 @@
 .module {
   display: flex;
+  align-items: center;
+  column-gap: 1rem;
+  position: relative;
+}
+.logo {
+  margin-inline-end: auto;
 }

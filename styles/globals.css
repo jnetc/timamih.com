@@ -18,22 +18,22 @@
 }
 
 html[data-theme='light'] {
-  --primary: hsl(var(--light));
-  --secondary: hsl(var(--dark));
+  --primary-color: hsl(var(--light));
+  --secondary-color: hsl(var(--dark));
   --secondary-shade: hsla(var(--dark) / 0.85);
   --card-color: hsl(24, 100%, 99%);
   --accent-color: hsl(var(--violet));
-  --accent-shadow: hsla(var(--violet) / 0.1);
+  --accent-shadow: var(--violet);
 
   --switch-button-bg: var(--green);
 }
 html[data-theme='dark'] {
-  --primary: hsl(var(--dark));
-  --secondary: hsl(var(--light));
+  --primary-color: hsl(var(--dark));
+  --secondary-color: hsl(var(--light));
   --secondary-shade: hsla(var(--light) / 0.85);
   --card-color: hsl(0, 0%, 33%);
   --accent-color: hsl(var(--rose));
-  --accent-shadow: hsla(var(--rose) / 0.1);
+  --accent-shadow: var(--rose);
 
   --switch-button-bg: var(--red);
 }
