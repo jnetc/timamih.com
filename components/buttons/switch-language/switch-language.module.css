@@ -62,8 +62,13 @@ html[data-theme='light'] .background {
     15px 15px 30px hsla(var(--accent-shadow) / 0.1);
   /* transform: translate(-50%, -50%); */
 
+  transition: all 0.3s ease-in-out;
   z-index: 5;
 }
+.buttons.show_languages {
+  transform: translate(0, 50px);
+}
+
 .button {
   display: flex;
   column-gap: 0.5rem;

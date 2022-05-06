@@ -1,12 +1,14 @@
-import { useEffect, SetStateAction, MutableRefObject } from 'react';
+import { useEffect, SetStateAction, RefObject } from 'react';
 
 export const useOutsideClick = (
-  ref: MutableRefObject<null>,
+  ref: RefObject<HTMLElement | null>,
   handler: (value: SetStateAction<boolean>) => void
 ) => {
   useEffect(() => {
-    const listener = () => {
-      if (!ref.current) return;
+    const listener = (event: Event) => {
+      const element = event.target as HTMLElement;
+
+      if (ref.current?.contains(element)) return;
       handler(false);
     };
     document.addEventListener('mousedown', listener);

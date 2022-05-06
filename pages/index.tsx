@@ -18,7 +18,7 @@ const Home: NextPage = ({
     return <main>Sorry! This page not found.</main>;
   }
 
-  console.log(data, language, languages);
+  // console.log(data, language, languages);
 
   return (
     <Store.Provider value={{ language, languages, data }}>
