@@ -48,7 +48,8 @@ html[data-theme='light'] .background {
 } */
 
 .buttons {
-  display: flex;
+  display: none;
+  opacity: 0;
   flex-flow: column;
   gap: 0.8rem;
   position: absolute;
@@ -78,4 +79,19 @@ html[data-theme='light'] .background {
   width: 1rem;
   text-align: left;
   text-transform: uppercase;
+}
+
+/* TRANSITION CLASSES */
+.buttons:global(.mountOnEnter) {
+  display: flex;
+}
+
+.buttons:global(.enterActive) {
+  transform: translateY(50px);
+  opacity: 1;
+}
+
+.buttons:global(.exitActive) {
+  transform: translateY(0);
+  opacity: 0;
 }
