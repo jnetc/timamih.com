@@ -15,6 +15,11 @@
   --blue-shadow: hsla(var(--blue) / 0.1);
   --green-shadow: hsla(var(--green) / 0.1);
   --red-shadow: hsla(var(--red) / 0.1);
+
+  /* Transition duration */
+  --optimal: 0.3s; /* Global transition duration*/
+  --especial: 0.5s; /* Especial */
+  --click: 0.1s; /* when you click the button */
 }
 
 html[data-theme='light'] {
@@ -75,8 +80,7 @@ label,
 div,
 time,
 address {
-  font-family: 'Roboto';
-  transition: all 0.2s ease-in-out;
+  font-family: 'Rubik';
 }
 
 a {

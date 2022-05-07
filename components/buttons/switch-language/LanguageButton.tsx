@@ -13,7 +13,7 @@ export const LanguageButton = ({
   const { push, locale } = useRouter();
   return (
     <button
-      className={`${styles.button} ${lang === locale && styles.active}`}
+      className={`${styles.button} ${lang === locale ? styles.active : ''}`}
       onClick={() => {
         push(`${path}`, `${path}`, { locale: lang });
       }}

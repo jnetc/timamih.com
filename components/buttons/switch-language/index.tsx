@@ -48,10 +48,10 @@ export const SwitchLanguageButton = () => {
         title="language switcher"
         onClick={toggleLanguageMenu}
         ref={ref}
-        className={styles.module}
+        className={`${styles.module} ${showMenu ? styles.pressed : ''}`}
         id="languages"
       >
-        {locale}
+        <p>{locale}</p>
       </div>
       <div
         className={styles.buttons}
