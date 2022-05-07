@@ -13,7 +13,7 @@ import { LanguagesType } from '@Types';
 export const SwitchLanguageButton = () => {
   const { asPath, locale } = useRouter();
   const { languages } = useStore();
-  const ref = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLButtonElement>(null);
   const animated = useRef<HTMLDivElement>(null);
   const [showMenu, setShowMenu] = useState(false);
 
@@ -42,17 +42,16 @@ export const SwitchLanguageButton = () => {
 
   return (
     <>
-      <div
-        role="button"
+      <button
         aria-label="language switcher"
         title="language switcher"
         onClick={toggleLanguageMenu}
         ref={ref}
-        className={`${styles.module} ${showMenu ? styles.pressed : ''}`}
+        className={`${styles.module} ${showMenu ? styles.pressed : ''} click`}
         id="languages"
       >
         <p>{locale}</p>
-      </div>
+      </button>
       <div
         className={styles.buttons}
         onClick={toggleLanguageMenu}

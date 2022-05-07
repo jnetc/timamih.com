@@ -1,0 +1,49 @@
+.module {
+  width: 6rem;
+  aspect-ratio: 2 / 1;
+  margin-inline-end: auto;
+}
+:where(.ribbon_ends, .ribbon_folds, .ribbon, .name) {
+  transition: fill var(--optimal) ease-in-out;
+}
+
+.ribbon_ends {
+  fill: hsla(var(--secondary-shade) / 0.65);
+}
+.ribbon_folds {
+  fill: hsla(var(--secondary-shade) / 0.85);
+}
+.ribbon {
+  fill: var(--secondary-color);
+}
+.name {
+  fill: var(--primary-color);
+}
+
+#saw {
+  transform-origin: 52% 50%;
+  animation: rotation-right 60s linear infinite;
+}
+
+@keyframes rotation-right {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+#stars {
+  transform-origin: 52% 50%;
+  animation: rotation-left 60s linear infinite;
+}
+
+@keyframes rotation-left {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(-360deg);
+  }
+}

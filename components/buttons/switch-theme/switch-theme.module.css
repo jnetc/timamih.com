@@ -1,14 +1,13 @@
 .module {
-  --size: 3rem;
+  --size: 2.5rem;
   width: var(--size);
   aspect-ratio: 1 / 1;
   position: relative;
   overflow: hidden;
   border-radius: 50%;
   background-color: hsl(var(--red));
-  box-shadow: 10px 10px 0 hsla(var(--switch-button-bg) / 0.1),
-    15px 15px 30px hsla(var(--switch-button-bg) / 0.1);
-  transition: all var(--click) ease-in-out;
+  box-shadow: 7px 7px 0 hsla(var(--switch-button-bg) / 0.1),
+    10px 10px 20px hsla(var(--switch-button-bg) / 0.1);
 }
 .background {
   width: var(--size);
@@ -29,9 +28,8 @@ html[data-theme='light'] .background {
   transition: all var(--especial) linear;
 }
 .module:active {
-  transform: scale(0.9);
-  box-shadow: 5px 5px 0 hsla(var(--switch-button-bg) / 0.2),
-    10px 10px 20px hsla(var(--switch-button-bg) / 0.2);
+  box-shadow: 3px 3px 0 hsla(var(--switch-button-bg) / 0.3),
+    6px 6px 15px hsla(var(--switch-button-bg) / 0.3);
 }
 
 .icon {

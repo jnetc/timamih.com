@@ -25,8 +25,9 @@
 html[data-theme='light'] {
   --primary-color: hsl(var(--light));
   --secondary-color: hsl(var(--dark));
-  --secondary-shade: hsla(var(--dark) / 0.85);
+  --secondary-shade: var(--dark); /* main shade .85 */
   --card-color: hsl(24, 100%, 99%);
+
   --accent-color: hsl(var(--violet));
   --accent-shadow: var(--violet);
 
@@ -35,8 +36,9 @@ html[data-theme='light'] {
 html[data-theme='dark'] {
   --primary-color: hsl(var(--dark));
   --secondary-color: hsl(var(--light));
-  --secondary-shade: hsla(var(--light) / 0.85);
+  --secondary-shade: var(--light); /* main shade .85 */
   --card-color: hsl(0, 0%, 33%);
+
   --accent-color: hsl(var(--rose));
   --accent-shadow: var(--rose);
 
@@ -113,8 +115,9 @@ main {
   margin-inline: auto;
   position: relative;
 }
-.click {
+.click:active {
   transform: scale(0.9);
+  transition: all var(--click) ease-in-out;
 }
 
 @media (max-width: 960px) {

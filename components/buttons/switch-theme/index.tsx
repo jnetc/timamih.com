@@ -30,7 +30,7 @@ export const SwitchThemeButton = () => {
   }, [themeState]);
 
   return (
-    <button className={styles.module} onClick={toggleTheme}>
+    <button className={`${styles.module} click`} onClick={toggleTheme}>
       <OnOffIcon />
       <span className={styles.background} />
     </button>

@@ -1,18 +1,18 @@
 .module {
-  --size: 3rem;
+  --size: 2.5rem;
   width: var(--size);
   aspect-ratio: 1 / 1;
   position: relative;
   border-radius: 50%;
   background-color: var(--accent-color);
   border: 2px solid var(--accent-color);
-  box-shadow: 10px 10px 0 hsla(var(--accent-shadow) / 0.1),
-    15px 15px 30px hsla(var(--accent-shadow) / 0.1);
+  box-shadow: 7px 7px 0 hsla(var(--accent-shadow) / 0.1),
+    10px 10px 20px hsla(var(--accent-shadow) / 0.1);
   color: var(--primary-color);
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
-  transition: all var(--click) ease-in-out;
+  transition: all var(--optimal) ease-in-out;
   cursor: pointer;
 }
 .module.pressed {
@@ -27,9 +27,8 @@
 }
 
 .module:active {
-  transform: scale(0.9);
-  box-shadow: 5px 5px 0 hsla(var(--accent-shadow) / 0.2),
-    10px 10px 20px hsla(var(--accent-shadow) / 0.2);
+  box-shadow: 3px 3px 0 hsla(var(--accent-shadow) / 0.3),
+    6px 6px 15px hsla(var(--accent-shadow) / 0.3);
 }
 
 .buttons {
@@ -39,7 +38,7 @@
   gap: 0.4rem;
   position: absolute;
   top: 0.5rem;
-  right: 2rem;
+  right: 1rem;
   padding: 1rem;
   overflow: hidden;
   background-color: var(--primary-color);
@@ -76,7 +75,7 @@
   aspect-ratio: 1 / 1;
   position: absolute;
   top: 50%;
-  left: -0.4rem;
+  left: -0.5rem;
   transform: translate(-50%, -50%);
   background-color: var(--accent-color);
   border-radius: 50%;
