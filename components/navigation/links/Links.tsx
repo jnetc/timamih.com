@@ -1,9 +1,7 @@
 import Link from 'next/link';
-import styles from '../navigation.module.css';
+import styles from './links.module.css';
 // Hook
 import { useStore } from '@Hooks/useStore';
-
-// Components
 
 export const Links = () => {
   const { language } = useStore();
@@ -16,14 +14,14 @@ export const Links = () => {
     );
   });
 
-  return <nav className={styles.links}>{links}</nav>;
+  return <nav className={styles.module}>{links}</nav>;
 };
 
 export const nav_urls = [
   {
-    fi: 'Mita ja Miten',
-    ru: 'Как и Что',
-    en: 'How and What',
+    fi: 'Mitä ja Miten',
+    ru: 'Что и Как',
+    en: 'What and How',
     anchor: '#how',
   },
   {
@@ -33,7 +31,7 @@ export const nav_urls = [
     anchor: '#services',
   },
   {
-    fi: 'Meista',
+    fi: 'Meistä',
     ru: 'О нас',
     en: 'About',
     anchor: '#about',

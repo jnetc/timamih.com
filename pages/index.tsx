@@ -1,4 +1,5 @@
 import type { NextPage, GetStaticProps, InferGetStaticPropsType } from 'next';
+import dynamic from 'next/dynamic';
 // import dynamic from 'next/dynamic';
 import Head from 'next/head';
 // import { useState } from 'react';
@@ -8,6 +9,12 @@ import Head from 'next/head';
 import { Store } from '@Hooks/useStore';
 
 import Navigation from '@Components/navigation';
+import HeroSection from '@Components/hero-section';
+const HowWeWork = dynamic(() => import('@Components/how-we-work'));
+const WhatWeOffer = dynamic(() => import('@Components/what-we-offer'));
+const OurLittleStory = dynamic(() => import('@Components/our-little-story'));
+const GetInTouch = dynamic(() => import('@Components/get-in-touch'));
+const Footer = dynamic(() => import('@Components/footer'));
 
 const Home: NextPage = ({
   data,
@@ -28,9 +35,14 @@ const Home: NextPage = ({
       </Head>
 
       <Navigation />
-      <main>Main {data[language]}</main>
-
-      <footer>Footer</footer>
+      <main>
+        <HeroSection />
+        <HowWeWork />
+        <WhatWeOffer />
+        <OurLittleStory />
+        <GetInTouch />
+      </main>
+      <Footer />
     </Store.Provider>
   );
 };

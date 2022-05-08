@@ -1,0 +1,35 @@
+.module {
+  display: flex;
+  gap: 1rem;
+  margin-inline-end: auto;
+}
+.link {
+  position: relative;
+  color: var(--secondary-color);
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  transition: all var(--optimal) ease-in-out;
+}
+.link::after {
+  content: '';
+  width: 0;
+  height: 3px;
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  opacity: 0;
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+  transition: all var(--optimal) ease-in-out;
+  transform: translateY(0.5rem);
+  pointer-events: none;
+}
+
+.link:hover::after {
+  width: 2rem;
+  opacity: 1;
+  transform: translateY(0);
+}
+.link:active::after {
+  transform: translateY(0);
+}
