@@ -1,6 +1,6 @@
 .module {
   position: absolute;
-  animation: shine 5s linear infinite;
+  animation: shine 5s ease-in-out infinite;
 }
 
 .module:global(.label-diamond) {
@@ -10,6 +10,6 @@
 
 @keyframes shine {
   50% {
-    transform: scale(0.5);
+    transform: scale(0.5) rotate(90deg);
   }
 }
