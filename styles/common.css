@@ -101,6 +101,7 @@
 @media screen and (max-width: 960px) {
 }
 
+/* DIAMOND's styles */
 .diamond-accent {
   fill: var(--accent-color);
 }
@@ -109,4 +110,19 @@
 }
 .diamond-second {
   fill: var(--secondary-color);
+}
+.diamond-dur5 {
+  animation-duration: 5s;
+}
+.diamond-dur10 {
+  animation-duration: 10s;
+}
+.diamond-dur15 {
+  animation-duration: 15s;
+}
+.diamond-dur20 {
+  animation-duration: 20s;
+}
+.diamond-dur25 {
+  animation-duration: 25s;
 }

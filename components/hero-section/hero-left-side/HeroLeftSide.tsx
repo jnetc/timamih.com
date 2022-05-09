@@ -20,7 +20,12 @@ export const HeroLeftSide = () => {
     <div className={styles.module}>
       <p className={styles.label}>
         {content.label[language]}
-        <Diamond color="accent" size={36} customClass={'label-diamond'} />
+        <Diamond
+          color="accent"
+          size={36}
+          dur={25}
+          customClass={'label-diamond'}
+        />
       </p>
       <h1 className={styles.title}>{splittingTitle}</h1>
       <p className="description-main">{content.description}</p>
