@@ -1,6 +1,6 @@
 .module {
-  width: 6rem;
-  aspect-ratio: 2 / 1;
+  height: var(--gap-three);
+  aspect-ratio: 1.5 / 1;
   margin-inline-end: auto;
 }
 :where(.ribbon_ends, .ribbon_folds, .ribbon, .name) {

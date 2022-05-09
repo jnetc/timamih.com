@@ -1,0 +1,9 @@
+.module {
+  /* height: calc(100vh - var(--gap-one) - var(--gap-three)); */
+  height: max(600px, calc(100vh - var(--gap-one) - var(--gap-three)));
+  max-height: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  column-gap: var(--gap-three);
+}

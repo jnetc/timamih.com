@@ -20,6 +20,10 @@
   --optimal: 0.3s; /* Global transition duration*/
   --especial: 0.5s; /* Especial */
   --click: 0.1s; /* when you click the button */
+
+  /* GAPS */
+  --gap-one: 1rem;
+  --gap-three: 3rem;
 }
 
 html[data-theme='light'] {
@@ -65,7 +69,7 @@ body,
 }
 body {
   max-width: 1920px;
-  padding: 1.5rem 2.5rem 0rem;
+  padding: var(--gap-one) var(--gap-one) 0;
   margin: 0 auto;
   overflow-x: hidden;
 }
@@ -121,9 +125,6 @@ main {
 }
 
 @media (max-width: 960px) {
-  body {
-    padding: 1rem 1rem 0;
-  }
   main {
     margin-block-start: 5rem;
   }

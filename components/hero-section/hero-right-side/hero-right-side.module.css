@@ -1,3 +1,6 @@
 .module {
+  /* width: 50%; */
   display: flex;
+  flex: 1 0 calc(50% - var(--gap-three) / 2);
+  /* width: max-content; */
 }

@@ -1,0 +1,15 @@
+.module {
+  position: absolute;
+  animation: shine 5s linear infinite;
+}
+
+.module:global(.label-diamond) {
+  right: -4rem;
+  top: -3rem;
+}
+
+@keyframes shine {
+  50% {
+    transform: scale(0.5);
+  }
+}

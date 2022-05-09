@@ -100,3 +100,13 @@
 
 @media screen and (max-width: 960px) {
 }
+
+.diamond-accent {
+  fill: var(--accent-color);
+}
+.diamond-accent-shade {
+  fill: hsla(var(--accent-shadow) / 0.85);
+}
+.diamond-second {
+  fill: var(--secondary-color);
+}
