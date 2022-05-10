@@ -3,12 +3,14 @@ export const Diamond = ({
   color,
   size,
   customClass,
-  dur,
+  duration,
+  delay,
 }: {
-  color: 'accent' | 'accent-shade' | 'secondary';
+  color: 'accent' | 'shade' | 'secondary';
   size: number;
   customClass: string;
-  dur: number;
+  duration: number;
+  delay?: number;
 }) => {
   return (
     <svg
@@ -17,13 +19,13 @@ export const Diamond = ({
       viewBox="0 0 65 65"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className={`${styles.module} ${customClass} diamond-dur${dur}`}
+      className={`${styles.module} ${customClass} duration-${duration} delay-${delay}`}
     >
-      <path className={`diamond-${color}`}>
+      <path className={`star-${color}`}>
         <animate
           attributeName="d"
           attributeType="CSS"
-          dur={`${dur}s`}
+          dur={`${duration}s`}
           repeatCount="indefinite"
           values="M32,0L32,0c2.8,16.4,15.6,29.2,32,32l0,0l0,0c-16.4,2.8-29.2,15.6-32,32l0,0l0,0C29.2,47.6,16.4,34.8,0,32l0,0l0,0C16.4,29.2,29.2,16.4,32,0L32,0z;
           M32,0l4.7,27c0,0.2,0.2,0.3,0.3,0.3L64,32l-27,4.7c-0.2,0-0.3,0.2-0.3,0.3L32,64l-4.7-27c0-0.2-0.2-0.3-0.3-0.3L0,32l27-4.7c0.2,0,0.3-0.2,0.3-0.3L32,0z;

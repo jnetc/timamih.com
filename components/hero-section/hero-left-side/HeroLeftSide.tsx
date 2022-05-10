@@ -1,11 +1,21 @@
+import { useState } from 'react';
+// Hook
 import { useStore } from '@Hooks/useStore';
+import { PlayModalStore, usePlayModalStore } from '@Hooks/usePlayModalStore';
 // SVG
 import { Underline } from './svg/Underline';
-import styles from './hero-left-side.module.css';
 import { Diamond } from '@Components/diamond';
+// Styles
+import styles from './hero-left-side.module.css';
+// Componenent
+import { PlayButton } from '@Components/buttons/play';
+import { PlayVideoModal } from '@Components/modals/play-video/PlayVideoModal';
 
 export const HeroLeftSide = () => {
   const { language } = useStore();
+  const { modal } = usePlayModalStore();
+  const [modalState, setModalState] = useState(modal);
+
   const splittingTitle = content.title[language].split(',').map((titl, idx) => {
     if (idx === 2)
       return (
@@ -16,6 +26,7 @@ export const HeroLeftSide = () => {
       );
     return <span key={idx}>{titl.trim()}</span>;
   });
+
   return (
     <div className={styles.module}>
       <p className={styles.label}>
@@ -23,13 +34,32 @@ export const HeroLeftSide = () => {
         <Diamond
           color="accent"
           size={36}
-          dur={25}
+          duration={7}
           customClass={'label-diamond'}
         />
       </p>
       <h1 className={styles.title}>{splittingTitle}</h1>
       <p className="description-main">{content.description}</p>
-      <button className={styles.playBtn}></button>
+      <div className={styles.actions}>
+        <PlayModalStore.Provider
+          value={{
+            modal: modalState,
+            openModal: setModalState,
+          }}
+        >
+          <PlayButton link={'https://youtu.be/liW6bDLnuuk'} />
+          <PlayVideoModal />
+        </PlayModalStore.Provider>
+
+        <p>Watch video</p>
+        <Diamond
+          color="secondary"
+          size={24}
+          duration={5}
+          customClass={'action-diamond'}
+          delay={1}
+        />
+      </div>
     </div>
   );
 };

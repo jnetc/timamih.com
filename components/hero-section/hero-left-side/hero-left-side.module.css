@@ -8,6 +8,7 @@
   position: relative;
   color: var(--secondary-color);
   font-size: 1.8rem;
+  transition: color 0.2s ease-in-out;
 }
 .title {
   display: flex;
@@ -20,7 +21,7 @@
   width: fit-content;
   font-size: 4.5rem;
   color: var(--secondary-color);
-  transition: color 0.3s ease-in-out;
+  transition: color 0.2s ease-in-out;
 }
 .title span:last-child {
   position: relative;
@@ -37,6 +38,16 @@
 }
 .underline path {
   fill: var(--accent-color);
+  transition: fill 0.2s ease-in-out;
 }
-.playBtn {
+.actions {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  column-gap: 2rem;
+  margin-inline: auto;
+  position: relative;
+  padding-block-start: 3rem;
+  font-size: 1.125rem;
+  font-weight: bold;
 }
