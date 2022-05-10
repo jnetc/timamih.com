@@ -1,0 +1,22 @@
+.module {
+  --size: 3rem;
+  width: var(--size);
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 100;
+}
+.module::after,
+.module::before {
+  content: '';
+  width: calc(var(--size) / 4);
+  height: 2px;
+  position: absolute;
+  background-color: var(--secondary-color);
+}
+.module::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.module::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}

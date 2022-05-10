@@ -43,6 +43,12 @@ function MyApp({ Component, pageProps }: AppProps) {
           sizes="192x192"
           href="/icons/icon-192x192.png"
         />
+
+        {/* <link
+          rel="preload"
+          href="https://www.youtube.com/embed/liW6bDLnuuk"
+          as="document"
+        /> */}
       </Head>
       <Component {...pageProps} />
     </>

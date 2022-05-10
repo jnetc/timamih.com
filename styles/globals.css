@@ -28,6 +28,7 @@
 
 html[data-theme='light'] {
   --primary-color: hsl(var(--light));
+  --primary-shade: var(--light);
   --secondary-color: hsl(var(--dark));
   --secondary-shade: var(--dark); /* main shade .85 */
   --card-color: hsl(24, 100%, 97%);
@@ -39,6 +40,7 @@ html[data-theme='light'] {
 }
 html[data-theme='dark'] {
   --primary-color: hsl(var(--dark));
+  --primary-shade: var(--dark);
   --secondary-color: hsl(var(--light));
   --secondary-shade: var(--light); /* main shade .85 */
   --card-color: hsl(0, 0%, 33%);

@@ -1,6 +1,6 @@
 import { useContext, createContext } from 'react';
 
-interface PlayModalType {
+export interface PlayModalType {
   open: boolean;
   url?: string | null;
 }

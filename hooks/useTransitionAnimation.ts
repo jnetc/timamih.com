@@ -15,7 +15,7 @@ export const useTransitionAnimation = (
       const entering = setTimeout(() => {
         el.classList.add('enterActive');
         clearTimeout(entering);
-      });
+      }, 10);
 
       return;
     }

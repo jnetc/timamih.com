@@ -48,7 +48,7 @@ export const HeroLeftSide = () => {
             openModal: setModalState,
           }}
         >
-          <PlayButton link={'https://youtu.be/liW6bDLnuuk'} />
+          <PlayButton link={'https://www.youtube.com/embed/liW6bDLnuuk'} />
           <PlayVideoModal />
         </PlayModalStore.Provider>
 
