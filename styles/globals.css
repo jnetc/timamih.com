@@ -4,7 +4,7 @@
   }
 }
 :root {
-  --light: 32 100% 97%; /* hsl(32, 100%, 97%) */
+  --light: 32 100% 95%; /* hsl(32, 100%, 97%) */
   --dark: 0 0% 22%; /* hsl(0, 0%, 22%) */
   --rose: 315 100% 70%; /* hsl(315, 100%, 70%) */
   --violet: 265 85% 63%; /* hsl(265, 85%, 63%) */
@@ -30,7 +30,7 @@ html[data-theme='light'] {
   --primary-color: hsl(var(--light));
   --secondary-color: hsl(var(--dark));
   --secondary-shade: var(--dark); /* main shade .85 */
-  --card-color: hsl(24, 100%, 99%);
+  --card-color: hsl(24, 100%, 97%);
 
   --accent-color: hsl(var(--violet));
   --accent-shadow: var(--violet);
@@ -58,8 +58,8 @@ html[data-theme='dark'] {
   text-size-adjust: none;
 }
 html {
-  background-color: var(--primary);
-  transition: all 0.2s ease-in-out;
+  background-color: var(--primary-color);
+  transition: all 0.3s ease-in-out;
   scrollbar-gutter: stable;
 }
 html,

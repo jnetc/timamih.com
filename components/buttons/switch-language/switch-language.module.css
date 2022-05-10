@@ -1,4 +1,4 @@
-.module {
+/* .module {
   --size: 2.5rem;
   width: var(--size);
   aspect-ratio: 1 / 1;
@@ -13,23 +13,21 @@
   font-weight: bold;
   text-transform: uppercase;
   transition: all var(--optimal) ease-in-out;
-  cursor: pointer;
   user-select: none;
 }
 .module.pressed {
   background-color: var(--accent-color);
   color: var(--primary-color);
 }
-.module p {
+.module:active {
+  box-shadow: 3px 3px 0 hsla(var(--accent-shadow) / 0.3),
+    6px 6px 15px hsla(var(--accent-shadow) / 0.3);
+} */
+.text {
   position: absolute;
   top: 48%;
   left: 48%;
   transform: translate(-50%, -50%);
-}
-
-.module:active {
-  box-shadow: 3px 3px 0 hsla(var(--accent-shadow) / 0.3),
-    6px 6px 15px hsla(var(--accent-shadow) / 0.3);
 }
 
 .buttons {

@@ -5,6 +5,7 @@ import { PlayModalStore, usePlayModalStore } from '@Hooks/usePlayModalStore';
 // SVG
 import { Underline } from './svg/Underline';
 import { Diamond } from '@Components/diamond';
+import { Arrow } from './svg/Arrow';
 // Styles
 import styles from './hero-left-side.module.css';
 // Componenent
@@ -59,6 +60,7 @@ export const HeroLeftSide = () => {
           customClass={'action-diamond'}
           delay={1}
         />
+        <Arrow />
       </div>
     </div>
   );

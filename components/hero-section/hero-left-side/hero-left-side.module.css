@@ -36,7 +36,8 @@
 .underline svg {
   width: inherit;
 }
-.underline path {
+.underline path,
+.arrow path {
   fill: var(--accent-color);
   transition: fill 0.2s ease-in-out;
 }
@@ -50,4 +51,9 @@
   padding-block-start: 3rem;
   font-size: 1.125rem;
   font-weight: bold;
+}
+.arrow {
+  position: absolute;
+  bottom: -5rem;
+  right: -2rem;
 }
