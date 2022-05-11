@@ -18,14 +18,24 @@ export const HeroLeftSide = () => {
   const [modalState, setModalState] = useState(modal);
 
   const splittingTitle = content.title[language].split(',').map((titl, idx) => {
-    if (idx === 2)
+    if (idx === 0) {
+      const two = titl.split(' ');
       return (
         <span key={idx}>
-          {titl.trim()}
+          <strong>{two[0]} </strong>
+          {two[1]}
+        </span>
+      );
+    }
+    if (idx === 2) {
+      return (
+        <span key={idx}>
+          {titl}
           <Underline />
         </span>
       );
-    return <span key={idx}>{titl.trim()}</span>;
+    }
+    return <span key={idx}>{titl}</span>;
   });
 
   return (
@@ -40,7 +50,7 @@ export const HeroLeftSide = () => {
         />
       </p>
       <h1 className={styles.title}>{splittingTitle}</h1>
-      <p className="description-main">{content.description}</p>
+      <p className={`${styles.desc} description-main`}>{content.description}</p>
       <div className={styles.actions}>
         <PlayModalStore.Provider
           value={{
@@ -68,14 +78,14 @@ export const HeroLeftSide = () => {
 
 const content = {
   label: {
-    en: 'Advertising agency',
-    ru: 'Рекламное агенство',
-    fi: 'Maions toimisto',
+    en: 'Marketing agency',
+    ru: 'Маркетинговое агентство',
+    fi: 'Markkinointitoimisto',
   },
   title: {
-    en: 'We make, media products, for you',
-    ru: 'Мы делаем, медиа продукты, для вас',
-    fi: 'Teemme, mediatuotteita, sinulle',
+    en: 'We make, video and media, advertising',
+    ru: 'Мы делаем, видео и медиа, рекламу',
+    fi: 'Me teemme, video ja media, mainonta',
   },
   description:
     'Our team create high-quality content for advertising using the latest, modern technologies and proficient professionals.',
