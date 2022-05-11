@@ -30,7 +30,12 @@ export const SwitchThemeButton = () => {
   }, [themeState]);
 
   return (
-    <button className={`${styles.module} click`} onClick={toggleTheme}>
+    <button
+      aria-label="theme switch button"
+      title="theme switch button"
+      className={`${styles.module} click`}
+      onClick={toggleTheme}
+    >
       <OnOffIcon />
       <span className={styles.background} />
     </button>

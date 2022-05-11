@@ -27,9 +27,8 @@ export const HeroRightSide = () => {
               y2="625.883"
               gradientUnits="userSpaceOnUse"
             >
-              <stop stopColor="#FFF3E5" />
-              <stop offset="0.529209" stopColor="#797979" />
-              <stop offset="1" stopColor="#393939" />
+              <stop offset=".1" />
+              <stop offset="1" />
             </linearGradient>
             <mask id="avatar-mask">
               <path

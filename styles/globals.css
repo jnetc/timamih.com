@@ -37,6 +37,10 @@ html[data-theme='light'] {
   --accent-shadow: var(--violet);
 
   --switch-button-bg: var(--green);
+
+  /* SVG ellipse */
+  --start-ellipse: hsl(32 100% 95%);
+  --end-ellipse: hsl(32 0% 22%);
 }
 html[data-theme='dark'] {
   --primary-color: hsl(var(--dark));
@@ -49,6 +53,9 @@ html[data-theme='dark'] {
   --accent-shadow: var(--rose);
 
   --switch-button-bg: var(--red);
+  /* SVG ellipse */
+  --start-ellipse: hsl(32 0% 34%);
+  --end-ellipse: hsl(0 0% 0%);
 }
 
 *,

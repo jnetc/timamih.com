@@ -139,12 +139,15 @@
 /* DIAMOND's styles */
 .star-accent {
   fill: var(--accent-color);
+  transition: fill 0.3s ease-in-out;
 }
 .star-shade {
   fill: hsla(var(--accent-shadow) / 0.85);
+  transition: fill 0.3s ease-in-out;
 }
 .star-secondary {
   fill: var(--secondary-color);
+  transition: fill 0.3s ease-in-out;
 }
 .duration-5 {
   animation-duration: 5s;
