@@ -1,8 +1,11 @@
 .module {
-  width: min-content;
-  display: flex;
-  flex-flow: column;
-  /* flex: 1 0 calc(50% - var(--gap-three) / 2); */
+  width: calc(50% - var(--gap-three) / 2);
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-auto-rows: min-content;
+}
+:where(.label, .title, .desc) {
+  grid-column: 1;
 }
 .label {
   width: fit-content;
@@ -15,10 +18,10 @@
   width: fit-content;
   display: flex;
   flex-flow: column;
-  padding-block: 1rem 1.5rem;
+  padding-block: 1rem 2.5rem;
   text-transform: uppercase;
   white-space: nowrap;
-  line-height: 1;
+  line-height: 1.1;
 }
 .title span {
   width: fit-content;
@@ -48,6 +51,7 @@
 }
 
 .actions {
+  grid-column: 1 / -1;
   width: fit-content;
   display: flex;
   align-items: center;
@@ -62,4 +66,17 @@
   position: absolute;
   bottom: -5rem;
   right: -2rem;
+}
+@media screen and (max-width: 960px) {
+  .module {
+    width: 100%;
+    align-content: center;
+    min-height: calc(100vh - var(--gap-one) - var(--gap-three));
+  }
+  .title span {
+    font-size: clamp(2.2rem, 10vw, 6rem);
+  }
+  .underline {
+    width: clamp(150px, 50vw, 250px);
+  }
 }

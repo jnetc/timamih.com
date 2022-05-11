@@ -3,7 +3,7 @@ import styles from './hero-right-side.module.css';
 export const HeroRightSide = () => {
   return (
     <div className={styles.module}>
-      <div className={styles.avatar}>
+      <div className={`${styles.avatar} ${styles.transition}`}>
         <svg
           width="100%"
           height="100%"
@@ -11,13 +11,6 @@ export const HeroRightSide = () => {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <ellipse
-            cx="322.239"
-            cy="604.018"
-            rx="321.97"
-            ry="51.9814"
-            fill="url(#ellipse-gradient)"
-          />
           <defs>
             <linearGradient
               id="ellipse-gradient"
@@ -37,12 +30,19 @@ export const HeroRightSide = () => {
               />
             </mask>
           </defs>
+          <ellipse
+            cx="322.239"
+            cy="604.018"
+            rx="321.97"
+            ry="51.9814"
+            fill="url(#ellipse-gradient)"
+          />
           <image
             mask="url(#avatar-mask)"
             width="560"
             height="744"
             x={45}
-            y={45}
+            // y={45}
             href="/images/timamih.png"
           />
         </svg>

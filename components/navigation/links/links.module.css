@@ -33,3 +33,8 @@
 .link:active::after {
   transform: translateY(0);
 }
+@media screen and (max-width: 960px) {
+  .module {
+    display: none;
+  }
+}

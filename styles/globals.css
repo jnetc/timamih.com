@@ -134,9 +134,6 @@ main {
 }
 
 @media (max-width: 960px) {
-  main {
-    margin-block-start: 5rem;
-  }
 }
 
 @import url('./common.css');
