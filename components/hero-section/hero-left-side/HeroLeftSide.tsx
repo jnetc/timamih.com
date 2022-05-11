@@ -23,7 +23,7 @@ export const HeroLeftSide = () => {
       return (
         <span key={idx}>
           <strong>{two[0]} </strong>
-          {two[1]}
+          {two[1]} {two[2]} {two[3]} {two[4]} {two[5]}
         </span>
       );
     }
@@ -92,3 +92,7 @@ const content = {
   videoUrl:
     '<iframe width="560" height="315" src="https://www.youtube.com/embed/ZeNyjnneq_w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
 };
+
+//  en: 'We make, video and media, advertising',
+//  ru: 'Мы делаем, видео и медиа, рекламу',
+//  fi: 'Me teemme, video ja media, mainonta',

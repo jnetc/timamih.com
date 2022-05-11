@@ -22,6 +22,7 @@
   text-transform: uppercase;
   white-space: nowrap;
   line-height: 1.1;
+  letter-spacing: 1px;
 }
 .title span {
   width: fit-content;
@@ -30,6 +31,7 @@
   color: var(--secondary-color);
   transition: color 0.3s ease-in-out;
 }
+
 .title strong {
   color: var(--accent-color);
   transition: color 0.3s ease-in-out;

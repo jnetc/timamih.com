@@ -31,9 +31,9 @@ export const nav_urls = [
     anchor: '#services',
   },
   {
-    fi: 'Meistä',
-    ru: 'О нас',
-    en: 'About',
+    fi: 'Keitä olemme',
+    ru: 'Кто мы',
+    en: 'Who we are',
     anchor: '#about',
   },
   {
