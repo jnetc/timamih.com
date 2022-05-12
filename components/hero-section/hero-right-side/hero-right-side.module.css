@@ -2,11 +2,12 @@
   width: calc(50% - var(--gap-three) / 2);
   display: flex;
   margin-block: auto;
+  position: relative;
 }
 
 .avatar {
   width: 100%;
-  height: 656px;
+  height: 756px; /* 656px */
   position: relative;
 }
 .avatar stop:first-child {
@@ -60,9 +61,10 @@
 @media screen and (max-width: 960px) {
   .module {
     width: 100%;
-    min-height: calc(100vh - var(--gap-one) - var(--gap-three));
+    /* min-height: calc(100vh - var(--gap-one) - var(--gap-three)); */
   }
   .avatar {
+    height: 656px;
     margin-block: auto;
   }
 }

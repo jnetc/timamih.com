@@ -1,5 +1,5 @@
-import styles from './diamond.module.css';
-export const Diamond = ({
+import styles from './star.module.css';
+export const Star = ({
   color,
   size,
   customClass,
@@ -7,10 +7,10 @@ export const Diamond = ({
   delay,
 }: {
   color: 'accent' | 'shade' | 'secondary';
-  size: number;
+  size: 24 | 32 | 36 | 48 | 56;
   customClass: string;
-  duration: number;
-  delay?: number;
+  duration: 5 | 7 | 9 | 11 | 13;
+  delay?: 1 | 2 | 3 | 4 | 5;
 }) => {
   return (
     <svg

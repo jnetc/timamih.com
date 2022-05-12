@@ -23,12 +23,12 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta
           name="theme-color"
           media="(prefers-color-scheme: light)"
-          content="#929ea5"
+          content="hsl(32, 100%, 95%)"
         />
         <meta
           name="theme-color"
           media="(prefers-color-scheme: dark)"
-          content="#060d0c"
+          content="hsl(0, 0%, 22%)"
         />
 
         <link rel="alternate" href="https://timamih.com/ru" hrefLang="ru" />

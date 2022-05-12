@@ -22,7 +22,6 @@ class MyDocument extends Document {
           <style dangerouslySetInnerHTML={{ __html: extraCSS }} />
         </Head>
         <body id="home">
-          <span id="orientation-landscape">Rotate to portrait</span>
           <Main />
           <div id="portal-play-video" />
           <div id="portal-contacts" />

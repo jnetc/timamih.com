@@ -1,0 +1,45 @@
+.module {
+  position: absolute;
+  animation-name: shine;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.module:global(.label-star) {
+  right: -4rem;
+  top: -3rem;
+}
+.module:global(.action-star) {
+  left: -4rem;
+  bottom: -2rem;
+}
+.module:global(.tima-left-acc-star) {
+  top: 30%;
+  left: 0;
+}
+.module:global(.tima-left-sec-star) {
+  top: 3%;
+  left: 20%;
+}
+.module:global(.tima-right-acc-star) {
+  top: 0;
+  right: 5%;
+}
+.module:global(.tima-right-sec-star) {
+  top: 20%;
+  right: 25%;
+}
+.module:global(.tima-bottom-acc-star) {
+  right: 15%;
+  bottom: -15%;
+}
+.module:global(.tima-bottom-sec-star) {
+  right: 5%;
+  bottom: -10%;
+}
+
+@keyframes shine {
+  50% {
+    transform: scale(0.5) rotate(90deg);
+  }
+}

@@ -4,7 +4,7 @@ import { useStore } from '@Hooks/useStore';
 import { PlayModalStore, usePlayModalStore } from '@Hooks/usePlayModalStore';
 // SVG
 import { Underline } from './svg/Underline';
-import { Diamond } from '@Components/diamond';
+import { Star } from '@Components/star';
 import { Arrow } from './svg/Arrow';
 // Styles
 import styles from './hero-left-side.module.css';
@@ -42,11 +42,11 @@ export const HeroLeftSide = () => {
     <div className={styles.module}>
       <p className={styles.label}>
         {content.label[language]}
-        <Diamond
+        <Star
           color="accent"
           size={36}
           duration={7}
-          customClass={'label-diamond'}
+          customClass={'label-star'}
         />
       </p>
       <h1 className={styles.title}>{splittingTitle}</h1>
@@ -63,11 +63,11 @@ export const HeroLeftSide = () => {
         </PlayModalStore.Provider>
 
         <p>Watch video</p>
-        <Diamond
+        <Star
           color="secondary"
           size={24}
           duration={5}
-          customClass={'action-diamond'}
+          customClass={'action-star'}
           delay={1}
         />
         <Arrow />
