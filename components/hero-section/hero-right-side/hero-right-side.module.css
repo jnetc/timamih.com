@@ -62,4 +62,13 @@
     width: 100%;
     min-height: calc(100vh - var(--gap-one) - var(--gap-three));
   }
+  .avatar {
+    margin-block: auto;
+  }
+}
+
+@media only screen and (orientation: landscape) and (max-device-height: 599px) {
+  .module {
+    width: 75%;
+  }
 }
