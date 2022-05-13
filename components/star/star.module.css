@@ -14,7 +14,7 @@
   bottom: -2rem;
 }
 .module:global(.tima-left-acc-star) {
-  top: 30%;
+  top: 25%;
   left: 0;
 }
 .module:global(.tima-left-sec-star) {
@@ -35,7 +35,7 @@
 }
 .module:global(.tima-bottom-sec-star) {
   right: 5%;
-  bottom: -10%;
+  bottom: -0%;
 }
 
 @keyframes shine {

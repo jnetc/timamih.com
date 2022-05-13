@@ -34,7 +34,7 @@ html[data-theme='light'] {
   --card-color: hsl(24, 100%, 97%);
 
   --accent-color: hsl(var(--violet));
-  --accent-shadow: var(--violet);
+  --accent-shade: var(--violet);
 
   --switch-button-bg: var(--green);
 
@@ -47,10 +47,10 @@ html[data-theme='dark'] {
   --primary-shade: var(--dark);
   --secondary-color: hsl(var(--light));
   --secondary-shade: var(--light); /* main shade .85 */
-  --card-color: hsl(0, 0%, 33%);
+  --card-color: hsl(0, 0%, 31%);
 
   --accent-color: hsl(var(--rose));
-  --accent-shadow: var(--rose);
+  --accent-shade: var(--rose);
 
   --switch-button-bg: var(--red);
   /* SVG ellipse */
@@ -163,3 +163,6 @@ main {
 } */
 
 @import url('./common.css');
+@import url('./buttons.css');
+@import url('./stars.css');
+@import url('./modals.css');

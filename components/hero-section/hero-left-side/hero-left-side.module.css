@@ -76,9 +76,9 @@
     min-height: calc(100vh - var(--gap-one) - var(--gap-three));
   }
   .title span {
-    font-size: clamp(2.2rem, 10vw, 6rem);
+    font-size: clamp(2.1rem, 9vw, 6rem);
   }
   .underline {
-    width: clamp(150px, 50vw, 250px);
+    width: clamp(100px, 40vw, 250px);
   }
 }

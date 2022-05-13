@@ -50,7 +50,9 @@ export const HeroLeftSide = () => {
         />
       </p>
       <h1 className={styles.title}>{splittingTitle}</h1>
-      <p className={`${styles.desc} description-main`}>{content.description}</p>
+      <p className={`${styles.desc} description-main`}>
+        {content.description[language]}
+      </p>
       <div className={styles.actions}>
         <PlayModalStore.Provider
           value={{
@@ -78,17 +80,21 @@ export const HeroLeftSide = () => {
 
 const content = {
   label: {
-    en: 'Marketing agency',
-    ru: 'Маркетинговое агентство',
-    fi: 'Markkinointitoimisto',
+    en: 'Advertising agency',
+    ru: 'Рекламное агенство',
+    fi: 'Mainostoimisto',
   },
   title: {
-    en: 'We make, video and media, advertising',
-    ru: 'Мы делаем, видео и медиа, рекламу',
-    fi: 'Me teemme, video ja media, mainonta',
+    en: 'we will make, a media product, for you',
+    ru: 'мы сделаем, медиа продукт, для вас',
+    fi: 'Me teemme, mediatuotteen, sinulle',
   },
-  description:
-    'Our team create high-quality content for advertising using the latest, modern technologies and proficient professionals.',
+  description: {
+    en: 'Our team create high-quality content for advertising using the latest, modern technologies and proficient professionals.',
+    ru: 'Наша команда создает качественный контент для рекламы, используя новейшие, современные технологии и опытных специалистов.',
+    fi: 'Tiimimme luo korkealaatuista sisältöä mainontaan käyttämällä uusinta, nykyaikaista teknologiaa ja ammattitaitoisia ammattilaisia.',
+  },
+
   videoUrl:
     '<iframe width="560" height="315" src="https://www.youtube.com/embed/ZeNyjnneq_w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>',
 };

@@ -1,0 +1,43 @@
+.module {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  padding: 0.6rem 5rem 0.6rem 1rem;
+  position: relative;
+  background-color: var(--card-color);
+  border-radius: 0.5rem;
+  box-shadow: 0.5rem 0.5rem 0 hsla(var(--accent-shade) / 0.1),
+    0.5rem 0.5rem 1rem hsla(var(--accent-shade) / 0.1);
+  transition: all 0.3s ease-in-out;
+  user-select: none;
+}
+.module p,
+.module time {
+  color: var(--secondary-color);
+  transition: color 0.3s ease-in-out;
+}
+.module p {
+  font-size: 1rem;
+  font-weight: bold;
+  flex-shrink: 1;
+}
+.module time,
+.module svg {
+  position: absolute;
+  bottom: 0.6rem;
+}
+
+.module time {
+  right: 2.3rem;
+  font-size: 1rem;
+  flex-grow: 1;
+}
+.module svg {
+  right: 0.6rem;
+  width: 1.225rem;
+  aspect-ratio: 1 / 1;
+  flex-grow: 1;
+  fill: var(--secondary-color);
+  transition: fill 0.3s ease-in-out;
+}

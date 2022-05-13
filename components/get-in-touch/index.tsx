@@ -2,7 +2,7 @@ import styles from './getintouch.module.css';
 
 const GetInTouch = () => {
   return (
-    <section className={styles.module}>
+    <section id="contact" className={styles.module}>
       <h1>Get in touch we us</h1>
     </section>
   );

@@ -58,6 +58,23 @@
   }
 }
 
+.messages {
+  display: flex;
+  flex-flow: column;
+  row-gap: 1.5rem;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+.hire_us {
+  margin-block-start: 1rem;
+}
+.hire_us svg {
+  height: 1.5rem;
+}
+
 @media screen and (max-width: 960px) {
   .module {
     width: 100%;
@@ -66,6 +83,11 @@
   .avatar {
     height: 656px;
     margin-block: auto;
+  }
+  .messages {
+    top: 60%;
+    transform: translateY(0%);
+    row-gap: 1rem;
   }
 }
 
