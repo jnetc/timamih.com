@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   column-gap: 0.5rem;
-  padding: 0.6rem 5rem 0.6rem 1rem;
+  padding: 0.6rem 5.5rem 0.6rem 1rem;
   position: relative;
   background-color: var(--card-color);
   border-radius: 0.5rem;
@@ -18,9 +18,18 @@
   transition: color 0.3s ease-in-out;
 }
 .module p {
+  padding-block: 0.1rem;
   font-size: 1rem;
   font-weight: bold;
   flex-shrink: 1;
+}
+.smile {
+  width: 1.4rem;
+  aspect-ratio: 1 / 1;
+  position: relative;
+  top: -1px;
+  background-image: url('/images/Smiling-Face.webp');
+  background-size: cover;
 }
 .module time,
 .module svg {
