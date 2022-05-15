@@ -1,6 +1,16 @@
+import { useRef } from 'react';
+// Hook
+import { useObserver } from '@Hooks/useObserver';
+
 export const Avatar = () => {
+  const targetAvatar = useRef(null);
+  useObserver({
+    ref: targetAvatar,
+    selectorClass: 'hero-right',
+    cssClass: 'transition',
+  });
   return (
-    <div className="hero-right__avatar">
+    <div className="hero-right__avatar" ref={targetAvatar}>
       <svg
         width="100%"
         height="100%"
@@ -30,8 +40,8 @@ export const Avatar = () => {
         <ellipse
           cx="322.239"
           cy="604.018"
-          rx="321.97"
-          ry="51.9814"
+          rx="0"
+          ry="0"
           fill="url(#ellipse-gradient)"
           className="hero-right__hole"
         />

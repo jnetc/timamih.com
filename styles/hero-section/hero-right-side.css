@@ -24,12 +24,13 @@
   visibility: hidden;
   opacity: 0;
 }
-.hero-right.transition hero-right__hole {
-  animation: hole 0.5s cubic-bezier(0.56, 0.1, 0.93, 0.35) forwards;
-}
-.hero-right.transition .hero-right__image {
-  animation: avatar 0.6s cubic-bezier(0.71, 0.1, 0.09, 1.04) forwards;
+.hero-right__avatar.transition .hero-right__hole {
+  animation: hole 0.7s cubic-bezier(0.21, 0.25, 0, 1.08) forwards;
   animation-delay: 0.4s;
+}
+.hero-right__avatar.transition .hero-right__image {
+  animation: avatar 0.5s cubic-bezier(0.72, 0.27, 0.38, 0.98) forwards;
+  animation-delay: 0.7s;
 }
 
 @keyframes hole {
@@ -63,16 +64,32 @@
   flex-flow: column;
   row-gap: 1.5rem;
   position: absolute;
-  top: 50%;
+  bottom: 13%;
   left: 0;
-  transform: translateY(-50%);
   z-index: 10;
 }
 .hero-right__hire_us {
   margin-block-start: 1rem;
+  opacity: 0;
 }
 .hero-right__hire_us svg {
   height: 1.5rem;
+}
+
+.hero-right__messages.transition .hero-right__hire_us {
+  animation: show-button 0.5s cubic-bezier(0.76, -0.01, 0.35, 1.12) forwards;
+  animation-delay: 1.6s;
+}
+
+@keyframes show-button {
+  from {
+    transform: translateX(-2rem);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 @media screen and (max-width: 960px) {
@@ -81,13 +98,26 @@
     /* min-height: calc(100vh - var(--gap-one) - var(--gap-three)); */
   }
   .hero-right__avatar {
-    height: 656px;
+    height: 556px;
     margin-block: auto;
   }
   .hero-right__messages {
-    top: 60%;
-    transform: translateY(0%);
+    bottom: 0;
     row-gap: 1rem;
+  }
+  @keyframes avatar {
+    0% {
+      y: 650px;
+    }
+    1% {
+      visibility: visible;
+      opacity: 1;
+    }
+    100% {
+      y: 0px;
+      opacity: 1;
+      visibility: visible;
+    }
   }
 }
 

@@ -21,11 +21,14 @@ export const useObserver = ({ ref, selectorClass, cssClass }: ObserverType) => {
       entries: IntersectionObserverEntry[]
       // observer: IntersectionObserver
     ) => {
-      // console.log(observer, element);
       entries.forEach(el => {
         const animatedNode = el.target;
-        console.log(el, animatedNode);
         animatedNode.classList.toggle(`${cssClass}`);
+        // if (el.isIntersecting) {
+        //   animatedNode.classList.add(`${cssClass}`);
+        //   observer.unobserve(el.target);
+        //   return;
+        // }
 
         //? REMOVE OBSERVER IF ELEMENT INVISIBLE
         // if (!el.isIntersecting) {

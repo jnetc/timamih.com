@@ -9,19 +9,20 @@ import { Message } from './message/Message';
 import { HandShakeIcon } from './HandShakeIcon';
 
 export const HeroRightSide = () => {
-  const targetAvatar = useRef(null);
+  const targetMessages = useRef(null);
+
   useObserver({
-    ref: targetAvatar,
-    selectorClass: 'animated',
+    ref: targetMessages,
+    selectorClass: 'hero-right__messages',
     cssClass: 'transition',
   });
   const message = messages.map((message, idx) => {
     return <Message key={idx} message={message} firstMessage={idx === 0} />;
   });
   return (
-    <div className="hero-right animated" ref={targetAvatar}>
+    <div className="hero-right">
       <Avatar />
-      <section className="hero-right__messages">
+      <section className="hero-right__messages" ref={targetMessages}>
         {message}
         <Link href="#contact">
           <a className="hero-right__hire_us hire-button click">
@@ -77,5 +78,5 @@ export const HeroRightSide = () => {
 const messages = [
   'Hello, I’m Timofei',
   'Can i help you?',
-  'All you need is to get in touch',
+  'All you need is to get in touch, maybe in monday at 7',
 ];
