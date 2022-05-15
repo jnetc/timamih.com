@@ -1,6 +1,7 @@
-.module {
+.navigation {
   display: flex;
   align-items: center;
   column-gap: 1rem;
   position: relative;
 }
+@import url('./desktop-links.css');

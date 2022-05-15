@@ -1,4 +1,4 @@
-import styles from '../hero-left-side.module.css';
+import styles from './svg.module.css';
 
 export const Arrow = () => (
   <svg

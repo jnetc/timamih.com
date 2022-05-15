@@ -1,24 +1,31 @@
 import Link from 'next/link';
+import { useRef } from 'react';
+// Hook
+import { useObserver } from '@Hooks/useObserver';
 // Component
 import { Avatar } from './Avatar';
 import { Star } from '@Components/star';
 import { Message } from './message/Message';
-import { Handshake } from './HandshakeIcon';
-// Style
-import styles from './hero-right-side.module.css';
+import { HandShakeIcon } from './HandShakeIcon';
 
 export const HeroRightSide = () => {
+  const targetAvatar = useRef(null);
+  useObserver({
+    ref: targetAvatar,
+    selectorClass: 'animated',
+    cssClass: 'transition',
+  });
   const message = messages.map((message, idx) => {
     return <Message key={idx} message={message} firstMessage={idx === 0} />;
   });
   return (
-    <div className={styles.module}>
+    <div className="hero-right animated" ref={targetAvatar}>
       <Avatar />
-      <section className={styles.messages}>
+      <section className="hero-right__messages">
         {message}
         <Link href="#contact">
-          <a className={`${styles.hire_us} hire-button click`}>
-            HIRE US <Handshake />
+          <a className="hero-right__hire_us hire-button click">
+            HIRE US <HandShakeIcon />
           </a>
         </Link>
       </section>

@@ -1,4 +1,4 @@
-import styles from '../hero-left-side.module.css';
+import styles from './svg.module.css';
 export const Underline = () => (
   <div className={styles.underline}>
     <svg viewBox="0 0 358 23" fill="none" xmlns="http://www.w3.org/2000/svg">

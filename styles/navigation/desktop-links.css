@@ -1,16 +1,16 @@
-.module {
+.desktop-links {
   display: flex;
   gap: 1rem;
   margin-inline-end: auto;
 }
-.link {
+.desktop-link {
   position: relative;
   color: var(--secondary-color);
   font-weight: 400;
   letter-spacing: 0.5px;
   transition: all var(--optimal) ease-in-out;
 }
-.link::after {
+.desktop-link::after {
   content: '';
   width: 0;
   height: 3px;
@@ -25,16 +25,16 @@
   pointer-events: none;
 }
 
-.link:hover::after {
+.desktop-link:hover::after {
   width: 2rem;
   opacity: 1;
   transform: translateY(0);
 }
-.link:active::after {
+.desktop-link:active::after {
   transform: translateY(0);
 }
 @media screen and (max-width: 960px) {
-  .module {
+  .desktop-links {
     display: none;
   }
 }

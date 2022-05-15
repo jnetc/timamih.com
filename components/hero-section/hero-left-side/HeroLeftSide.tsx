@@ -7,7 +7,7 @@ import { Underline } from './svg/Underline';
 import { Star } from '@Components/star';
 import { Arrow } from './svg/Arrow';
 // Styles
-import styles from './hero-left-side.module.css';
+// import styles from './hero-left-side.module.css';
 // Componenent
 import { PlayButton } from '@Components/buttons/play';
 import { PlayVideoModal } from '@Components/modals/play-video/PlayVideoModal';
@@ -39,8 +39,8 @@ export const HeroLeftSide = () => {
   });
 
   return (
-    <div className={styles.module}>
-      <p className={styles.label}>
+    <div className="hero-left">
+      <p className="hero-left__label">
         {content.label[language]}
         <Star
           color="accent"
@@ -49,11 +49,11 @@ export const HeroLeftSide = () => {
           customClass={'label-star'}
         />
       </p>
-      <h1 className={styles.title}>{splittingTitle}</h1>
-      <p className={`${styles.desc} description-main`}>
+      <h1 className="hero-left__title">{splittingTitle}</h1>
+      <p className="hero-left__desc description-main">
         {content.description[language]}
       </p>
-      <div className={styles.actions}>
+      <div className="hero-left__action-buttons">
         <PlayModalStore.Provider
           value={{
             modal: modalState,

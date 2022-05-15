@@ -1,4 +1,4 @@
-.module {
+.hero-section {
   /* height: max(600px, calc(100vh - var(--gap-one) - var(--gap-three))); */
   min-height: 1000px;
   display: flex;
@@ -8,14 +8,17 @@
 }
 
 @media screen and (max-width: 960px) {
-  .module {
+  .hero-section {
     min-height: calc(200vh - var(--gap-one) - var(--gap-three));
     flex-flow: column;
   }
 }
 
 @media only screen and (orientation: landscape) and (max-device-height: 780px) {
-  .module {
+  .hero-section {
     row-gap: 10rem;
   }
 }
+
+@import url('./hero-left-side.css');
+@import url('./hero-right-side.css');

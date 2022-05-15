@@ -1,6 +1,4 @@
-import styles from './message.module.css';
-// Component
-import { AceptedIcon } from './AceptedIcon';
+import { CheckedIcon } from './CheckedIcon';
 
 export const Message = ({
   message,
@@ -14,13 +12,13 @@ export const Message = ({
   const minutes = time.getMinutes();
 
   return (
-    <div className={styles.module}>
+    <div className="hero-left__message">
       <p>{message}</p>
-      {firstMessage && <span className={styles.smile} />}
+      {firstMessage && <span className="hero-left__message-smile" />}
       <time>
         {hours}:{minutes}
       </time>
-      <AceptedIcon />
+      <CheckedIcon />
     </div>
   );
 };

@@ -1,4 +1,4 @@
-.module {
+.hero-left__message {
   width: fit-content;
   display: flex;
   align-items: center;
@@ -12,18 +12,18 @@
   transition: all 0.3s ease-in-out;
   user-select: none;
 }
-.module p,
-.module time {
+.hero-left__message p,
+.hero-left__message time {
   color: var(--secondary-color);
   transition: color 0.3s ease-in-out;
 }
-.module p {
+.hero-left__message p {
   padding-block: 0.1rem;
   font-size: 1rem;
   font-weight: bold;
   flex-shrink: 1;
 }
-.smile {
+.hero-left__message-smile {
   width: 1.4rem;
   aspect-ratio: 1 / 1;
   position: relative;
@@ -31,18 +31,18 @@
   background-image: url('/images/Smiling-Face.webp');
   background-size: cover;
 }
-.module time,
-.module svg {
+.hero-left__message time,
+.hero-left__message svg {
   position: absolute;
   bottom: 0.6rem;
 }
 
-.module time {
+.hero-left__message time {
   right: 2.3rem;
   font-size: 1rem;
   flex-grow: 1;
 }
-.module svg {
+.hero-left__message svg {
   right: 0.6rem;
   width: 1.225rem;
   aspect-ratio: 1 / 1;

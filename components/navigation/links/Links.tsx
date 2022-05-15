@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import styles from './links.module.css';
 // Hook
 import { useStore } from '@Hooks/useStore';
 
@@ -9,12 +8,12 @@ export const Links = () => {
   const links = nav_urls.map(link => {
     return (
       <Link href={link.anchor} key={link.anchor}>
-        <a className={`${styles.link} click`}>{link[language]}</a>
+        <a className="desktop-link click">{link[language]}</a>
       </Link>
     );
   });
 
-  return <nav className={styles.module}>{links}</nav>;
+  return <nav className="desktop-links">{links}</nav>;
 };
 
 export const nav_urls = [

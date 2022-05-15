@@ -1,7 +1,6 @@
-import styles from './hero-right-side.module.css';
 export const Avatar = () => {
   return (
-    <div className={`${styles.avatar} ${styles.transition}`}>
+    <div className="hero-right__avatar">
       <svg
         width="100%"
         height="100%"
@@ -18,8 +17,8 @@ export const Avatar = () => {
             y2="625.883"
             gradientUnits="userSpaceOnUse"
           >
-            <stop offset=".1" />
-            <stop offset="1" />
+            <stop offset=".1" className="hero-right__gradient" />
+            <stop offset="1" className="hero-right__gradient" />
           </linearGradient>
           <mask id="avatar-mask">
             <path
@@ -34,6 +33,7 @@ export const Avatar = () => {
           rx="321.97"
           ry="51.9814"
           fill="url(#ellipse-gradient)"
+          className="hero-right__hole"
         />
         <image
           mask="url(#avatar-mask)"
@@ -42,6 +42,7 @@ export const Avatar = () => {
           x={45}
           // y={45}
           href="/images/timamih.png"
+          className="hero-right__image"
         />
       </svg>
     </div>

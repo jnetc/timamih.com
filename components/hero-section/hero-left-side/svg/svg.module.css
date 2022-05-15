@@ -1,0 +1,24 @@
+.underline {
+  width: 250px;
+  display: flex;
+  position: absolute;
+  bottom: -1rem;
+}
+.underline svg {
+  width: inherit;
+}
+.underline path,
+.arrow path {
+  fill: var(--accent-color);
+  transition: fill 0.3s ease-in-out;
+}
+.arrow {
+  position: absolute;
+  bottom: -5rem;
+  right: -2rem;
+}
+@media screen and (max-width: 960px) {
+  .underline {
+    width: clamp(100px, 40vw, 250px);
+  }
+}
