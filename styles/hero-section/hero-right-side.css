@@ -20,15 +20,21 @@
 }
 
 .hero-right__image {
-  will-change: contents;
-  visibility: hidden;
   opacity: 0;
+  visibility: hidden;
+  will-change: contents;
+  mix-blend-mode: luminosity;
+  transition: all 0.3s ease-in-out;
 }
-.hero-right__avatar.transition .hero-right__hole {
+
+.hero-right__avatar.transition :where(.hero-right__hole, .hero-right__image) {
+  animation: none;
+}
+.hero-right__avatar .hero-right__hole {
   animation: hole 0.7s cubic-bezier(0.21, 0.25, 0, 1.08) forwards;
   animation-delay: 0.4s;
 }
-.hero-right__avatar.transition .hero-right__image {
+.hero-right__avatar .hero-right__image {
   animation: avatar 0.5s cubic-bezier(0.72, 0.27, 0.38, 0.98) forwards;
   animation-delay: 0.7s;
 }
@@ -68,28 +74,25 @@
   left: 0;
   z-index: 10;
 }
+
 .hero-right__hire_us {
   margin-block-start: 1rem;
-  opacity: 0;
+  opacity: 1;
 }
+
 .hero-right__hire_us svg {
   height: 1.5rem;
 }
 
 .hero-right__messages.transition .hero-right__hire_us {
-  animation: show-button 0.5s cubic-bezier(0.76, -0.01, 0.35, 1.12) forwards;
-  animation-delay: 1.6s;
+  transform: translate(-2rem, 0);
+  opacity: 0;
 }
 
-@keyframes show-button {
-  from {
-    transform: translateX(-2rem);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
+/* useObserver delay class*/
+.hero-right__messages.delay .hero-right__hire_us {
+  transition-delay: 1.6s;
+  pointer-events: none;
 }
 
 @media screen and (max-width: 960px) {

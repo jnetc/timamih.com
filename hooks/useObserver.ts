@@ -4,9 +4,15 @@ interface ObserverType {
   ref: RefObject<HTMLElement>;
   selectorClass: string;
   cssClass: string;
+  delayClass?: { class: string; time: number };
 }
 
-export const useObserver = ({ ref, selectorClass, cssClass }: ObserverType) => {
+export const useObserver = ({
+  ref,
+  selectorClass,
+  cssClass,
+  delayClass,
+}: ObserverType) => {
   useEffect(() => {
     const element = ref.current;
 
@@ -23,9 +29,19 @@ export const useObserver = ({ ref, selectorClass, cssClass }: ObserverType) => {
     ) => {
       entries.forEach(el => {
         const animatedNode = el.target;
-        animatedNode.classList.toggle(`${cssClass}`);
+
+        if (el.isIntersecting) {
+          animatedNode.classList.remove(`${cssClass}`);
+          if (!delayClass) return;
+          const delay = setTimeout(() => {
+            animatedNode.classList.remove(`${delayClass.class}`);
+            clearTimeout(delay);
+          }, 1000 * delayClass.time);
+        }
+
         // if (el.isIntersecting) {
-        //   animatedNode.classList.add(`${cssClass}`);
+        //   console.log(animatedNode, cssClass);
+        //   animatedNode.classList.remove(`${cssClass}`);
         //   observer.unobserve(el.target);
         //   return;
         // }
@@ -40,5 +56,5 @@ export const useObserver = ({ ref, selectorClass, cssClass }: ObserverType) => {
 
     observer.observe(element);
     return () => observer.unobserve(element);
-  }, [ref, selectorClass, cssClass]);
+  }, [ref, selectorClass, cssClass, delayClass]);
 };

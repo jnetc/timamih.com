@@ -15,6 +15,7 @@ export const HeroRightSide = () => {
     ref: targetMessages,
     selectorClass: 'hero-right__messages',
     cssClass: 'transition',
+    delayClass: { class: 'delay', time: 1.6 },
   });
   const message = messages.map((message, idx) => {
     return <Message key={idx} message={message} firstMessage={idx === 0} />;
@@ -22,9 +23,12 @@ export const HeroRightSide = () => {
   return (
     <div className="hero-right">
       <Avatar />
-      <section className="hero-right__messages" ref={targetMessages}>
+      <section
+        className="hero-right__messages transition delay"
+        ref={targetMessages}
+      >
         {message}
-        <Link href="#contact">
+        <Link href="#">
           <a className="hero-right__hire_us hire-button click">
             HIRE US <HandShakeIcon />
           </a>

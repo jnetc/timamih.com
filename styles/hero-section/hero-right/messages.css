@@ -5,7 +5,7 @@
   column-gap: 0.5rem;
   padding: 0.6rem 5.5rem 0.6rem 1rem;
   position: relative;
-  opacity: 0;
+  opacity: 1;
   background-color: var(--card-color);
   border-radius: 0.5rem;
   box-shadow: 0.5rem 0.5rem 0 hsla(var(--accent-shade) / 0.1),
@@ -51,26 +51,17 @@
   fill: var(--secondary-color);
   transition: fill 0.3s ease-in-out;
 }
-.hero-right__messages.transition .hero-left__message:nth-child(1) {
-  animation: move-right 0.5s cubic-bezier(0.76, -0.01, 0.35, 1.12) forwards;
-  animation-delay: 1s;
-}
-.hero-right__messages.transition .hero-left__message:nth-child(2) {
-  animation: move-right 0.5s cubic-bezier(0.76, -0.01, 0.35, 1.12) forwards;
-  animation-delay: 1.2s;
-}
-.hero-right__messages.transition .hero-left__message:nth-child(3) {
-  animation: move-right 0.5s cubic-bezier(0.76, -0.01, 0.35, 1.12) forwards;
-  animation-delay: 1.4s;
-}
 
-@keyframes move-right {
-  from {
-    transform: translateX(-2rem);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
+.hero-right__messages.transition .hero-left__message {
+  transform: translate(-2rem, 0);
+  opacity: 0;
+}
+.hero-right__messages .hero-left__message:nth-child(1) {
+  transition-delay: 1s;
+}
+.hero-right__messages .hero-left__message:nth-child(2) {
+  transition-delay: 1.2s;
+}
+.hero-right__messages .hero-left__message:nth-child(3) {
+  transition-delay: 1.4s;
 }

@@ -131,10 +131,6 @@ main {
   margin-inline: auto;
   position: relative;
 }
-.click:active {
-  transform: scale(0.9);
-  transition: all var(--click) ease-in-out;
-}
 
 @media (max-width: 960px) {
 }

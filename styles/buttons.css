@@ -16,7 +16,7 @@
   text-transform: uppercase;
   border-radius: 1rem;
   border: 2px solid transparent;
-  transition: all 0.3s ease-in-out;
+  transition: all var(--optimal) ease-in-out;
   user-select: none;
 }
 .rect-button {
@@ -86,4 +86,9 @@
 .circle-button.pressed {
   background-color: var(--accent-color);
   color: var(--primary-color);
+}
+
+.click:active {
+  transform: scale(0.95);
+  transition: all var(--click) ease-in-out;
 }
