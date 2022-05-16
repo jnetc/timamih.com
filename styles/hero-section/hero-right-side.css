@@ -23,8 +23,11 @@
   opacity: 0;
   visibility: hidden;
   will-change: contents;
-  mix-blend-mode: luminosity;
+  /* mix-blend-mode: luminosity; */
   transition: all 0.3s ease-in-out;
+}
+.hero-right__avatar:hover .hero-right__image {
+  opacity: 0;
 }
 
 .hero-right__avatar.transition :where(.hero-right__hole, .hero-right__image) {
@@ -59,7 +62,7 @@
     opacity: 1;
   }
   100% {
-    y: 45px;
+    y: 15px;
     opacity: 1;
     visibility: visible;
   }
@@ -84,12 +87,11 @@
   height: 1.5rem;
 }
 
+/* useOBSERVER */
 .hero-right__messages.transition .hero-right__hire_us {
   transform: translate(-2rem, 0);
   opacity: 0;
 }
-
-/* useObserver delay class*/
 .hero-right__messages.delay .hero-right__hire_us {
   transition-delay: 1.6s;
   pointer-events: none;

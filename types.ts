@@ -2,7 +2,7 @@ import { ReactChild, Dispatch, SetStateAction } from 'react';
 
 export type LanguagesType = 'ru' | 'fi' | 'en';
 
-interface ArticleType<T> {
+export interface ArticleType<T> {
   title: T;
   description: T;
 }
