@@ -20,34 +20,52 @@
   border-radius: 1rem;
   border: 2px solid transparent;
   transition: all var(--optimal) ease-in-out;
+  box-shadow: 0.75rem 0.75rem 0 hsla(var(--accent-shade) / 0.1),
+    0.75rem 0.75rem 1.5rem hsla(var(--accent-shade) / 0.1);
   user-select: none;
 }
 .rect-button {
   fill: var(--secondary-color);
   color: var(--secondary-color);
   background-color: var(--primary-color);
-  border-color: var(--accent-color);
-  box-shadow: 0.75rem 0.75rem 0 hsla(var(--accent-shade) / 0.1),
-    0.75rem 0.75rem 1.5rem hsla(var(--accent-shade) / 0.1);
+  border-color: hsla(var(--accent-shade) / 0.5);
 }
 .hire-button {
   fill: var(--primary-color);
   color: var(--primary-color);
   border-color: hsla(var(--light) / 0.5);
-
   background-color: var(--accent-color);
-  box-shadow: 0.75rem 0.75rem 0 hsla(var(--accent-shade) / 0.1),
-    0.75rem 0.75rem 1.5rem hsla(var(--accent-shade) / 0.1);
 }
+.rect-button:hover,
 .hire-button:hover {
-  border-color: hsl(var(--light));
   box-shadow: 0.75rem 0.75rem 0 hsla(var(--accent-shade) / 0.1),
     0.75rem 0.75rem 1.5rem hsla(var(--accent-shade) / 0.1);
 }
+.rect-button:active,
 .hire-button:active {
-  border-color: hsl(var(--light));
   box-shadow: 0.5rem 0.5rem 0 hsla(var(--accent-shade) / 0.3),
     0.5rem 0.5rem 1rem hsla(var(--accent-shade) / 0.3);
+}
+.rect-button:hover,
+.rect-button:active {
+  border-color: var(--accent-color);
+}
+.hire-button:hover,
+.hire-button:active {
+  border-color: hsl(var(--light));
+}
+.rect-button.disable {
+  fill: hsla(var(--secondary-shade) / 0.5);
+  color: hsla(var(--secondary-shade) / 0.5);
+  background-color: var(--primary-color);
+  border-color: hsla(var(--secondary-shade) / 0.1);
+  box-shadow: none;
+  pointer-events: none;
+}
+.rect-button.move {
+  opacity: 0;
+  /* transform: translateX(-1rem); */
+  pointer-events: none;
 }
 
 .circle-l {
@@ -95,4 +113,12 @@
 .click:active {
   transform: scale(0.95);
   transition: all var(--click) ease-in-out;
+}
+
+@media screen and (max-width: 560px) {
+  .rect-button {
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 0.8rem;
+  }
 }

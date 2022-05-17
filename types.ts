@@ -67,3 +67,16 @@ export interface NavMobLinksProps {
   open: boolean;
   handler: Dispatch<SetStateAction<boolean>>;
 }
+
+/**
+ * Button Types Props
+ */
+export interface ButtonProps {
+  handler: () => void;
+}
+export interface PrevButtonProps extends ButtonProps {
+  currentStep: number;
+}
+export interface NextButtonProps extends PrevButtonProps {
+  amountSteps: number;
+}

@@ -1,0 +1,66 @@
+.steps__actions {
+  display: flex;
+  column-gap: var(--gap-one);
+  justify-content: space-between;
+  align-items: center;
+  padding-inline-end: 1rem;
+}
+
+.step-dots,
+.step-numbers {
+  display: flex;
+  align-items: center;
+  column-gap: var(--gap-one);
+}
+.step-dots {
+  margin-inline-start: auto;
+}
+.step-numbers {
+  width: 2.5rem;
+  justify-content: flex-end;
+}
+
+.step-dot {
+  width: 1rem;
+  aspect-ratio: 1 / 1;
+  position: relative;
+  background-color: hsla(var(--accent-shade) / 0.3);
+  border-radius: 50%;
+}
+.step-dot::after {
+  content: '';
+  width: 1.5rem;
+  aspect-ratio: 1 / 1;
+  position: absolute;
+  top: -0.25rem;
+  left: -0.25rem;
+  background-color: var(--accent-color);
+  opacity: 0;
+  border-radius: 50%;
+  transition: all var(--optimal) cubic-bezier(0, 1.04, 0.57, 1.18);
+  transform: scale(0);
+}
+.step-dot.active::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+@media screen and (max-width: 1280px) {
+  .step-dots {
+    display: none;
+  }
+}
+@media screen and (max-width: 960px) {
+  .step-dots {
+    display: flex;
+  }
+}
+@media screen and (max-width: 560px) {
+  .step-dots {
+    display: none;
+  }
+
+  .step-numbers {
+    display: flex;
+  }
+}

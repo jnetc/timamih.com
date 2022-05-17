@@ -1,0 +1,11 @@
+.content {
+  grid-column: 1;
+  display: flex;
+  flex-flow: column;
+  row-gap: 2.5rem;
+  overflow: hidden;
+  padding-block-end: 1rem;
+}
+
+@import url('./articles/articles.css');
+@import url('./steps/steps.css');
