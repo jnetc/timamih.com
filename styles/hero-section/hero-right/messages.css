@@ -5,13 +5,15 @@
   column-gap: 0.5rem;
   padding: 0.6rem 5.5rem 0.6rem 1rem;
   position: relative;
-  opacity: 1;
+  opacity: 0.95;
+  backdrop-filter: blur(25px);
   background-color: var(--card-color);
   border-radius: 0.5rem;
   box-shadow: 0.5rem 0.5rem 0 hsla(var(--accent-shade) / 0.1),
     0.5rem 0.5rem 1rem hsla(var(--accent-shade) / 0.1);
   transition: all 0.3s ease-in-out;
   user-select: none;
+  z-index: 5;
 }
 .hero-left__message p,
 .hero-left__message time {

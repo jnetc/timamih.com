@@ -1,14 +1,19 @@
 .hero-right {
   width: calc(50% - var(--gap-three) / 2);
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr;
   margin-block: auto;
   position: relative;
 }
 
 .hero-right__avatar {
-  width: 100%;
-  height: 756px; /* 656px */
+  grid-column: 1;
+  grid-row: 1;
+  width: 80%;
+  margin-inline: auto;
+  /* height: 756px; 656px */
   position: relative;
+  z-index: 1;
 }
 .hero-right__gradient:first-child {
   stop-color: var(--start-ellipse);
@@ -23,7 +28,6 @@
   opacity: 0;
   visibility: hidden;
   will-change: contents;
-  /* mix-blend-mode: luminosity; */
   transition: all 0.3s ease-in-out;
 }
 .hero-right__avatar:hover .hero-right__image {
@@ -69,12 +73,12 @@
 }
 
 .hero-right__messages {
+  grid-column: 1;
+  grid-row: 1;
+  align-self: center;
   display: flex;
   flex-flow: column;
   row-gap: 1.5rem;
-  position: absolute;
-  bottom: 13%;
-  left: 0;
   z-index: 10;
 }
 
@@ -103,11 +107,11 @@
     /* min-height: calc(100vh - var(--gap-one) - var(--gap-three)); */
   }
   .hero-right__avatar {
+    width: 100%;
     height: 556px;
-    margin-block: auto;
   }
   .hero-right__messages {
-    bottom: 0;
+    align-self: flex-end;
     row-gap: 1rem;
   }
   @keyframes avatar {
