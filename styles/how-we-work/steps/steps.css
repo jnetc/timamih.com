@@ -1,4 +1,4 @@
-.steps__actions {
+.section-content__actions {
   display: flex;
   column-gap: var(--gap-one);
   justify-content: space-between;

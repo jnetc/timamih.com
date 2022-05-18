@@ -1,9 +1,7 @@
-import styles from './whatweoffer.module.css';
-
 const WhatWeOffer = () => {
   return (
-    <section id="services" className={styles.module}>
-      <h1>What we offer</h1>
+    <section id="services" className="what-we-offer">
+      <h1 className="section-title">What we offer</h1>
     </section>
   );
 };

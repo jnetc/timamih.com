@@ -38,17 +38,14 @@ export const query = gql`
     _site {
       ...SiteFragment
     }
-    home(locale: $locale) {
-      ...HomeRecordFragment
+    navigation(locale: $locale) {
+      ...NavigationRecordFragment
     }
-    project(locale: $locale) {
-      ...ProjectRecordFragment
+    heroSection(locale: $locale) {
+      ...HeroSectionRecordFragment
     }
-    service(locale: $locale) {
-      ...ServiceRecordFragment
-    }
-    about(locale: $locale) {
-      ...AboutRecordFragment
+    howwework(locale: $locale) {
+      ...HowweworkRecordFragment
     }
   }
   fragment SiteFragment on Site {
@@ -59,45 +56,33 @@ export const query = gql`
       }
     }
   }
-  fragment HomeRecordFragment on HomeRecord {
-    title
-    description
-    phone
-    email
-    address
-    person
-  }
-  fragment ProjectRecordFragment on ProjectRecord {
-    projects {
+  fragment NavigationRecordFragment on NavigationRecord {
+    headerlinks {
       id
-      area
-      address
-      cloudLink
-      completed
-      contractor
-      jobType
-      projectDescription
-      projectName
-      projectNumber
-      releaseDate
-      projectImage {
-        url
-        blurUpThumb
-      }
+      name
+      navanchor
     }
   }
-  fragment ServiceRecordFragment on ServiceRecord {
+  fragment HeroSectionRecordFragment on HeroSectionRecord {
+    label
     title
     description
-    serviceCard {
+    playButton
+    mainVideoUrl
+    hireButton
+    chat {
       id
-      cardTitle
-      cardDescription
-      icon
+      message
     }
   }
-  fragment AboutRecordFragment on AboutRecord {
+  fragment HowweworkRecordFragment on HowweworkRecord {
     title
-    description
+    steps {
+      id
+      title
+      description
+    }
+    nextButton
+    prevButton
   }
 `;

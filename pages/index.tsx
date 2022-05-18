@@ -4,11 +4,13 @@ import dynamic from 'next/dynamic';
 import Head from 'next/head';
 
 // import { request, query } from 'lib/datocms';
+import { data } from 'dummy_content';
 // Hooks
 import { Store } from '@Hooks/useStore';
 
 import Navigation from '@Components/navigation';
 import HeroSection from '@Components/hero-section';
+
 const HowWeWork = dynamic(() => import('@Components/how-we-work'));
 const WhatWeOffer = dynamic(() => import('@Components/what-we-offer'));
 const OurLittleStory = dynamic(() => import('@Components/our-little-story'));
@@ -20,49 +22,12 @@ const Home: NextPage = ({
   language,
   languages,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
-  // const target = useRef<HTMLElement | null>(null);
+  console.log(data);
 
-  // useEffect(() => {
-  //   const element = target.current;
-
-  //   const options = {
-  //     root: null,
-  //     rootMarign: '0px',
-  //     threshold: 1.0,
-  //   };
-
-  //   const callback = (
-  //     entries: IntersectionObserverEntry[]
-  //     // observer: IntersectionObserver
-  //   ) => {
-  //     entries.forEach(el => {
-  //       const animatedNode = el.target.querySelectorAll('.animated');
-  //       animatedNode[0].classList.add('transition');
-  //       console.log(animatedNode);
-  //     });
-  //   };
-  //   const observer = new IntersectionObserver(callback, options);
-
-  //   if (!element) return;
-
-  //   observer.observe(element);
-  //   return () => observer.unobserve(element);
-  // }, []);
-
-  // const options = useMemo(() => {
-  //   return {
-  //     root: null,
-  //     rootMarign: '0px',
-  //     threshold: 1.0,
-  //   };
-  // }, []);
-
-  // observer.observe();
-
-  // console.log(data, language, languages);
   if (!data) {
     return <main>Sorry! This page not found.</main>;
   }
+
   return (
     <Store.Provider value={{ language, languages, data }}>
       <Head>
@@ -95,10 +60,4 @@ export const getStaticProps: GetStaticProps = async context => {
       languages: context.locales,
     },
   };
-};
-
-const data = {
-  en: 'welcome',
-  ru: 'добро пожаловать',
-  fi: 'terve tuloa',
 };

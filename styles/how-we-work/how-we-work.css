@@ -5,19 +5,12 @@
   row-gap: 8rem;
 }
 
-.illustration-right {
-  grid-column: 2;
-}
-
 @media screen and (max-width: 960px) {
   .how-we-work {
     grid-template-columns: 1fr;
     row-gap: var(--gap-three);
   }
-  .illustration-right {
-    grid-column: 1;
-    order: 1;
-  }
 }
 
-@import url('./content-side/content-side.css');
+@import url('./articles/articles.css');
+@import url('./steps/steps.css');

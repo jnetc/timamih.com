@@ -16,47 +16,43 @@ interface PosterType<T> {
   url: T;
   blurUpThumb: T;
 }
-interface HomeType<T> extends ArticleType<T> {
-  phone: T;
-  email: T;
-  address: T;
-  person: T;
-}
-export interface ProjectType<T> extends ArticleType<T> {
-  area: T;
-  address: T;
-  cloudLink: T;
-  completed: boolean;
-  contractor: T;
+
+interface NavigationLinkType<T> {
   id: T;
-  jobType: T;
-  projectDescription: T;
-  projectName: T;
-  projectNumber: T;
-  releaseDate: T;
-  projectImage: PosterType<T>;
+  name: T;
+  navanchor: T;
 }
-interface ProjectsType<T> {
-  projects: Array<ProjectType<T>>;
+interface HeaderLinksType<T> {
+  headerlinks: Array<NavigationLinkType<T>>;
 }
 
-export type ServiceIconsType = 'building' | 'house' | 'office';
-
-export interface ServicesType<T> {
+export interface ChatMessageType<T> {
   id: T;
-  cardTitle: T;
-  cardDescription: T;
-  icon: ServiceIconsType;
+  message: T;
 }
-export interface ServiceType<T> extends ArticleType<T> {
-  serviceCard: Array<ServicesType<T>>;
+interface HeroSectionType<T> extends ArticleType<T> {
+  label: T;
+  playButton: T;
+  hireButton: T;
+  mainVideoUrl: T;
+  chat: Array<ChatMessageType<T>>;
 }
-export interface AboutType<T> extends ArticleType<T> {}
+interface StepType<T> {
+  id: T;
+  title: T;
+  description: T;
+}
+export interface HowWeWorkType<T> extends ArticleType<T> {
+  steps: Array<StepType<string>>;
+  nextButton: T;
+  prevButton: T;
+}
 
 export interface DataType {
   _site: SEO<string>;
-  navigation: Array<string>;
-  // home: HomeType<string>;
+  navigation: HeaderLinksType<string>;
+  heroSection: HeroSectionType<string>;
+  howwework: HowWeWorkType<string>;
   // project: ProjectsType<string>;
   // service: ServiceType<string>;
   // about: AboutType<string>;

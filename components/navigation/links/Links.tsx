@@ -3,12 +3,12 @@ import Link from 'next/link';
 import { useStore } from '@Hooks/useStore';
 
 export const Links = () => {
-  const { language } = useStore();
+  const { data } = useStore();
 
-  const links = nav_urls.map(link => {
+  const links = data?.navigation.headerlinks.map(link => {
     return (
-      <Link href={link.anchor} key={link.anchor}>
-        <a className="desktop-link click">{link[language]}</a>
+      <Link href={link.navanchor} key={link.id}>
+        <a className="desktop-link click">{link.name}</a>
       </Link>
     );
   });
@@ -16,29 +16,29 @@ export const Links = () => {
   return <nav className="desktop-links">{links}</nav>;
 };
 
-export const nav_urls = [
-  {
-    fi: 'Mitä ja Miten',
-    ru: 'Что и Как',
-    en: 'What and How',
-    anchor: '#how',
-  },
-  {
-    fi: 'Palvelut',
-    ru: 'Услуги',
-    en: 'Services',
-    anchor: '#services',
-  },
-  {
-    fi: 'Keitä olemme',
-    ru: 'Кто мы',
-    en: 'Who we are',
-    anchor: '#about',
-  },
-  {
-    fi: 'Yhteystiedot',
-    ru: 'Связаться',
-    en: 'Contact',
-    anchor: '#contact',
-  },
-];
+// export const nav_urls = [
+//   {
+//     fi: 'Mitä ja Miten',
+//     ru: 'Что и Как',
+//     en: 'What and How',
+//     anchor: '#how',
+//   },
+//   {
+//     fi: 'Palvelut',
+//     ru: 'Услуги',
+//     en: 'Services',
+//     anchor: '#services',
+//   },
+//   {
+//     fi: 'Keitä olemme',
+//     ru: 'Кто мы',
+//     en: 'Who we are',
+//     anchor: '#about',
+//   },
+//   {
+//     fi: 'Yhteystiedot',
+//     ru: 'Связаться',
+//     en: 'Contact',
+//     anchor: '#contact',
+//   },
+// ];

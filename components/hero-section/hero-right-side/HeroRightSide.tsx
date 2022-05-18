@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { useRef } from 'react';
 // Hook
 import { useObserver } from '@Hooks/useObserver';
+import { useStore } from '@Hooks/useStore';
 // Component
 import { Avatar } from './Avatar';
 import { Star } from '@Components/star';
@@ -9,6 +10,7 @@ import { Message } from './message/Message';
 import { HandShakeIcon } from './HandShakeIcon';
 
 export const HeroRightSide = () => {
+  const { data } = useStore();
   const targetMessages = useRef(null);
 
   useObserver({
@@ -17,8 +19,10 @@ export const HeroRightSide = () => {
     cssClass: 'transition',
     delayClass: { class: 'delay', time: 1.6 },
   });
-  const message = messages.map((message, idx) => {
-    return <Message key={idx} message={message} firstMessage={idx === 0} />;
+  const message = data?.heroSection.chat.map((msg, idx) => {
+    return (
+      <Message key={msg.id} message={msg.message} firstMessage={idx === 0} />
+    );
   });
   return (
     <div className="hero-right">
@@ -28,9 +32,9 @@ export const HeroRightSide = () => {
         ref={targetMessages}
       >
         {message}
-        <Link href="#">
+        <Link href="#contact">
           <a className="hero-right__hire_us hire-button click">
-            HIRE US <HandShakeIcon />
+            {data?.heroSection.hireButton} <HandShakeIcon />
           </a>
         </Link>
       </section>
@@ -54,20 +58,6 @@ export const HeroRightSide = () => {
         duration={11}
         customClass={'tima-right-acc-star'}
       />
-      {/* <Star
-        color="accent"
-        size={32}
-        duration={5}
-        delay={2}
-        customClass={'tima-right-sec-star'}
-      /> */}
-      {/* <Star
-        color="accent"
-        size={36}
-        duration={9}
-        delay={5}
-        customClass={'tima-bottom-acc-star'}
-      /> */}
       <Star
         color="secondary"
         size={24}
@@ -79,8 +69,8 @@ export const HeroRightSide = () => {
   );
 };
 
-const messages = [
-  'Hello, I’m Timofei',
-  'Can i help you?',
-  'All you need is to get in touch, maybe in monday at 7',
-];
+// const messages = [
+//   'Hello, I’m Timofei',
+//   'Can i help you?',
+//   'All you need is to get in touch, maybe in monday at 7',
+// ];

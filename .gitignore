@@ -60,3 +60,6 @@ yarn-error.log*
 
 # Local Netlify folder
 .netlify
+
+# Dummy content
+dummy_content.ts
