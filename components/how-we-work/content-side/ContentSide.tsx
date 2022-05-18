@@ -16,14 +16,14 @@ export const ContentSide = () => {
   if (!data) return null;
   const { steps } = data.howwework;
 
-  const stepsAmount = steps.length - 1 || 0;
+  const stepsSum = steps.length - 1 || 0;
+  const eachStepSize = 100;
 
   const stepHandler = (direction: 'next' | 'prev') => {
-    const eachStepSize = 100 / steps.length;
     let currentStep = 0;
 
     if (direction == 'next') {
-      if (moveStep.num === stepsAmount) return;
+      if (moveStep.num === stepsSum) return;
       currentStep = ++moveStep.num;
     }
 
@@ -38,16 +38,16 @@ export const ContentSide = () => {
 
   return (
     <div className="section-content content-left">
+      <StepNumbers currentNumber={moveStep.num} amountNumber={stepsSum} />
       <Articles move={moveStep} />
       <div className="section-content__actions">
+        <StepDots activeStep={moveStep.num} />
         <PrevButton
           currentStep={moveStep.num}
           handler={() => stepHandler('prev')}
         />
-        <StepDots activeStep={moveStep.num} />
-        <StepNumbers currentNumber={moveStep.num} amountNumber={stepsAmount} />
         <NextButton
-          amountSteps={stepsAmount}
+          amountSteps={stepsSum}
           currentStep={moveStep.num}
           handler={() => stepHandler('next')}
         />

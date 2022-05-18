@@ -58,7 +58,7 @@
   flex-flow: column;
   row-gap: 2.5rem;
   align-self: center;
-  overflow: hidden;
+  position: relative;
   padding-block-end: 1rem;
 }
 .content-left {

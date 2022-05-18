@@ -8,11 +8,13 @@ export const Articles = ({ move }: { move: { num: number; size: number } }) => {
     return <Article key={art.id} data={art} active={idx === move.num} />;
   });
   return (
-    <div
-      className="hww-articles-wrap"
-      style={{ transform: `translate3d(-${move.size}%, 0, 0)` }}
-    >
-      {articles}
+    <div className="limited-area">
+      <div
+        className="hww-articles"
+        style={{ transform: `translate3d(-${move.size}%, 0, 0)` }}
+      >
+        {articles}
+      </div>
     </div>
   );
 };

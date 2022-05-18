@@ -10,7 +10,7 @@ export const NextButton = ({
   return (
     <button
       className={`rect-button click ${
-        currentStep === amountSteps && 'disable'
+        currentStep === amountSteps ? 'disable' : ''
       }`}
       onClick={() => handler()}
       role="button"

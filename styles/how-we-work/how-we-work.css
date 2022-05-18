@@ -1,13 +1,13 @@
 .how-we-work {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, calc(50% - var(--gap-three) / 2));
   column-gap: var(--gap-three);
   row-gap: 8rem;
 }
 
 @media screen and (max-width: 960px) {
   .how-we-work {
-    grid-template-columns: 1fr;
+    grid-template-columns: 100%;
     row-gap: var(--gap-three);
   }
 }
