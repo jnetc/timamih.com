@@ -1,9 +1,9 @@
-#projects,
+/* #projects,
 #services {
   display: flex;
   flex-flow: column;
   align-items: center;
-}
+} */
 
 .section-header {
   display: flex;

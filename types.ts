@@ -6,6 +6,11 @@ export interface ArticleType<T> {
   title: T;
   description: T;
 }
+interface ArticleWithIdType<T> {
+  id: T;
+  title: T;
+  description: T;
+}
 
 interface SEO<T> {
   globalSeo: {
@@ -37,15 +42,18 @@ interface HeroSectionType<T> extends ArticleType<T> {
   mainVideoUrl: T;
   chat: Array<ChatMessageType<T>>;
 }
-interface StepType<T> {
-  id: T;
-  title: T;
-  description: T;
-}
+
 export interface HowWeWorkType<T> extends ArticleType<T> {
-  steps: Array<StepType<string>>;
+  steps: Array<ArticleWithIdType<string>>;
   nextButton: T;
   prevButton: T;
+}
+export interface Service<T> extends ArticleWithIdType<T> {
+  price: T;
+  buttonName: T;
+}
+export interface WhatWeOfferType<T> extends ArticleType<T> {
+  services: Service<string>;
 }
 
 export interface DataType {
@@ -53,6 +61,7 @@ export interface DataType {
   navigation: HeaderLinksType<string>;
   heroSection: HeroSectionType<string>;
   howwework: HowWeWorkType<string>;
+  whatweoffer: WhatWeOfferType<string>;
   // project: ProjectsType<string>;
   // service: ServiceType<string>;
   // about: AboutType<string>;

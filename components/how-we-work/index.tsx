@@ -6,7 +6,7 @@ import { Illustration } from './Illustration';
 const HowWeWork = () => {
   const { data } = useStore();
   return (
-    <section id="howwework" className="how-we-work">
+    <section id="how-we-work" className="how-we-work">
       <h1 className="section-title">{data?.howwework.title}</h1>
       <ContentSide />
       <Illustration />

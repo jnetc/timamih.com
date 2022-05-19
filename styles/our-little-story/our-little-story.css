@@ -1,13 +1,11 @@
-#what-we-offer {
+#our-little-story {
   display: grid;
   grid-template-columns: repeat(2, calc(50% - var(--gap-three) / 2));
   column-gap: var(--gap-three);
-  grid-auto-rows: min-content;
   row-gap: 8rem;
 }
-
 @media screen and (max-width: 960px) {
-  #what-we-offer {
+  #our-little-story {
     grid-template-columns: 100%;
     row-gap: var(--gap-three);
   }

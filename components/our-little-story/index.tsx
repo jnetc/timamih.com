@@ -1,9 +1,7 @@
-import styles from './ourlittlestory.module.css';
-
 const OurLittleStory = () => {
   return (
-    <section id="story" className={styles.module}>
-      <h1>Our little story</h1>
+    <section id="our-little-story" className="our-little-story">
+      <h1 className="section-title">Our little story</h1>
     </section>
   );
 };
