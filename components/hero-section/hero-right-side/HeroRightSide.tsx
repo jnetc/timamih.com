@@ -33,7 +33,11 @@ export const HeroRightSide = () => {
       >
         {message}
         <Link href="#contact">
-          <a className="hero-right__hire_us hire-button click">
+          <a
+            className="hero-right__hire_us hire-button click"
+            title={data?.heroSection.hireButton}
+            aria-labelledby={data?.heroSection.hireButton}
+          >
             {data?.heroSection.hireButton} <HandShakeIcon />
           </a>
         </Link>

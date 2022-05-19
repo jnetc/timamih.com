@@ -84,4 +84,5 @@ export interface PrevButtonProps extends ButtonProps {
 }
 export interface NextButtonProps extends PrevButtonProps {
   amountSteps: number;
+  lastStep: boolean;
 }

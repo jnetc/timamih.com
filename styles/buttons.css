@@ -62,6 +62,17 @@
   box-shadow: none;
   pointer-events: none;
 }
+.rect-button.complete {
+  fill: var(--primary-color);
+  stroke: var(--primary-color);
+  color: var(--secondary-color);
+  background-color: hsl(var(--green));
+  background-color: var(--primary-color);
+  border-color: hsla(var(--green) / 1);
+  box-shadow: none;
+  pointer-events: none;
+  transition: all var(--optimal) ease-in-out;
+}
 .rect-button.move {
   opacity: 0;
   /* transform: translateX(-1rem); */

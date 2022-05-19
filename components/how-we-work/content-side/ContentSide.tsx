@@ -49,6 +49,7 @@ export const ContentSide = () => {
         <NextButton
           amountSteps={stepsSum}
           currentStep={moveStep.num}
+          lastStep={moveStep.num === stepsSum}
           handler={() => stepHandler('next')}
         />
       </div>

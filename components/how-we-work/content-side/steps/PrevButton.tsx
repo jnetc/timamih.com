@@ -1,4 +1,5 @@
 import { useStore } from '@Hooks/useStore';
+import { NextIcon } from './NextIcon';
 // Type
 import { PrevButtonProps } from '@Types';
 
@@ -12,7 +13,8 @@ export const PrevButton = ({ currentStep, handler }: PrevButtonProps) => {
       title={data?.howwework.prevButton}
       aria-labelledby={data?.howwework.prevButton}
     >
-      {data?.howwework.prevButton}
+      {/* {data?.howwework.prevButton} */}
+      <NextIcon direction="right" />
     </button>
   );
 };

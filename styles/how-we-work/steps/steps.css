@@ -17,7 +17,7 @@
 .step-dots {
   display: flex;
   justify-content: center;
-  flex: 1 0 100%;
+  margin-inline-end: auto;
 }
 .step-numbers {
   position: absolute;
@@ -55,17 +55,42 @@
   transform: scale(1);
 }
 
-@media screen and (max-width: 1280px) {
-  .step-dots {
-    display: none;
-  }
+.arrow-svg {
+  width: 1.5rem;
+  aspect-ratio: 1 / 1;
 }
+.arrow-svg.right {
+  transform: rotate(180deg);
+}
+.rect-button .arrow-icon {
+  fill: none;
+  stroke: var(--secondary-color);
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+  stroke-dashoffset: 261;
+  stroke-dasharray: 153;
+  transition: all 0.5s ease-in-out;
+}
+.rect-button .arrow-icon.done {
+  stroke-dashoffset: 117;
+  stroke-dasharray: 153;
+  stroke: hsla(var(--green) / 1);
+}
+
 @media screen and (max-width: 960px) {
   .step-dots {
     display: flex;
   }
 }
 @media screen and (max-width: 560px) {
+  .section-content__actions {
+    justify-content: center;
+  }
+  .step-dots {
+    flex: 1 0 100%;
+  }
   .step-dot {
     --dot-diametr: 0.5rem;
   }
