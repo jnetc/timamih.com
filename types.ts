@@ -48,12 +48,22 @@ export interface HowWeWorkType<T> extends ArticleType<T> {
   nextButton: T;
   prevButton: T;
 }
-export interface Service<T> extends ArticleWithIdType<T> {
+
+export type ServiceIllustrationType =
+  | 'ads'
+  | 'photo'
+  | 'video'
+  | 'graphic'
+  | 'drone';
+
+export interface ServiceType<T> extends ArticleWithIdType<T> {
   price: T;
   buttonName: T;
+  illustration: ServiceIllustrationType;
+  order: number;
 }
 export interface WhatWeOfferType<T> extends ArticleType<T> {
-  services: Service<string>;
+  services: Array<ServiceType<string>>;
 }
 
 export interface DataType {

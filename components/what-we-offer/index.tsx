@@ -1,13 +1,13 @@
-// import { useStore } from '@Hooks/useStore';
+import { useStore } from '@Hooks/useStore';
 // Component
-// import { ContentSide } from './content-side/ContentSide';
-import { Illustration } from './Illustration';
+import { Services } from './Services';
 
 const WhatWeOffer = () => {
+  const { data } = useStore();
   return (
     <section id="what-we-offer" className="what-we-offer">
-      <h1 className="section-title">What we offer</h1>
-      <Illustration />
+      <h1 className="section-title">{data?.whatweoffer.title}</h1>
+      <Services />
     </section>
   );
 };

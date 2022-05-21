@@ -47,6 +47,9 @@ export const query = gql`
     howwework(locale: $locale) {
       ...HowweworkRecordFragment
     }
+    whatweoffer(locale: $locale) {
+      ...WhatweofferRecordFragment
+    }
   }
   fragment SiteFragment on Site {
     globalSeo(locale: $locale) {
@@ -84,5 +87,17 @@ export const query = gql`
     }
     nextButton
     prevButton
+  }
+  fragment WhatweofferRecordFragment on WhatweofferRecord {
+    title
+    services {
+      id
+      order
+      title
+      description
+      price
+      buttonName
+      illustration
+    }
   }
 `;

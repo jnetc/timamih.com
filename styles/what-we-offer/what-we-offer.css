@@ -12,3 +12,5 @@
     row-gap: var(--gap-three);
   }
 }
+
+@import url('./service/service.css');

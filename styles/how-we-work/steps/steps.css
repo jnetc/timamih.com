@@ -71,12 +71,12 @@
   stroke-miterlimit: 10;
   stroke-dashoffset: 261;
   stroke-dasharray: 153;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.8s ease-in-out;
 }
 .rect-button .arrow-icon.done {
   stroke-dashoffset: 117;
   stroke-dasharray: 153;
-  stroke: hsla(var(--green) / 1);
+  stroke: var(--accent-color);
 }
 
 @media screen and (max-width: 960px) {

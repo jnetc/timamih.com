@@ -66,9 +66,8 @@
   fill: var(--primary-color);
   stroke: var(--primary-color);
   color: var(--secondary-color);
-  background-color: hsl(var(--green));
   background-color: var(--primary-color);
-  border-color: hsla(var(--green) / 1);
+  border-color: hsla(var(--secondary-shade) / 0.1);
   box-shadow: none;
   pointer-events: none;
   transition: all var(--optimal) ease-in-out;
