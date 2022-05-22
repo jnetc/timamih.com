@@ -6,6 +6,13 @@
   row-gap: 8rem;
 }
 
+.services {
+  grid-column: 1 /-1;
+  display: flex;
+  flex-flow: column;
+  row-gap: 8rem;
+}
+
 @media screen and (max-width: 960px) {
   #what-we-offer {
     grid-template-columns: 100%;

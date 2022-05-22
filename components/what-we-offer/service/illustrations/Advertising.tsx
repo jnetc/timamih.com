@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export const Advertising = () => {
   return (
-    <div className="illustration illustration-left">
+    <div className="illustration">
       <Image
         src="/images/advertising.svg"
         alt="illustration, advertising"

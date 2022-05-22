@@ -17,10 +17,10 @@ interface SEO<T> {
     fallbackSeo: ArticleType<T>;
   };
 }
-interface PosterType<T> {
-  url: T;
-  blurUpThumb: T;
-}
+// interface PosterType<T> {
+//   url: T;
+//   blurUpThumb: T;
+// }
 
 interface NavigationLinkType<T> {
   id: T;
