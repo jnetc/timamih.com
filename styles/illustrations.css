@@ -2,9 +2,9 @@
 .illustration {
   --ill-primary-80: hsl(327, 80%, 80%);
   --ill-primary-75: hsl(327, 80%, 75%);
-  --ill-primary-70: hsl(327, 79%, 70%);
-  --ill-primary-65: hsl(337, 79%, 65%);
-  --ill-primary-60: hsl(337, 79%, 60%);
+  --ill-primary-70: hsl(327, 80%, 70%);
+  --ill-primary-65: hsl(337, 80%, 65%);
+  --ill-primary-60: hsl(337, 80%, 60%);
   --ill-primary-50: hsl(337, 50%, 50%);
   --ill-primary-40: hsl(337, 50%, 40%);
   --ill-primary-30: hsl(337, 50%, 30%);
@@ -19,8 +19,6 @@
   --ill-soil: hsl(31, 94%, 87%);
   --ill-white-element: hsl(0, 0%, 100%);
   --ill-dark-element: hsl(199, 33%, 17%);
-  /* --ill-main-elements-2: #1c3035;
-  --ill-main-elements-3: #1d313a; */
 
   --ill-detail-1: hsl(199, 10%, 95%);
   --ill-detail-2: hsl(199, 10%, 80%);
@@ -113,9 +111,6 @@
 .body-light-skin {
   fill: var(--ill-body-light-skin);
 }
-/* .body-light-skin-shadow {
-  fill: var(--ill-body-light-skin-shadow);
-} */
 .hair-color {
   fill: var(--ill-hair-color);
 }
@@ -193,91 +188,9 @@
   fill: var(--ill-white-element);
   stroke-miterlimit: 10;
 }
-
 .notepad-paper,
 .pen-ereaser {
   stroke: var(--ill-detail-3);
   fill: var(--ill-white-element);
   stroke-miterlimit: 10;
 }
-
-/* .q {
-  fill: hsl(328, 84%, 68%);
-} */
-/* .r {
-  fill: hsl(337, 79%, 61%);
-} */
-/* .s {
-  opacity: 0.15;
-}
-.s,
-.t {
-  fill: #050404;
-} */
-/* .u {
-  fill: #5a0c0c;
-} */
-/* .v {
-  fill: hsl(263, 96%, 72%);
-} */
-/* .w {
-  fill: hsl(0, 65%, 50%);
-} */
-
-/* .x {
-  fill: #f99e83;
-} */
-/* .y {
-  fill: #c5a5f9;
-} */
-/* .o {
-  stroke: var(--ill-white-element);
-} */
-/* .a {
-  stroke: var(--ill-white-element);
-  stroke-linejoin: round;
-} */
-
-/* .a {
-  fill: none;
-  stroke-linecap: round;
-} */
-/* .aa {
-  fill: #1d3039;
-} */
-/* .ab {
-  fill: hsl(258, 100%, 92%);
-} */
-/* .ac {
-  fill: #f59b80;
-} */
-
-/* .ad {
-  fill: #e2674d;
-} */
-/* .p {
-  stroke: #686868;
-} */
-/* .ae {
-  fill: #aaa;
-} */
-/* .af {
-  fill: hsl(261, 90%, 77%);
-} */
-/* .ag {
-  fill: hsl(336, 64%, 52%);
-} */
-
-/* .ah {
-  fill: #757575;
-} */
-/* .ai {
-  fill: hsl(333, 65%, 33%);
-} */
-/* .aj {
-  fill: hsl(261, 43%, 45%);
-} */
-
-/* .ak {
-  fill: hsl(248, 63%, 59%);
-} */
