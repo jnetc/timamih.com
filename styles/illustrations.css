@@ -1,0 +1,283 @@
+/* ILLUSTRATION PROPERTIES */
+.illustration {
+  --ill-primary-80: hsl(327, 80%, 80%);
+  --ill-primary-75: hsl(327, 80%, 75%);
+  --ill-primary-70: hsl(327, 79%, 70%);
+  --ill-primary-65: hsl(337, 79%, 65%);
+  --ill-primary-60: hsl(337, 79%, 60%);
+  --ill-primary-50: hsl(337, 50%, 50%);
+  --ill-primary-40: hsl(337, 50%, 40%);
+  --ill-primary-30: hsl(337, 50%, 30%);
+
+  --ill-secondary-80: hsl(263, 85%, 80%);
+  --ill-secondary-75: hsl(263, 85%, 75%);
+  --ill-secondary-70: hsl(263, 85%, 70%);
+  --ill-secondary-65: hsl(263, 85%, 65%);
+  --ill-secondary-60: hsl(263, 85%, 60%);
+
+  /* --ill-soil: hsl(263, 85%, 90%); */
+  --ill-soil: hsl(31, 94%, 87%);
+  --ill-white-element: hsl(0, 0%, 100%);
+  --ill-dark-element: hsl(199, 33%, 17%);
+  /* --ill-main-elements-2: #1c3035;
+  --ill-main-elements-3: #1d313a; */
+
+  --ill-detail-1: hsl(199, 10%, 95%);
+  --ill-detail-2: hsl(199, 10%, 80%);
+  --ill-detail-3: hsl(199, 10%, 50%);
+  --ill-detail-4: hsl(199, 10%, 30%);
+  --ill-detail-5: hsl(199, 10%, 15%);
+  --ill-detail-6: hsl(199, 10%, 10%);
+
+  --ill-body-black-skin: #8b6b6b;
+  --ill-body-light-skin: #f7bba4;
+  --ill-body-light-skin: #f99e83;
+  --ill-body-light-skin-shadow: #e2674d;
+  --ill-hair-color: #404551;
+}
+
+.opacity-40 {
+  opacity: 0.4;
+}
+
+.primary-30 {
+  fill: var(--ill-primary-30);
+}
+.primary-40 {
+  fill: var(--ill-primary-40);
+}
+.primary-50 {
+  fill: var(--ill-primary-50);
+}
+.primary-60 {
+  fill: var(--ill-primary-70);
+}
+.primary-65 {
+  fill: var(--ill-primary-65);
+}
+.primary-70 {
+  fill: var(--ill-primary-70);
+}
+.primary-75 {
+  fill: var(--ill-primary-70);
+}
+.primary-80 {
+  fill: var(--ill-primary-70);
+}
+
+.secondary-60 {
+  fill: var(--ill-secondary-60);
+}
+.secondary-65 {
+  fill: var(--ill-secondary-65);
+}
+.secondary-70 {
+  fill: var(--ill-secondary-70);
+}
+.secondary-75 {
+  fill: var(--ill-secondary-75);
+}
+.secondary-80 {
+  fill: var(--ill-secondary-80);
+}
+
+.soil {
+  fill: var(--ill-soil);
+}
+.white-element {
+  fill: var(--ill-white-element);
+}
+.dark-element {
+  fill: var(--ill-dark-element);
+}
+
+.detail-1 {
+  fill: var(--ill-detail-1);
+}
+.detail-2 {
+  fill: var(--ill-detail-2);
+}
+.detail-3 {
+  fill: var(--ill-detail-3);
+}
+.detail-4 {
+  fill: var(--ill-detail-4);
+}
+.detail-5 {
+  fill: var(--ill-detail-5);
+}
+
+.body-black-skin {
+  fill: var(--ill-body-black-skin);
+}
+.body-light-skin {
+  fill: var(--ill-body-light-skin);
+}
+/* .body-light-skin-shadow {
+  fill: var(--ill-body-light-skin-shadow);
+} */
+.hair-color {
+  fill: var(--ill-hair-color);
+}
+
+/* AERIAL FILMING PROPERTIES */
+.aerial-filming-shadow {
+  fill: url(#aerial-filming-shadow);
+}
+
+.shadow stop:first-child {
+  stop-color: hsl(30, 35%, 45%);
+}
+.shadow stop:last-child {
+  stop-color: hsl(30, 45%, 65%);
+}
+
+/*  ADVERTISING PROPERTIES */
+.advertising-main-shadow {
+  fill: url(#advertising-main-shadow);
+}
+.advertising-human1-shadow {
+  fill: url(#advertising-human1-shadow);
+}
+.advertising-human2-shadow {
+  fill: url(#advertising-human2-shadow);
+}
+
+/* PHOTOGRAPHY PROPERTIES */
+.photography-shadow {
+  fill: url(#photography-shadow);
+}
+.photography-flash {
+  fill: hsl(var(--red));
+}
+
+/* 3D GRAPHICS PROPERTIES */
+.graphics3d-shadow {
+  fill: url(#graphics3d-shadow);
+}
+.depth-gradient-3 {
+  fill: url(#depth-gradient-3);
+}
+.depth-gradient-D {
+  fill: url(#depth-gradient-D);
+}
+/* VIDEO PRODUCTION PROPERTIES */
+.video-production-shadow {
+  fill: url(#video-production-shadow);
+}
+.white-stroke-element {
+  stroke: var(--ill-white-element);
+  stroke-width: 2px;
+}
+.primary-stroke-65 {
+  stroke: var(--ill-primary-65);
+}
+.detail-stroke-4 {
+  stroke: var(--ill-detail-4);
+}
+.primary-stroke-65,
+.detail-stroke-4 {
+  stroke-width: 10px;
+}
+.white-stroke-element,
+.primary-stroke-65,
+.detail-stroke-4 {
+  fill: none;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+}
+
+/* HOW WE WORK PROPERTIES */
+.sneakers-foot {
+  stroke: var(--ill-detail-1);
+  fill: var(--ill-white-element);
+  stroke-miterlimit: 10;
+}
+
+.notepad-paper,
+.pen-ereaser {
+  stroke: var(--ill-detail-3);
+  fill: var(--ill-white-element);
+  stroke-miterlimit: 10;
+}
+
+/* .q {
+  fill: hsl(328, 84%, 68%);
+} */
+/* .r {
+  fill: hsl(337, 79%, 61%);
+} */
+/* .s {
+  opacity: 0.15;
+}
+.s,
+.t {
+  fill: #050404;
+} */
+/* .u {
+  fill: #5a0c0c;
+} */
+/* .v {
+  fill: hsl(263, 96%, 72%);
+} */
+/* .w {
+  fill: hsl(0, 65%, 50%);
+} */
+
+/* .x {
+  fill: #f99e83;
+} */
+/* .y {
+  fill: #c5a5f9;
+} */
+/* .o {
+  stroke: var(--ill-white-element);
+} */
+/* .a {
+  stroke: var(--ill-white-element);
+  stroke-linejoin: round;
+} */
+
+/* .a {
+  fill: none;
+  stroke-linecap: round;
+} */
+/* .aa {
+  fill: #1d3039;
+} */
+/* .ab {
+  fill: hsl(258, 100%, 92%);
+} */
+/* .ac {
+  fill: #f59b80;
+} */
+
+/* .ad {
+  fill: #e2674d;
+} */
+/* .p {
+  stroke: #686868;
+} */
+/* .ae {
+  fill: #aaa;
+} */
+/* .af {
+  fill: hsl(261, 90%, 77%);
+} */
+/* .ag {
+  fill: hsl(336, 64%, 52%);
+} */
+
+/* .ah {
+  fill: #757575;
+} */
+/* .ai {
+  fill: hsl(333, 65%, 33%);
+} */
+/* .aj {
+  fill: hsl(261, 43%, 45%);
+} */
+
+/* .ak {
+  fill: hsl(248, 63%, 59%);
+} */
