@@ -9,7 +9,7 @@ export const Star = ({
   color: 'accent' | 'shade' | 'secondary';
   size: 24 | 32 | 36 | 48 | 56;
   customClass: string;
-  duration: 5 | 7 | 9 | 11 | 13;
+  duration: 10 | 14 | 18 | 22 | 13;
   delay?: 1 | 2 | 3 | 4 | 5;
 }) => {
   return (

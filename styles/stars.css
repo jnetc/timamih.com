@@ -10,16 +10,16 @@
   fill: var(--secondary-color);
   transition: fill 0.3s ease-in-out;
 }
-.duration-5 {
+.duration-10 {
   animation-duration: 5s;
 }
-.duration-7 {
+.duration-14 {
   animation-duration: 7s;
 }
-.duration-9 {
+.duration-18 {
   animation-duration: 9s;
 }
-.duration-11 {
+.duration-22 {
   animation-duration: 11s;
 }
 .duration-13 {

@@ -139,23 +139,23 @@ export const Photography = () => {
             </g>
             <g id="i">
               <path
-                className="detail-5"
+                className="detail-20"
                 d="M741.11,278.77v221.41c0,37.44-30.34,67.78-67.78,67.78H287.05c-37.43,0-67.78-30.34-67.78-67.78v-221.41c0-2.87,.18-5.71,.53-8.49,4.16-33.44,32.7-59.29,67.25-59.29h386.28c32.7,0,59.97,23.13,66.36,53.92,.94,4.49,1.42,9.12,1.42,13.86Z"
               />
               <polygon
-                className="detail-3"
+                className="detail-50"
                 points="532.59 121.92 532.59 141.37 468.9 141.37 468.9 121.92 482.86 121.92 482.86 127.86 476.79 127.86 476.79 134.31 524.69 134.31 524.69 127.86 518.63 127.86 518.63 121.92 532.59 121.92"
               />
               <path
-                className="detail-3"
+                className="detail-50"
                 d="M434.14,210.99v77.72H219.8v-18.43c4.16-33.44,32.7-59.29,67.25-59.29h147.09Z"
               />
               <path
-                className="detail-3"
+                className="detail-50"
                 d="M739.69,264.91h-140.68v-53.92h74.32c32.7,0,59.97,23.13,66.36,53.92Z"
               />
               <rect
-                className="detail-5"
+                className="detail-20"
                 x="288.89"
                 y="181.68"
                 width="106.08"
@@ -165,7 +165,7 @@ export const Photography = () => {
               />
               <g>
                 <rect
-                  className="detail-5"
+                  className="detail-20"
                   x="288.89"
                   y="230.35"
                   width="72.75"
@@ -173,55 +173,60 @@ export const Photography = () => {
                   rx="10.14"
                   ry="10.14"
                 />
-                <circle className="detail-3" cx="325.26" cy="248.94" r="8.51" />
+                <circle
+                  className="detail-50"
+                  cx="325.26"
+                  cy="248.94"
+                  r="8.51"
+                />
               </g>
               <path
-                className="detail-5"
+                className="detail-20"
                 d="M545.42,140.07h-89.37c-21.93,0-40.87,15.35-45.4,36.81l-22.58,106.87h225.33l-22.58-106.87c-4.53-21.46-23.47-36.81-45.4-36.81Z"
               />
               <path
-                className="detail-1"
+                className="detail-95"
                 d="M458.6,149.49h85.85c6.71,0,12.16,5.45,12.16,12.16v12.96h-110.18v-12.96c0-6.71,5.45-12.16,12.16-12.16Z"
               />
               <g id="j">
                 <circle
-                  className="detail-3"
+                  className="detail-50"
                   cx="498.95"
                   cy="374.64"
                   r="173.43"
                 />
                 <circle
-                  className="detail-5"
+                  className="detail-20"
                   cx="498.95"
                   cy="374.64"
                   r="161.21"
                 />
                 <circle
-                  className="detail-2"
+                  className="detail-80"
                   cx="498.95"
                   cy="374.64"
                   r="138.88"
                 />
                 <circle
-                  className="detail-5"
+                  className="detail-20"
                   cx="498.95"
                   cy="374.64"
                   r="105.38"
                 />
                 <circle
-                  className="detail-6"
+                  className="detail-black"
                   cx="498.95"
                   cy="374.64"
                   r="65.95"
                 />
                 <circle
-                  className="white-element"
+                  className="detail-white"
                   cx="464.75"
                   cy="405.35"
                   r="22.33"
                 />
                 <circle
-                  className="white-element"
+                  className="detail-white"
                   cx="550.33"
                   cy="316.81"
                   r="10.21"

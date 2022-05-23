@@ -28,7 +28,7 @@
 }
 
 .step-dot {
-  --dot-diametr: 1rem;
+  --dot-diametr: 0.7rem;
   --dor-radius: var(--dot-diametr) / 2;
   --dot-diametr-active: calc(var(--dot-diametr) + 0.75rem);
   width: var(--dot-diametr);

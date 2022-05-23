@@ -4,6 +4,7 @@
   align-items: center;
   column-gap: 0.5rem;
   padding: 0.6rem 5.5rem 0.6rem 1rem;
+  margin-inline-start: auto;
   position: relative;
   opacity: 0.95;
   backdrop-filter: blur(25px);

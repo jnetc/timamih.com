@@ -48,7 +48,7 @@ export const HeroLeftSide = () => {
         <Star
           color="accent"
           size={36}
-          duration={7}
+          duration={14}
           customClass={'label-star'}
         />
       </p>
@@ -69,7 +69,7 @@ export const HeroLeftSide = () => {
         <Star
           color="secondary"
           size={24}
-          duration={5}
+          duration={10}
           customClass={'action-star'}
           delay={1}
         />

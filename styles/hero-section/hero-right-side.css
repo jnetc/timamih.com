@@ -75,7 +75,8 @@
 .hero-right__messages {
   grid-column: 1;
   grid-row: 1;
-  align-self: center;
+  align-self: flex-end;
+  justify-self: flex-end;
   display: flex;
   flex-flow: column;
   row-gap: 1.5rem;

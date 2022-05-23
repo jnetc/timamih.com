@@ -117,7 +117,7 @@ export const VideoProduction = () => {
             <g>
               <g id="g">
                 <polygon
-                  className="dark-element"
+                  className="detail-15"
                   points="717.77 255.04 212.4 256.76 212.2 567.95 718.84 566.57 717.77 255.04"
                 />
                 <circle
@@ -127,7 +127,7 @@ export const VideoProduction = () => {
                   r="68.98"
                 />
                 <path
-                  className="white-element"
+                  className="detail-white"
                   d="M488.76,374.78l-36.55-21.78c-3.48-2.07-7.89,.43-7.9,4.48l-.12,43.35c-.01,4.05,4.39,6.57,7.88,4.52l36.67-21.57c3.42-2.01,3.44-6.96,.03-9Z"
                 />
                 <line
@@ -145,11 +145,11 @@ export const VideoProduction = () => {
                   y2="504.91"
                 />
                 <path
-                  className="white-element"
+                  className="detail-white"
                   d="M250.49,536.08l-15.32-8.67c-.59-.34-1.33,.1-1.31,.78l.38,17.98c.01,.68,.77,1.09,1.34,.73l14.94-9.31c.57-.35,.55-1.18-.03-1.51Z"
                 />
                 <path
-                  className="white-element"
+                  className="detail-white"
                   d="M274.69,543.2l-5.79,.18c-.47,.01-.85-.35-.86-.82l-.19-9.19c0-.46,.35-.84,.81-.86l5.8-.18c.21,0,.41-.09,.56-.24l5.08-5.02c.52-.51,1.4-.16,1.43,.57l.61,19.61c.02,.72-.82,1.13-1.37,.67l-5.51-4.54c-.16-.13-.36-.2-.56-.19Z"
                 />
                 <path
@@ -157,100 +157,110 @@ export const VideoProduction = () => {
                   d="M286.35,528.3c4.66-.1,8.52,3.92,8.63,8.97,.11,5.05-3.58,9.22-8.24,9.32"
                 />
                 <path
-                  className="white-element"
+                  className="detail-white"
                   d="M286.09,541.41c0,.21,.17,.38,.36,.36,2.04-.24,3.59-2.14,3.55-4.41s-1.69-4.1-3.73-4.25c-.19-.01-.35,.17-.35,.38l.17,7.93Z"
                 />
                 <g>
                   <polygon
-                    className="white-element"
+                    className="detail-white"
                     points="672.95 532.45 672.95 527.88 677.51 527.88 677.51 523.72 668.78 523.72 668.78 532.45 672.95 532.45"
                   />
                   <polygon
-                    className="white-element"
+                    className="detail-white"
                     points="685.19 527.88 689.75 527.88 689.75 532.45 693.91 532.45 693.91 523.72 685.19 523.72 685.19 527.88"
                   />
                   <polygon
-                    className="white-element"
+                    className="detail-white"
                     points="677.51 544.69 672.95 544.69 672.95 540.12 668.78 540.12 668.78 548.85 677.51 548.85 677.51 544.69"
                   />
                   <polygon
-                    className="white-element"
+                    className="detail-white"
                     points="689.75 540.12 689.75 544.69 685.19 544.69 685.19 548.85 693.91 548.85 693.91 540.12 689.75 540.12"
                   />
                 </g>
               </g>
               <g id="h">
                 <polygon
-                  className="dark-element"
+                  className="detail-15"
                   points="698.66 5.23 182 103.06 195.6 183.09 712.98 83.2 698.66 5.23"
                 />
                 <g>
                   <polygon
-                    className="white-element"
+                    className="detail-white"
                     points="504.94 123.37 455.59 132.89 507.16 41.49 557.85 31.89 504.94 123.37"
                   />
                   <polygon
-                    className="white-element"
+                    className="detail-white"
                     points="401 143.43 352.04 152.89 403.85 61.05 454.16 51.53 401 143.43"
                   />
                   <polygon
-                    className="white-element"
+                    className="detail-white"
                     points="300 80.71 350.47 71.16 297.06 163.5 247.94 172.99 300 80.71"
                   />
                   <polygon
-                    className="white-element"
+                    className="detail-white"
                     points="195.15 180.4 182 103.06 247 90.75 195.15 180.4"
                   />
                   <polygon
-                    className="white-element"
+                    className="detail-white"
                     points="608.71 103.33 559.92 112.75 611.24 21.78 661.36 12.29 608.71 103.33"
                   />
                   <polygon
-                    className="white-element"
+                    className="detail-white"
                     points="702.19 24.41 712.98 83.2 663.65 92.72 702.19 24.41"
                   />
                 </g>
               </g>
               <g id="i">
                 <polygon
-                  className="dark-element"
+                  className="detail-15"
                   points="722.86 263.94 197.02 263.59 195.55 182.42 722.47 184.67 722.86 263.94"
                 />
                 <g>
                   <polygon
-                    className="white-element"
+                    className="detail-white"
                     points="510.59 183.76 460.33 183.55 527.95 263.81 579.54 263.84 510.59 183.76"
                   />
                   <polygon
-                    className="white-element"
+                    className="detail-white"
                     points="404.73 183.31 354.87 183.1 422.81 263.74 474.01 263.77 404.73 183.31"
                   />
                   <polygon
-                    className="white-element"
+                    className="detail-white"
                     points="317.11 263.67 368.48 263.71 298.88 182.86 248.85 182.65 317.11 263.67"
                   />
                   <polygon
-                    className="white-element"
+                    className="detail-white"
                     points="195.59 185.15 197.02 263.59 263.17 263.64 195.59 185.15"
                   />
                   <polygon
-                    className="white-element"
+                    className="detail-white"
                     points="616.27 184.21 566.58 184 633.88 263.88 684.89 263.91 616.27 184.21"
                   />
                   <polygon
-                    className="white-element"
+                    className="detail-white"
                     points="722.76 244.44 722.47 184.67 672.23 184.45 722.76 244.44"
                   />
                 </g>
               </g>
               <g id="j">
                 <path
-                  className="dark-element"
+                  className="detail-15"
                   d="M330.56,246.16c-1.25-75.09-62.28-132.27-131.56-128.78l1.3,129.29,130.26-.51Z"
                 />
-                <circle className="detail-3" cx="218.98" cy="143.39" r="9.48" />
-                <circle className="detail-3" cx="300.41" cy="222.29" r="9.48" />
-                <circle className="detail-3" cx="220.01" cy="221.5" r="9.48" />
+                <circle
+                  className="detail-50"
+                  cx="218.98"
+                  cy="143.39"
+                  r="9.48"
+                />
+                <circle
+                  className="detail-50"
+                  cx="300.41"
+                  cy="222.29"
+                  r="9.48"
+                />
+                <circle className="detail-50" cx="220.01" cy="221.5" r="9.48" />
               </g>
             </g>
           </g>

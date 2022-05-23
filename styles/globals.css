@@ -5,9 +5,9 @@
 }
 :root {
   --light: 32 100% 95%; /* hsl(32, 100%, 97%) */
-  --dark: 0 0% 22%; /* hsl(0, 0%, 22%) */
-  --rose: 315 100% 70%; /* hsl(315, 100%, 70%) */
-  --violet: 265 85% 63%; /* hsl(265, 85%, 63%) */
+  --dark: 263 0% 16%; /* hsl(0, 0%, 22%) */
+  --rose: 337 80% 65%; /* hsl(337, 80%, 65%) */
+  --violet: 263 80% 60%; /* hsl(263, 80%, 60%) */
   --blue: 201 84% 55%; /* hsl(201, 84%, 55%) */
   --green: 129 65% 43%; /* hsl(129, 65%, 43%) */
   --red: 5 70% 57%; /* hsl(5, 70%, 57%) */
@@ -67,7 +67,7 @@ html[data-theme='dark'] {
   text-size-adjust: none;
 }
 html {
-  background-color: var(--primary-color);
+  background-color: var(--primary-color) !important;
   transition: all 0.3s ease-in-out;
   scrollbar-gutter: stable;
 }

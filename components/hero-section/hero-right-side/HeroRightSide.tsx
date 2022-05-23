@@ -1,4 +1,4 @@
-import Link from 'next/link';
+// import Link from 'next/link';
 import { useRef } from 'react';
 // Hook
 import { useObserver } from '@Hooks/useObserver';
@@ -7,7 +7,7 @@ import { useStore } from '@Hooks/useStore';
 import { Avatar } from './Avatar';
 import { Star } from '@Components/star';
 import { Message } from './message/Message';
-import { HandShakeIcon } from './HandShakeIcon';
+// import { HandShakeIcon } from './HandShakeIcon';
 
 export const HeroRightSide = () => {
   const { data } = useStore();
@@ -32,7 +32,7 @@ export const HeroRightSide = () => {
         ref={targetMessages}
       >
         {message}
-        <Link href="#contact">
+        {/* <Link href="#contact">
           <a
             className="hero-right__hire_us hire-button click"
             title={data?.heroSection.hireButton}
@@ -40,35 +40,35 @@ export const HeroRightSide = () => {
           >
             {data?.heroSection.hireButton} <HandShakeIcon />
           </a>
-        </Link>
+        </Link> */}
       </section>
       <Star
         color="accent"
         size={32}
-        duration={7}
+        duration={14}
         delay={4}
         customClass={'tima-left-acc-star'}
       />
       <Star
         color="secondary"
         size={24}
-        duration={5}
+        duration={18}
         delay={3}
         customClass={'tima-left-sec-star'}
       />
-      <Star
+      {/* <Star
         color="accent"
         size={24}
-        duration={11}
+        duration={22}
         customClass={'tima-right-acc-star'}
-      />
-      <Star
+      /> */}
+      {/* <Star
         color="secondary"
         size={24}
-        duration={5}
+        duration={10}
         delay={2}
         customClass={'tima-bottom-sec-star'}
-      />
+      /> */}
     </div>
   );
 };
