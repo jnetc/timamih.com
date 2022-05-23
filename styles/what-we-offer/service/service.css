@@ -77,6 +77,16 @@
   font-size: clamp(2rem, 5vw, 3rem);
   font-weight: bold;
 }
+.illustration:hover .red-leaf,
+.service:hover .illustration .red-leaf,
+.section-content:hover ~ .illustration .red-leaf {
+  fill: var(--ill-primary-65-hover);
+}
+.illustration:hover .red-stem,
+.service:hover .illustration .red-stem,
+.section-content:hover ~ .illustration .red-stem {
+  fill: var(--ill-primary-50-hover);
+}
 
 @media screen and (max-width: 960px) {
   .service {

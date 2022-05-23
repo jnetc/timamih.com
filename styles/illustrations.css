@@ -9,6 +9,8 @@ html[data-theme='dark'] .illustration {
   --ill-primary-40: hsl(337, 30%, 40%);
   --ill-primary-30: hsl(337, 30%, 30%);
 
+  --ill-primary-65-hover: hsl(337, 80%, 65%);
+
   --ill-secondary-80: hsl(263, 50%, 80%);
   --ill-secondary-75: hsl(263, 50%, 75%);
   --ill-secondary-70: hsl(263, 50%, 70%);
@@ -30,6 +32,8 @@ html[data-theme='dark'] .illustration {
   --ill-detail-5: hsl(199, 10%, 15%);
   --ill-detail-6: hsl(199, 10%, 10%);
 
+  --ill-drone-blades: var(--ill-white-element);
+
   --ill-body-black-skin: #8b6b6b;
   --ill-body-light-skin: #f7bba4;
   --ill-body-light-skin: #f99e83;
@@ -45,6 +49,9 @@ html[data-theme='light'] .illustration {
   --ill-primary-50: hsl(337, 50%, 50%);
   --ill-primary-40: hsl(337, 50%, 40%);
   --ill-primary-30: hsl(337, 50%, 30%);
+
+  --ill-primary-65-hover: hsl(263, 80%, 70%);
+  --ill-primary-50-hover: hsl(263, 80%, 50%);
 
   --ill-secondary-80: hsl(263, 80%, 80%);
   --ill-secondary-75: hsl(263, 80%, 75%);
@@ -67,6 +74,8 @@ html[data-theme='light'] .illustration {
   --ill-detail-5: hsl(199, 10%, 15%);
   --ill-detail-6: hsl(199, 10%, 10%);
 
+  --ill-drone-blades: var(--ill-dark-element);
+
   --ill-body-black-skin: #8b6b6b;
   --ill-body-light-skin: #f7bba4;
   --ill-body-light-skin: #f99e83;
@@ -86,12 +95,14 @@ html[data-theme='light'] .illustration {
 }
 .primary-50 {
   fill: var(--ill-primary-50);
+  transition: all 0.3s ease-in-out;
 }
 .primary-60 {
   fill: var(--ill-primary-70);
 }
 .primary-65 {
   fill: var(--ill-primary-65);
+  transition: all 0.3s ease-in-out;
 }
 .primary-70 {
   fill: var(--ill-primary-70);
@@ -188,6 +199,9 @@ html[data-theme='light'] .illustration {
 }
 .advertising-human2-shadow {
   fill: url(#advertising-human2-shadow);
+}
+.drone-blades {
+  fill: var(--ill-drone-blades);
 }
 
 /* PHOTOGRAPHY PROPERTIES */
