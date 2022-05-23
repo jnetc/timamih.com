@@ -6,11 +6,15 @@
 } */
 
 .section-header {
+  grid-column: 1 / -1;
   display: flex;
   flex-flow: column;
   align-items: center;
 }
-
+.section-header :where(.description-section) {
+  width: min(100%, 700px);
+  text-align: center;
+}
 .main-title,
 .section-title {
   text-transform: uppercase;
@@ -97,7 +101,10 @@
   }
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 560px) {
+  .section-header :where(.description-section) {
+    text-align: left;
+  }
 }
 
 /* TRANSITION CLASSES */

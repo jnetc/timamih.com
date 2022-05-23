@@ -1,5 +1,42 @@
 /* ILLUSTRATION PROPERTIES */
-.illustration {
+html[data-theme='dark'] .illustration {
+  --ill-primary-80: hsl(327, 50%, 80%);
+  --ill-primary-75: hsl(327, 50%, 75%);
+  --ill-primary-70: hsl(327, 50%, 70%);
+  --ill-primary-65: hsl(337, 50%, 65%);
+  --ill-primary-60: hsl(337, 50%, 60%);
+  --ill-primary-50: hsl(337, 30%, 50%);
+  --ill-primary-40: hsl(337, 30%, 40%);
+  --ill-primary-30: hsl(337, 30%, 30%);
+
+  --ill-secondary-80: hsl(263, 50%, 80%);
+  --ill-secondary-75: hsl(263, 50%, 75%);
+  --ill-secondary-70: hsl(263, 50%, 70%);
+  --ill-secondary-65: hsl(263, 50%, 65%);
+  --ill-secondary-60: hsl(263, 50%, 60%);
+  --ill-secondary-50: hsl(263, 30%, 50%);
+
+  --ill-soil: hsl(263, 10%, 40%);
+  --ill-soil-shadow-gradient-stop: hsl(263, 10%, 20%);
+  --ill-soil-shadow-gradient-start: hsl(263, 10%, 35%);
+
+  --ill-white-element: hsl(0, 0%, 100%);
+  --ill-dark-element: hsl(199, 33%, 17%);
+
+  --ill-detail-1: hsl(199, 10%, 95%);
+  --ill-detail-2: hsl(199, 10%, 80%);
+  --ill-detail-3: hsl(199, 10%, 50%);
+  --ill-detail-4: hsl(199, 10%, 30%);
+  --ill-detail-5: hsl(199, 10%, 15%);
+  --ill-detail-6: hsl(199, 10%, 10%);
+
+  --ill-body-black-skin: #8b6b6b;
+  --ill-body-light-skin: #f7bba4;
+  --ill-body-light-skin: #f99e83;
+  --ill-body-light-skin-shadow: #e2674d;
+  --ill-hair-color: #404551;
+}
+html[data-theme='light'] .illustration {
   --ill-primary-80: hsl(327, 80%, 80%);
   --ill-primary-75: hsl(327, 80%, 75%);
   --ill-primary-70: hsl(327, 80%, 70%);
@@ -9,14 +46,17 @@
   --ill-primary-40: hsl(337, 50%, 40%);
   --ill-primary-30: hsl(337, 50%, 30%);
 
-  --ill-secondary-80: hsl(263, 85%, 80%);
-  --ill-secondary-75: hsl(263, 85%, 75%);
-  --ill-secondary-70: hsl(263, 85%, 70%);
-  --ill-secondary-65: hsl(263, 85%, 65%);
-  --ill-secondary-60: hsl(263, 85%, 60%);
+  --ill-secondary-80: hsl(263, 80%, 80%);
+  --ill-secondary-75: hsl(263, 80%, 75%);
+  --ill-secondary-70: hsl(263, 80%, 70%);
+  --ill-secondary-65: hsl(263, 80%, 65%);
+  --ill-secondary-60: hsl(263, 80%, 60%);
+  --ill-secondary-50: hsl(263, 50%, 50%);
 
-  /* --ill-soil: hsl(263, 85%, 90%); */
-  --ill-soil: hsl(31, 94%, 87%);
+  --ill-soil: hsl(30, 95%, 90%);
+  --ill-soil-shadow-gradient-stop: hsl(30, 35%, 45%);
+  --ill-soil-shadow-gradient-start: hsl(30, 45%, 65%);
+
   --ill-white-element: hsl(0, 0%, 100%);
   --ill-dark-element: hsl(199, 33%, 17%);
 
@@ -63,6 +103,9 @@
   fill: var(--ill-primary-70);
 }
 
+.secondary-50 {
+  fill: var(--ill-secondary-50);
+}
 .secondary-60 {
   fill: var(--ill-secondary-60);
 }
@@ -115,16 +158,25 @@
   fill: var(--ill-hair-color);
 }
 
+.white-stroke-element,
+.primary-stroke-65,
+.detail-stroke-4,
+.smartphone-in-hands {
+  fill: none;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+}
+
 /* AERIAL FILMING PROPERTIES */
 .aerial-filming-shadow {
   fill: url(#aerial-filming-shadow);
 }
 
 .shadow stop:first-child {
-  stop-color: hsl(30, 35%, 45%);
+  stop-color: var(--ill-soil-shadow-gradient-stop);
 }
 .shadow stop:last-child {
-  stop-color: hsl(30, 45%, 65%);
+  stop-color: var(--ill-soil-shadow-gradient-start);
 }
 
 /*  ADVERTISING PROPERTIES */
@@ -174,13 +226,6 @@
 .detail-stroke-4 {
   stroke-width: 10px;
 }
-.white-stroke-element,
-.primary-stroke-65,
-.detail-stroke-4 {
-  fill: none;
-  stroke-linecap: round;
-  stroke-miterlimit: 10;
-}
 
 /* HOW WE WORK PROPERTIES */
 .sneakers-foot {
@@ -193,4 +238,19 @@
   stroke: var(--ill-detail-3);
   fill: var(--ill-white-element);
   stroke-miterlimit: 10;
+}
+
+/* GET IN TOUCH PROPERTIES */
+.phone-bg-linear-gradient {
+  fill: url(#phone-bg-linear-gradient);
+}
+#phone-bg-linear-gradient stop:first-child {
+  stop-color: var(--ill-secondary-70);
+}
+#phone-bg-linear-gradient stop:last-child {
+  stop-color: var(--ill-secondary-80);
+}
+.smartphone-in-hands {
+  stroke: var(--ill-detail-4);
+  stroke-width: 4px;
 }
