@@ -1,10 +1,10 @@
 .service {
   display: grid;
-  grid-template-columns: repeat(2, calc(50% - var(--gap-three) / 2));
+  grid-template-columns: repeat(2, calc(50% - var(--gap-column-section) / 2));
   grid-template-rows: 1fr;
-  column-gap: var(--gap-three);
+  column-gap: var(--gap-column-section);
+  row-gap: var(--gap-row-section);
   grid-auto-rows: min-content;
-  row-gap: 8rem;
 }
 
 /* ORDERS */
@@ -77,7 +77,7 @@
   font-size: clamp(2rem, 5vw, 3rem);
   font-weight: bold;
 }
-.illustration:hover .red-leaf,
+/* .illustration:hover .red-leaf,
 .service:hover .illustration .red-leaf,
 .section-content:hover ~ .illustration .red-leaf {
   fill: var(--ill-primary-65-hover);
@@ -86,7 +86,7 @@
 .service:hover .illustration .red-stem,
 .section-content:hover ~ .illustration .red-stem {
   fill: var(--ill-primary-50-hover);
-}
+} */
 
 @media screen and (max-width: 960px) {
   .service {

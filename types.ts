@@ -72,6 +72,8 @@ export interface DataType {
   heroSection: HeroSectionType<string>;
   howwework: HowWeWorkType<string>;
   whatweoffer: WhatWeOfferType<string>;
+  ourlittlestory: ArticleType<string>;
+
   // project: ProjectsType<string>;
   // service: ServiceType<string>;
   // about: AboutType<string>;

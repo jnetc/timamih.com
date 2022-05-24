@@ -1,8 +1,8 @@
 .how-we-work {
   display: grid;
-  grid-template-columns: repeat(2, calc(50% - var(--gap-three) / 2));
-  column-gap: var(--gap-three);
-  row-gap: 8rem;
+  grid-template-columns: repeat(2, calc(50% - var(--gap-column-section) / 2));
+  column-gap: var(--gap-column-section);
+  row-gap: var(--gap-column-section);
 }
 
 @media screen and (max-width: 960px) {

@@ -24,6 +24,8 @@
   /* GAPS */
   --gap-one: 1rem;
   --gap-three: 3rem;
+  --gap-column-section: 8rem;
+  --gap-row-section: 8rem;
 }
 
 html[data-theme='light'] {

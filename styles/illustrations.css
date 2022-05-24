@@ -1,23 +1,41 @@
 /* ILLUSTRATION PROPERTIES */
 html[data-theme='dark'] .illustration {
-  --ill-primary-80: hsl(327, 80%, 80%);
+  --ill-primary-80: hsl(263, 80%, 80%);
+  --ill-primary-75: hsl(263, 80%, 75%);
+  --ill-primary-70: hsl(263, 80%, 70%);
+  --ill-primary-65: hsl(263, 80%, 65%);
+  --ill-primary-60: hsl(263, 80%, 60%);
+  --ill-primary-50: hsl(263, 50%, 50%);
+  --ill-primary-40: hsl(263, 50%, 40%);
+  --ill-primary-30: hsl(263, 50%, 30%);
+  /* --ill-primary-80: hsl(327, 80%, 80%);
   --ill-primary-75: hsl(327, 80%, 75%);
   --ill-primary-70: hsl(327, 80%, 70%);
   --ill-primary-65: hsl(337, 80%, 65%);
   --ill-primary-60: hsl(337, 80%, 60%);
   --ill-primary-50: hsl(337, 50%, 50%);
   --ill-primary-40: hsl(337, 50%, 40%);
-  --ill-primary-30: hsl(337, 50%, 30%);
+  --ill-primary-30: hsl(337, 50%, 30%); */
 
   --ill-primary-65-hover: hsl(263, 50%, 70%);
   --ill-primary-50-hover: hsl(263, 50%, 50%);
 
-  --ill-secondary-80: hsl(263, 50%, 80%);
-  --ill-secondary-75: hsl(263, 50%, 75%);
-  --ill-secondary-70: hsl(263, 50%, 70%);
-  --ill-secondary-65: hsl(263, 50%, 65%);
-  --ill-secondary-60: hsl(263, 50%, 60%);
-  --ill-secondary-50: hsl(263, 30%, 50%);
+  /* hsl(210, 80%, 80%) */
+  /* hsl(15, 80%, 80%) */
+  /* hsl(290, 80%, 80%) */
+
+  --ill-secondary-80: hsl(337, 80%, 80%);
+  --ill-secondary-75: hsl(337, 80%, 75%);
+  --ill-secondary-70: hsl(337, 80%, 70%);
+  --ill-secondary-65: hsl(337, 80%, 65%);
+  --ill-secondary-60: hsl(337, 80%, 60%);
+  --ill-secondary-50: hsl(337, 50%, 50%);
+  /* --ill-secondary-80: hsl(263, 80%, 80%);
+  --ill-secondary-75: hsl(263, 80%, 75%);
+  --ill-secondary-70: hsl(263, 80%, 70%);
+  --ill-secondary-65: hsl(263, 80%, 65%);
+  --ill-secondary-60: hsl(263, 80%, 60%);
+  --ill-secondary-50: hsl(263, 50%, 50%); */
 
   --ill-detail-white: hsl(199, 15%, 100%);
   --ill-detail-95: hsl(199, 15%, 95%);
@@ -30,9 +48,9 @@ html[data-theme='dark'] .illustration {
   --ill-detail-15: hsl(199, 30%, 15%);
   --ill-detail-black: hsl(199, 30%, 10%);
 
-  --ill-soil: hsl(263, 10%, 40%);
+  --ill-soil: hsl(263, 10%, 30%);
   --ill-soil-shadow-gradient-stop: hsl(263, 10%, 20%);
-  --ill-soil-shadow-gradient-start: hsl(263, 10%, 35%);
+  --ill-soil-shadow-gradient-start: hsl(263, 10%, 25%);
 
   --ill-body-black-skin: #8b6b6b;
   --ill-body-light-skin: #f99e83;

@@ -1,7 +1,7 @@
 .module {
   position: absolute;
   animation-name: shine;
-  animation-timing-function: ease-in-out;
+  animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
 

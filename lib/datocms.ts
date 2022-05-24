@@ -50,6 +50,9 @@ export const query = gql`
     whatweoffer(locale: $locale) {
       ...WhatweofferRecordFragment
     }
+    ourlittlestory(locale: $locale) {
+      ...OurlittlestoryRecordFragment
+    }
   }
   fragment SiteFragment on Site {
     globalSeo(locale: $locale) {
@@ -99,5 +102,9 @@ export const query = gql`
       buttonName
       illustration
     }
+  }
+  fragment OurlittlestoryRecordFragment on OurlittlestoryRecord {
+    title
+    description(markdown: true)
   }
 `;

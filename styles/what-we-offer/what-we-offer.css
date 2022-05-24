@@ -1,16 +1,16 @@
 #what-we-offer {
   display: grid;
-  grid-template-columns: repeat(2, calc(50% - var(--gap-three) / 2));
-  column-gap: var(--gap-three);
+  grid-template-columns: repeat(2, calc(50% - var(--gap-column-section) / 2));
+  column-gap: var(--gap-column-section);
   grid-auto-rows: min-content;
-  row-gap: 8rem;
+  row-gap: var(--gap-column-section);
 }
 
 .services {
   grid-column: 1 /-1;
   display: flex;
   flex-flow: column;
-  row-gap: 8rem;
+  row-gap: var(--gap-column-section);
 }
 
 @media screen and (max-width: 960px) {

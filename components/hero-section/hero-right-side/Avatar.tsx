@@ -11,7 +11,7 @@ export const Avatar = () => {
     cssClass: 'transition',
   });
   return (
-    <Link href="#contact">
+    <Link href="#get-in-touch">
       <a
         title="avatar"
         aria-labelledby="avatar"

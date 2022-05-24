@@ -18,8 +18,10 @@
   letter-spacing: 0.5px;
   text-transform: uppercase;
   border-radius: 1rem;
+  line-height: 1.1;
   border: 2px solid transparent;
   transition: all var(--optimal) ease-in-out;
+  transform-origin: center bottom;
   box-shadow: 0.75rem 0.75rem 0 hsla(var(--accent-shade) / 0.1),
     0.75rem 0.75rem 1.5rem hsla(var(--accent-shade) / 0.1);
   user-select: none;
