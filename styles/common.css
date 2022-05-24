@@ -52,10 +52,10 @@
   font-size: 1.125em;
   line-height: 1.4;
 }
-.align-center {
+/* .align-center {
   margin-inline: auto;
   text-align: center;
-}
+} */
 
 /* SECTION BLOCKS */
 .section-content {

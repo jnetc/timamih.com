@@ -30,7 +30,7 @@
 
 .service-title {
   grid-column: 1 / -1;
-  font-size: 3em;
+  font-size: clamp(1.5rem, 5vw, 3em);
   text-transform: uppercase;
 }
 .service-button {
@@ -103,6 +103,21 @@
   .service:nth-child(odd) .service-content {
     grid-column: 1;
     grid-row: 2;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .service-price {
+    grid-column: 1 /-1;
+    grid-row: 3;
+    margin-block: 2rem 3rem;
+    margin-inline: auto;
+  }
+  .service-button {
+    grid-column: 1 /-1;
+    grid-row: 4;
+    width: 100%;
     justify-content: center;
   }
 }

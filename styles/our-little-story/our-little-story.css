@@ -4,9 +4,20 @@
   column-gap: var(--gap-column-section);
   row-gap: var(--gap-row-section);
 }
+.story {
+  grid-column: 1 /-1;
+  column-count: 2;
+  column-gap: var(--gap-column-section);
+}
+.story-description:first-child {
+  margin-block-start: 0;
+}
 @media screen and (max-width: 960px) {
   #our-little-story {
     grid-template-columns: 100%;
     row-gap: var(--gap-three);
+  }
+  .story {
+    column-count: 1;
   }
 }
