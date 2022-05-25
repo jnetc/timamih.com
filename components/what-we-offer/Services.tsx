@@ -1,6 +1,6 @@
 import { useStore } from '@Hooks/useStore';
 // Component
-import { Service } from './service/Service';
+import { Service } from './services/Service';
 
 export const Services = () => {
   const { data } = useStore();

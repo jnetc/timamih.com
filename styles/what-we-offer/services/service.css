@@ -1,0 +1,130 @@
+.service {
+  display: grid;
+  grid-template-columns: repeat(2, calc(50% - var(--gap-column-section) / 2));
+  grid-template-rows: 1fr;
+  column-gap: var(--gap-column-section);
+  row-gap: var(--gap-row-section);
+  grid-auto-rows: min-content;
+}
+
+/* ORDERS */
+.service-content {
+  display: grid;
+  position: relative;
+  perspective: 5000px;
+  transform-style: preserve-3d;
+  perspective-origin: center;
+}
+
+.service:nth-child(even) .illustration,
+.service:nth-child(odd) .service-content {
+  grid-column: 2;
+  grid-row: 1;
+  justify-content: flex-end;
+}
+.service:nth-child(even) .service-content,
+.service:nth-child(odd) .illustration {
+  grid-column: 1;
+  grid-row: 1;
+}
+/* - */
+
+.service-article {
+  grid-column: 1;
+  grid-row: 1;
+  height: min-content;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-self: center;
+  transform: rotate3d(0, 1, 0, 0) translate3d(0, 0, 0);
+  transition: all 0.7s linear;
+  z-index: 5;
+}
+.background-article {
+  grid-column: 1;
+  grid-row: 1;
+  opacity: 1;
+  background-color: hsl(var(--accent-shade) / 1);
+  transform: rotate3d(0, 1, 0, 0) translate3d(0, 0, 0);
+  backdrop-filter: blur(5px);
+  transition: all 0.7s linear;
+  pointer-events: none;
+  user-select: none;
+  z-index: -1;
+}
+.service-teammates {
+  grid-column: 1;
+  grid-row: 1;
+  display: grid;
+  grid-auto-flow: column;
+  place-content: center;
+  transition: all 0.7s linear;
+  transform: rotate3d(0, 1, 0, 180deg) translate3d(0, 0, 150px);
+  transform-origin: center;
+  z-index: 5;
+}
+
+.service-content.show-teammates .rect-button {
+  box-shadow: none;
+}
+.service-content.show-teammates .service-article {
+  transform: rotate3d(0, 1, 0, 180deg) translate3d(0, 0, 150px);
+  pointer-events: none;
+  user-select: none;
+}
+.service-content.show-teammates .background-article {
+  animation: backdrop-foward 0.7s linear forwards;
+
+  transform: rotate3d(0, 1, 0, 180deg) translate3d(0, 0, 0);
+}
+.service-content.hide-teammates .background-article {
+  animation: backdrop-backward 0.7s linear forwards;
+}
+.service-content.show-teammates .service-teammates {
+  transform: rotate3d(0, 1, 0, 360deg) translate3d(0, 0, 0);
+}
+
+@keyframes backdrop-foward {
+  0% {
+    background-color: hsl(var(--primary-shade) / 1);
+  }
+  50% {
+    background-color: hsl(var(--accent-shade) / 0.05);
+  }
+  100% {
+    background-color: hsl(var(--primary-shade) / 1);
+  }
+}
+@keyframes backdrop-backward {
+  0% {
+    background-color: hsl(var(--primary-shade) / 1);
+  }
+  50% {
+    background-color: hsl(var(--accent-shade) / 0.05);
+  }
+  100% {
+    background-color: hsl(var(--primary-shade) / 1);
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .service {
+    grid-template-columns: 100%;
+    row-gap: var(--gap-three);
+  }
+  .service:nth-child(even) .illustration,
+  .service:nth-child(odd) .illustration {
+    grid-column: 1;
+    grid-row: 1;
+    justify-content: center;
+  }
+  .service:nth-child(even) .service-content,
+  .service:nth-child(odd) .service-content {
+    grid-column: 1;
+    grid-row: 2;
+    justify-content: center;
+  }
+}
+
+@import url('./service-article/service-article.css');
+@import url('./service-teammates/teammates.css');

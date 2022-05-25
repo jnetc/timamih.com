@@ -1,0 +1,64 @@
+.service-title {
+  grid-column: 1 / -1;
+  font-size: clamp(1.5rem, 5vw, 3em);
+  text-transform: uppercase;
+}
+.service-button {
+  height: fit-content;
+  margin-block: auto;
+}
+.service-price {
+  justify-self: flex-end;
+  align-self: flex-end;
+  display: flex;
+  position: relative;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+.service-price sub {
+  margin-block-start: auto;
+  color: var(--secondary-color);
+  font-size: clamp(1.125em, 5vw, 1.5em);
+  font-weight: bold;
+}
+.service-price span {
+  position: relative;
+  padding-inline-end: clamp(1.5rem, 4vw, 2.8rem);
+  color: var(--accent-color);
+  font-size: clamp(4em, 7vw, 6em);
+  font-weight: bold;
+  line-height: 0.75;
+}
+.service-price::after {
+  content: '€';
+  position: absolute;
+  top: -25%;
+  right: 0;
+  color: var(--accent-color);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: bold;
+}
+.service-price::after {
+  content: '€';
+  position: absolute;
+  top: -25%;
+  right: 0;
+  color: var(--accent-color);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: bold;
+}
+
+@media screen and (max-width: 480px) {
+  .service-price {
+    grid-column: 1 /-1;
+    grid-row: 3;
+    margin-block: 2rem 3rem;
+    margin-inline: auto;
+  }
+  .service-button {
+    grid-column: 1 /-1;
+    grid-row: 4;
+    width: 100%;
+    justify-content: center;
+  }
+}

@@ -17,10 +17,10 @@ interface SEO<T> {
     fallbackSeo: ArticleType<T>;
   };
 }
-// interface PosterType<T> {
-//   url: T;
-//   blurUpThumb: T;
-// }
+interface AvatarType<T> {
+  url: T;
+  blurUpThumb: T;
+}
 
 interface NavigationLinkType<T> {
   id: T;
@@ -56,12 +56,27 @@ export type ServiceIllustrationType =
   | 'graphic'
   | 'drone';
 
+export interface TeammateType<T> extends ArticleWithIdType<T> {
+  proff: T;
+  avatar: AvatarType<T>;
+}
+
 export interface ServiceType<T> extends ArticleWithIdType<T> {
   price: T;
   buttonName: T;
   illustration: ServiceIllustrationType;
   order: number;
+  teammates: Array<TeammateType<T>>;
 }
+export type ServiceContentType = Omit<
+  ServiceType<string>,
+  'illustration' | 'id'
+>;
+export type ServiceArticleType = Omit<
+  ServiceContentType,
+  'teammates' | 'order'
+>;
+
 export interface WhatWeOfferType<T> extends ArticleType<T> {
   services: Array<ServiceType<string>>;
 }
