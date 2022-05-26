@@ -54,7 +54,7 @@
   grid-row: 1;
   height: calc(100% + 3rem);
   width: calc(100% + 3rem);
-  position: relative;
+  position: absolute;
   inset: -1.5rem;
   opacity: 1;
   border: 2px solid transparent;
@@ -144,6 +144,11 @@
   }
   .service-content {
     padding-inline-start: var(--gap-one);
+  }
+  .background-article {
+    height: calc(100% + 3rem);
+    width: calc(100% + 1rem);
+    inset: -1.5rem -1rem;
   }
 }
 
