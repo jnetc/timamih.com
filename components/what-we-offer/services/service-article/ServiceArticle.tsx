@@ -3,13 +3,7 @@ import { useStore } from '@Hooks/useStore';
 // Type
 import { ServiceArticleType } from '@Types';
 
-export const ServiceArticle = ({
-  data,
-  handler,
-}: {
-  data: ServiceArticleType;
-  handler: () => void;
-}) => {
+export const ServiceArticle = ({ data, handler }: ServiceArticleType) => {
   const { language } = useStore();
   const subPriceTxt = { en: 'from', ru: 'от', fi: 'alkaa' };
 

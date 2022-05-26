@@ -1,22 +1,23 @@
 import { ReactChild, Dispatch, SetStateAction } from 'react';
 
+// COMPONENTS TIPE
 export type LanguagesType = 'ru' | 'fi' | 'en';
+
+export type ServiceIllustrationType = 'ads' | 'photo' | 'video' | 'graphic' | 'drone';
+
+export type HandlerType = { handler: () => void };
 
 export interface ArticleType<T> {
   title: T;
   description: T;
 }
+
 interface ArticleWithIdType<T> {
   id: T;
   title: T;
   description: T;
 }
 
-interface SEO<T> {
-  globalSeo: {
-    fallbackSeo: ArticleType<T>;
-  };
-}
 interface AvatarType<T> {
   url: T;
   blurUpThumb: T;
@@ -27,6 +28,7 @@ interface NavigationLinkType<T> {
   name: T;
   navanchor: T;
 }
+
 interface HeaderLinksType<T> {
   headerlinks: Array<NavigationLinkType<T>>;
 }
@@ -35,6 +37,14 @@ export interface ChatMessageType<T> {
   id: T;
   message: T;
 }
+
+// SECTION TYPES
+interface SEO<T> {
+  globalSeo: {
+    fallbackSeo: ArticleType<T>;
+  };
+}
+
 interface HeroSectionType<T> extends ArticleType<T> {
   label: T;
   playButton: T;
@@ -49,13 +59,6 @@ export interface HowWeWorkType<T> extends ArticleType<T> {
   prevButton: T;
 }
 
-export type ServiceIllustrationType =
-  | 'ads'
-  | 'photo'
-  | 'video'
-  | 'graphic'
-  | 'drone';
-
 export interface TeammateType<T> extends ArticleWithIdType<T> {
   proff: T;
   avatar: AvatarType<T>;
@@ -68,14 +71,12 @@ export interface ServiceType<T> extends ArticleWithIdType<T> {
   order: number;
   teammates: Array<TeammateType<T>>;
 }
-export type ServiceContentType = Omit<
-  ServiceType<string>,
-  'illustration' | 'id'
->;
-export type ServiceArticleType = Omit<
-  ServiceContentType,
-  'teammates' | 'order'
->;
+
+export type ServiceContentType = Omit<ServiceType<string>, 'illustration' | 'id'>;
+export type ServiceArticleType = {
+  data: Omit<ServiceContentType, 'teammates' | 'order'>;
+} & HandlerType;
+export type TeammatesGroupType<T> = Pick<ServiceType<T>, 'teammates'> & HandlerType;
 
 export interface WhatWeOfferType<T> extends ArticleType<T> {
   services: Array<ServiceType<string>>;
@@ -88,10 +89,6 @@ export interface DataType {
   howwework: HowWeWorkType<string>;
   whatweoffer: WhatWeOfferType<string>;
   ourlittlestory: ArticleType<string>;
-
-  // project: ProjectsType<string>;
-  // service: ServiceType<string>;
-  // about: AboutType<string>;
 }
 
 export interface NavMobLinksProps {

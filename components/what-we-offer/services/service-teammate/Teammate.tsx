@@ -6,7 +6,7 @@ interface Teammmate {
 }
 export const ServiceTeammate = ({ data }: { data: Teammmate }) => {
   return (
-    <article className="teammate">
+    <article className="service-teammate">
       <h1>{data.title}</h1>
     </article>
   );
