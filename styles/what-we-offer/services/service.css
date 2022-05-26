@@ -1,6 +1,9 @@
 .service {
   display: grid;
-  grid-template-columns: repeat(2, calc(50% - var(--gap-column-section) / 2));
+  grid-template-columns:
+    calc(50% - (var(--gap-column-section)) / 2)
+    calc(50% - (var(--gap-column-section)) / 2);
+
   grid-template-rows: 1fr;
   column-gap: var(--gap-column-section);
   row-gap: var(--gap-row-section);
@@ -14,6 +17,7 @@
   perspective: 5000px;
   transform-style: preserve-3d;
   perspective-origin: center;
+  padding-inline-end: var(--gap-one);
 }
 
 .service:nth-child(even) .illustration,
@@ -27,6 +31,9 @@
   grid-column: 1;
   grid-row: 1;
 }
+.service .illustration {
+  padding-inline-start: var(--gap-one);
+}
 /* - */
 
 .service-article {
@@ -39,11 +46,18 @@
   transform: rotate3d(0, 1, 0, 0) translate3d(0, 0, 0);
   transition: all 0.7s linear;
   z-index: 5;
+  position: relative;
 }
+
 .background-article {
   grid-column: 1;
   grid-row: 1;
+  height: calc(100% + 3rem);
+  width: calc(100% + 3rem);
+  position: relative;
+  inset: -1.5rem;
   opacity: 1;
+  border: 2px solid transparent;
   background-color: hsl(var(--accent-shade) / 1);
   transform: rotate3d(0, 1, 0, 0) translate3d(0, 0, 0);
   backdrop-filter: blur(5px);
@@ -74,7 +88,6 @@
 }
 .service-content.show-teammates .background-article {
   animation: backdrop-foward 0.7s linear forwards;
-
   transform: rotate3d(0, 1, 0, 180deg) translate3d(0, 0, 0);
 }
 .service-content.hide-teammates .background-article {
@@ -90,6 +103,7 @@
   }
   50% {
     background-color: hsl(var(--accent-shade) / 0.05);
+    border: 2px solid hsla(var(--accent-shade) / 0.2);
   }
   100% {
     background-color: hsl(var(--primary-shade) / 1);
@@ -101,6 +115,7 @@
   }
   50% {
     background-color: hsl(var(--accent-shade) / 0.05);
+    border: 2px solid hsla(var(--accent-shade) / 0.2);
   }
   100% {
     background-color: hsl(var(--primary-shade) / 1);
@@ -123,6 +138,12 @@
     grid-column: 1;
     grid-row: 2;
     justify-content: center;
+  }
+  .service .illustration {
+    padding-inline-start: 0;
+  }
+  .service-content {
+    padding-inline-start: var(--gap-one);
   }
 }
 

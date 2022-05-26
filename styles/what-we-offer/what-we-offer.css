@@ -1,7 +1,7 @@
 #what-we-offer {
   display: grid;
-  grid-template-columns: repeat(2, calc(50% - var(--gap-column-section) / 2));
-  column-gap: var(--gap-column-section);
+  grid-template-columns: var(--gap-one) 1fr var(--gap-one);
+  /* column-gap: var(--gap-column-section); */
   grid-auto-rows: min-content;
   row-gap: var(--gap-column-section);
 }

@@ -1,4 +1,3 @@
-/* ILLUSTRATION PROPERTIES */
 html[data-theme='dark'] .illustration {
   --ill-primary-80: hsl(263, 80%, 80%);
   --ill-primary-75: hsl(263, 80%, 75%);
@@ -106,6 +105,33 @@ html[data-theme='light'] .illustration {
   --ill-smartphone-screen-gradient-end: var(--ill-secondary-80);
 }
 
+/* ILLUSTRATION PROPERTIES */
+.illustration {
+  display: flex;
+  height: 470px;
+  position: relative;
+  user-select: none;
+}
+.illustration-right {
+  grid-column: 2;
+  justify-self: flex-end;
+}
+.illustration-left {
+  grid-column: 1;
+}
+
+@media screen and (max-width: 960px) {
+  .illustration {
+    height: clamp(200px, 55vw, 270px);
+  }
+  .illustration-right {
+    grid-column: 1;
+    order: 1;
+    justify-self: center;
+  }
+}
+
+/* ILLUSTRATION OPTION PROPERTIES */
 .primary-30 {
   fill: var(--ill-primary-30);
 }

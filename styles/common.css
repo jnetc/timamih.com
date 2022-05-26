@@ -1,9 +1,10 @@
-/* #projects,
-#services {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-} */
+.navigation,
+.hero-section,
+.how-we-work,
+.our-little-story,
+.get-in-touch {
+  padding-inline: 1rem;
+}
 
 .section-header {
   grid-column: 1 / -1;
@@ -52,10 +53,6 @@
   font-size: 1.125em;
   line-height: 1.4;
 }
-/* .align-center {
-  margin-inline: auto;
-  text-align: center;
-} */
 
 /* SECTION BLOCKS */
 .section-content {
@@ -74,27 +71,7 @@
   order: 2;
 }
 
-.illustration {
-  display: flex;
-  height: 470px;
-  position: relative;
-  user-select: none;
-}
-.illustration-right {
-  grid-column: 2;
-}
-.illustration-left {
-  grid-column: 1;
-}
-
 @media screen and (max-width: 960px) {
-  .illustration {
-    height: clamp(200px, 55vw, 270px);
-  }
-  .illustration-right {
-    grid-column: 1;
-    order: 1;
-  }
   .content-left,
   .content-right {
     order: 2;
