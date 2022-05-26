@@ -48,7 +48,7 @@
   inset: -1.5rem;
   opacity: 1;
   border: 2px solid transparent;
-  background-color: hsl(var(--accent-shade) / 1);
+  background-color: hsl(var(--accent-shade) / 0);
   transform: rotate3d(0, 1, 0, 0) translate3d(0, 0, 0);
   backdrop-filter: blur(5px);
   pointer-events: none;

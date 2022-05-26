@@ -9,7 +9,7 @@ export const TeammateGroup = ({ teammates, handler }: TeammatesGroupType<string>
     return <ServiceTeammate key={t.title} data={t} />;
   });
   return (
-    <div className="service-teammates">
+    <div className="service-teammates" style={{ visibility: 'hidden' }}>
       <button
         className="circle-button circle-m teammates__close-button"
         title="close button"
