@@ -40,6 +40,8 @@ html[data-theme='light'] {
 
   --switch-button-bg: var(--green);
 
+  --class-highlight: var(--violet);
+
   /* SVG ellipse */
   --start-ellipse: hsl(32 100% 95%);
   --end-ellipse: hsl(32 0% 22%);
@@ -55,6 +57,9 @@ html[data-theme='dark'] {
   --accent-shade: var(--rose);
 
   --switch-button-bg: var(--red);
+
+  --class-highlight: var(--light);
+
   /* SVG ellipse */
   --start-ellipse: hsl(32 0% 34%);
   --end-ellipse: hsl(0 0% 0%);

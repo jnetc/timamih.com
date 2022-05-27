@@ -49,7 +49,7 @@
   opacity: 1;
   overflow: hidden;
   border: 2px solid transparent;
-  transform: rotate3d(0, 1, 0, 0deg) translate3d(0, 0, 0);
+  transform: rotate3d(0, 1, 0, 0) translate3d(0, 0, 0);
   backdrop-filter: blur(5px);
   border-radius: 0.5rem;
   pointer-events: none;
@@ -57,15 +57,16 @@
   z-index: -1;
 }
 .background-article::after {
+  --position-bg-article: 1200px;
   content: '';
   width: 200%;
   height: 1rem;
   position: absolute;
-  top: 150px;
-  left: -1000px;
-  background-color: hsla(var(--light) / 0.5);
-  transform: rotate(-45deg) translate3d(0, 0px, 0);
-  transition: all 0.5s linear;
+  top: 0;
+  left: -95%;
+  background-color: hsla(var(--class-highlight) / 0.5);
+  transform: rotate(-45deg) translate3d(0, 0, 0);
+  transition: all 0.7s linear;
   filter: blur(3rem);
 }
 
@@ -85,7 +86,7 @@
   animation: backdrop-backward 0.7s linear forwards;
 }
 .service-content.show-teammates .background-article::after {
-  transform: rotate(-45deg) translate3d(0, 1000px, 0);
+  transform: rotate(-45deg) translate3d(0, var(--position-bg-article), 0);
 }
 .service-content.show-teammates .service-teammates {
   transform: rotate3d(0, 1, 0, 360deg) translate3d(0, 0, 0);
@@ -148,6 +149,12 @@
     width: calc(100% + 1rem);
     inset: -1.5rem -1rem;
   }
+}
+@media screen and (max-width: 480px) {
+  /* .background-article::after {
+    top: 150px;
+    --position-bg-article: 700px;
+  } */
 }
 
 @import url('./service-article/service-article.css');
