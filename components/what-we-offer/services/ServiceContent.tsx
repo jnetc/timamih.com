@@ -12,7 +12,14 @@ export const ServiceContent = ({ data }: { data: ServiceContentType }) => {
   const [showTeam, setShowTeam] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
+  const openTeammates = () => {
+    if (!teammates || teammates.length === 0) return;
+    setShowTeam(true);
+  };
+
   useOutsideClick(ref, setShowTeam);
+  console.log(teammates);
+
   useEffect(() => {
     const preventOnLoadAnimation = setTimeout(() => {
       ref.current?.querySelector('.background-article')?.removeAttribute('style');
@@ -23,7 +30,7 @@ export const ServiceContent = ({ data }: { data: ServiceContentType }) => {
 
   return (
     <div ref={ref} className={`service-content ${showTeam ? 'show-teammates' : 'hide-teammates'}`}>
-      <ServiceArticle data={article} handler={() => setShowTeam(true)} />
+      <ServiceArticle data={article} handler={openTeammates} />
       <span
         className="background-article"
         style={{ visibility: 'hidden', animationDuration: '0s' }}

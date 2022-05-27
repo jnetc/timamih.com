@@ -22,9 +22,7 @@ export function request({
   variables: {};
   preview?: boolean;
 }): Promise<Data> {
-  const endpoint = preview
-    ? `https://graphql.datocms.com/preview`
-    : `https://graphql.datocms.com/`;
+  const endpoint = preview ? `https://graphql.datocms.com/preview` : `https://graphql.datocms.com/`;
   const client = new GraphQLClient(endpoint, {
     headers: {
       authorization: `Bearer ${process.env.NEXT_PUBLIC_NEXT_DATOCMS_API_TOKEN}`,
@@ -101,6 +99,16 @@ export const query = gql`
       price
       buttonName
       illustration
+      teammates {
+        title
+        proff
+        id
+        description
+        avatar {
+          url
+          blurUpThumb
+        }
+      }
     }
   }
   fragment OurlittlestoryRecordFragment on OurlittlestoryRecord {
