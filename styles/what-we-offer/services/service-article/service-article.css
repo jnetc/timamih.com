@@ -49,24 +49,7 @@
   font-size: clamp(2rem, 5vw, 3rem);
   font-weight: bold;
 }
-.service-price::after {
-  content: '€';
-  position: absolute;
-  top: -25%;
-  right: 0;
-  color: var(--accent-color);
-  font-size: clamp(2rem, 5vw, 3rem);
-  font-weight: bold;
-}
-
-@media screen and (max-width: 960px) {
-  .service-article {
-    width: calc(100% - var(--gap-one) * 2);
-    margin-inline: auto;
-  }
-}
-
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 1280px) {
   .service-price {
     grid-column: 1 /-1;
     grid-row: 3;
@@ -78,5 +61,11 @@
     grid-row: 4;
     width: 100%;
     justify-content: center;
+  }
+}
+@media screen and (max-width: 960px) {
+  .service-article {
+    width: calc(100% - var(--gap-one) * 2);
+    margin-inline: auto;
   }
 }

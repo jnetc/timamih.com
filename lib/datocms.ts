@@ -100,9 +100,10 @@ export const query = gql`
       buttonName
       illustration
       teammates {
+        id
+        recruit
         title
         proff
-        id
         description
         avatar {
           url

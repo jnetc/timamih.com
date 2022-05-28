@@ -4,8 +4,10 @@ import { Service } from './services/Service';
 
 export const Services = () => {
   const { data } = useStore();
-  const services = data?.whatweoffer.services.map(serv => {
-    return <Service key={serv.id} data={serv} />;
-  });
+  const services = data?.whatweoffer.services
+    .sort((a, b) => (a.order > b.order ? 1 : -1))
+    .map(serv => {
+      return <Service key={serv.id} data={serv} />;
+    });
   return <div className="services">{services}</div>;
 };

@@ -1,10 +1,15 @@
 import Image from 'next/image';
+// Hook
+import { useStore } from '@Hooks/useStore';
 // Types
 import { TeammateType } from '@Types';
 
 export const ServiceTeammate = ({ data }: { data: TeammateType<string> }) => {
+  const { language } = useStore();
   return (
     <article className="service-teammate">
+      {data.recruit && <span className="teammate-recruit">{recruit[language]}</span>}
+
       <div className="teammate-avatar">
         <Image
           src={data.avatar.url}
@@ -18,7 +23,12 @@ export const ServiceTeammate = ({ data }: { data: TeammateType<string> }) => {
       <h1 className="teammate-name">{data.title}</h1>
       <h2 className="teammate-proff">{data.proff}</h2>
       <p className="teammate-desc">{data.description}</p>
-      {/* <div className="service-data"></div> */}
     </article>
   );
+};
+
+const recruit = {
+  en: 'recruit',
+  ru: 'рекрут',
+  fi: 'rekryytti',
 };

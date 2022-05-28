@@ -60,6 +60,7 @@ export interface HowWeWorkType<T> extends ArticleType<T> {
 }
 
 export interface TeammateType<T> extends ArticleWithIdType<T> {
+  recruit: boolean;
   proff: T;
   avatar: AvatarType<T>;
 }

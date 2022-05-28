@@ -1,7 +1,7 @@
 .service-teammates {
   display: flex;
-  overflow-x: hidden;
   padding-block-end: 1rem;
+  overflow-x: hidden;
   transform: rotate3d(0, 1, 0, 180deg) translate3d(0, 0, 150px);
   transform-origin: center;
   z-index: 5;
@@ -12,9 +12,9 @@
   position: relative;
   grid-auto-flow: column;
   column-gap: 3rem;
+  padding-block: 1.5rem;
   overflow-x: auto;
   overflow-y: hidden;
-  padding-block-end: 1.5rem;
   scroll-snap-type: x mandatory;
   scroll-padding-left: 1rem;
   scrollbar-width: thin;
@@ -30,21 +30,23 @@
   background-color: hsla(var(--secondary-shade) / 0.1);
 }
 .teammate-group::-webkit-scrollbar-thumb {
-  border-radius: 0.815rem;
   background-color: var(--accent-color);
+  border-radius: 0.815rem;
 }
 
 .service-teammate {
-  min-width: 300px;
+  width: 300px;
+  aspect-ratio: 1 / 1.4;
   display: flex;
   flex-flow: column;
   align-items: center;
   padding: 1.5rem;
-  border-radius: 1rem;
-  scroll-snap-align: start;
+  position: relative;
   overflow: hidden;
-  box-shadow: 0.75rem 0.75rem 0 hsla(var(--accent-shade) / 0.1),
-    0.75rem 0.75rem 1.5rem hsla(var(--accent-shade) / 0.1);
+  border-radius: 1rem;
+  box-shadow: 0.5rem 0.5rem 0 hsla(var(--accent-shade) / 0.1),
+    0.5rem 0.5rem 1.5rem hsla(var(--accent-shade) / 0.1);
+  scroll-snap-align: start;
 }
 .service-teammate:first-child {
   margin-inline-start: 3rem;
@@ -53,8 +55,21 @@
   margin-inline-end: 3rem;
 }
 
+.teammate-recruit {
+  padding: 0.5rem;
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  background-color: hsla(var(--accent-shade) / 0.3);
+  border-radius: 8px;
+  color: var(--secondary-color);
+  font-size: 0.7rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
 .teammate-avatar {
-  width: 6rem;
+  width: 7rem;
   aspect-ratio: 1 / 1;
   border-radius: 50%;
   position: relative;
@@ -78,13 +93,17 @@
 .teammate-desc {
   font-size: 1.125em;
   line-height: 1.3;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
+  overflow: hidden;
 }
 
 /*Close teammates group*/
 .teammates__close-button {
   position: absolute;
-  top: var(--gap-one);
-  right: var(--gap-one);
+  top: 0;
+  right: 0;
   z-index: 100;
 }
 .teammates__close-button::after,
