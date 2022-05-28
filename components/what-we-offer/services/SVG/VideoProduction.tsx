@@ -120,25 +120,14 @@ export const VideoProduction = () => {
                   className="detail-15"
                   points="717.77 255.04 212.4 256.76 212.2 567.95 718.84 566.57 717.77 255.04"
                 />
-                <circle
-                  className="primary-65"
-                  cx="463.2"
-                  cy="378.45"
-                  r="68.98"
-                />
+                <circle className="video-production-play-button" cx="463.2" cy="378.45" r="68.98" />
                 <path
                   className="detail-white"
                   d="M488.76,374.78l-36.55-21.78c-3.48-2.07-7.89,.43-7.9,4.48l-.12,43.35c-.01,4.05,4.39,6.57,7.88,4.52l36.67-21.57c3.42-2.01,3.44-6.96,.03-9Z"
                 />
+                <line className="detail-stroke-4" x1="236" y1="505.4" x2="693.91" y2="503.78" />
                 <line
-                  className="detail-stroke-4"
-                  x1="236"
-                  y1="505.4"
-                  x2="693.91"
-                  y2="503.78"
-                />
-                <line
-                  className="primary-stroke-65"
+                  className="video-production-stroke-track "
                   x1="236"
                   y1="505.4"
                   x2="373.48"
@@ -248,18 +237,8 @@ export const VideoProduction = () => {
                   className="detail-15"
                   d="M330.56,246.16c-1.25-75.09-62.28-132.27-131.56-128.78l1.3,129.29,130.26-.51Z"
                 />
-                <circle
-                  className="detail-50"
-                  cx="218.98"
-                  cy="143.39"
-                  r="9.48"
-                />
-                <circle
-                  className="detail-50"
-                  cx="300.41"
-                  cy="222.29"
-                  r="9.48"
-                />
+                <circle className="detail-50" cx="218.98" cy="143.39" r="9.48" />
+                <circle className="detail-50" cx="300.41" cy="222.29" r="9.48" />
                 <circle className="detail-50" cx="220.01" cy="221.5" r="9.48" />
               </g>
             </g>

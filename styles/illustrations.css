@@ -1,3 +1,22 @@
+:root {
+  --ill-detail-white: hsl(199, 15%, 100%);
+  --ill-detail-95: hsl(199, 15%, 95%);
+  --ill-detail-80: hsl(199, 15%, 80%);
+  --ill-detail-50: hsl(199, 15%, 50%);
+  --ill-detail-40: hsl(199, 15%, 40%);
+  --ill-detail-30: hsl(199, 15%, 30%);
+  --ill-detail-25: hsl(199, 15%, 25%);
+  --ill-detail-20: hsl(199, 30%, 20%);
+  --ill-detail-15: hsl(199, 30%, 15%);
+  --ill-detail-black: hsl(199, 30%, 10%);
+
+  --ill-body-black-skin: #8b6b6b;
+  --ill-body-light-skin: #f99e83;
+  --ill-body-light-skin2: #d88260;
+  --ill-body-light-skin-shadow: #e2674d;
+  --ill-hair-color: #404551;
+}
+
 html[data-theme='dark'] .illustration {
   --ill-primary-80: hsl(263, 80%, 80%);
   --ill-primary-75: hsl(263, 80%, 75%);
@@ -7,14 +26,6 @@ html[data-theme='dark'] .illustration {
   --ill-primary-50: hsl(263, 50%, 50%);
   --ill-primary-40: hsl(263, 50%, 40%);
   --ill-primary-30: hsl(263, 50%, 30%);
-  /* --ill-primary-80: hsl(327, 80%, 80%);
-  --ill-primary-75: hsl(327, 80%, 75%);
-  --ill-primary-70: hsl(327, 80%, 70%);
-  --ill-primary-65: hsl(337, 80%, 65%);
-  --ill-primary-60: hsl(337, 80%, 60%);
-  --ill-primary-50: hsl(337, 50%, 50%);
-  --ill-primary-40: hsl(337, 50%, 40%);
-  --ill-primary-30: hsl(337, 50%, 30%); */
 
   --ill-primary-65-hover: hsl(263, 50%, 70%);
   --ill-primary-50-hover: hsl(263, 50%, 50%);
@@ -29,33 +40,10 @@ html[data-theme='dark'] .illustration {
   --ill-secondary-65: hsl(337, 80%, 65%);
   --ill-secondary-60: hsl(337, 80%, 60%);
   --ill-secondary-50: hsl(337, 50%, 50%);
-  /* --ill-secondary-80: hsl(263, 80%, 80%);
-  --ill-secondary-75: hsl(263, 80%, 75%);
-  --ill-secondary-70: hsl(263, 80%, 70%);
-  --ill-secondary-65: hsl(263, 80%, 65%);
-  --ill-secondary-60: hsl(263, 80%, 60%);
-  --ill-secondary-50: hsl(263, 50%, 50%); */
-
-  --ill-detail-white: hsl(199, 15%, 100%);
-  --ill-detail-95: hsl(199, 15%, 95%);
-  --ill-detail-80: hsl(199, 15%, 80%);
-  --ill-detail-50: hsl(199, 15%, 50%);
-  --ill-detail-40: hsl(199, 15%, 40%);
-  --ill-detail-30: hsl(199, 15%, 30%);
-  --ill-detail-25: hsl(199, 15%, 25%);
-  --ill-detail-20: hsl(199, 30%, 20%);
-  --ill-detail-15: hsl(199, 30%, 15%);
-  --ill-detail-black: hsl(199, 30%, 10%);
 
   --ill-soil: hsl(263, 10%, 30%);
   --ill-soil-shadow-gradient-stop: hsl(263, 10%, 20%);
   --ill-soil-shadow-gradient-start: hsl(263, 10%, 25%);
-
-  --ill-body-black-skin: #8b6b6b;
-  --ill-body-light-skin: #f99e83;
-  --ill-body-light-skin2: #d88260;
-  --ill-body-light-skin-shadow: #e2674d;
-  --ill-hair-color: #404551;
 
   --ill-drone-blades: var(--ill-detail-white);
   --ill-smartphone-screen-gradient-start: var(--ill-detail-15);
@@ -81,24 +69,9 @@ html[data-theme='light'] .illustration {
   --ill-secondary-60: hsl(263, 80%, 60%);
   --ill-secondary-50: hsl(263, 50%, 50%);
 
-  --ill-detail-white: hsl(0, 0%, 100%);
-  --ill-detail-95: hsl(199, 10%, 95%);
-  --ill-detail-80: hsl(199, 10%, 80%);
-  --ill-detail-50: hsl(199, 10%, 50%);
-  --ill-detail-30: hsl(199, 10%, 30%);
-  --ill-detail-20: hsl(199, 10%, 15%);
-  --ill-detail-15: hsl(199, 30%, 20%);
-  --ill-detail-black: hsl(199, 10%, 10%);
-
   --ill-soil: hsl(30, 95%, 90%);
   --ill-soil-shadow-gradient-stop: hsl(30, 35%, 45%);
   --ill-soil-shadow-gradient-start: hsl(30, 45%, 65%);
-
-  --ill-body-black-skin: #8b6b6b;
-  --ill-body-light-skin: #f99e83;
-  --ill-body-light-skin2: #d88260;
-  --ill-body-light-skin-shadow: #e2674d;
-  --ill-hair-color: #404551;
 
   --ill-drone-blades: var(--ill-detail-15);
   --ill-smartphone-screen-gradient-start: var(--ill-secondary-65);
@@ -225,6 +198,7 @@ html[data-theme='light'] .illustration {
 
 .white-stroke-element,
 .primary-stroke-65,
+.video-production-stroke-track,
 .detail-stroke-4,
 .smartphone-in-hands {
   fill: none;
@@ -257,6 +231,9 @@ html[data-theme='light'] .illustration {
 .drone-blades {
   fill: var(--ill-drone-blades);
 }
+.drone-rotors {
+  fill: var(--ill-detail-25);
+}
 
 /* PHOTOGRAPHY PROPERTIES */
 .photography-shadow {
@@ -280,6 +257,12 @@ html[data-theme='light'] .illustration {
 .video-production-shadow {
   fill: url(#video-production-shadow);
 }
+.video-production-play-button {
+  fill: hsl(var(--rose));
+}
+.video-production-stroke-track {
+  stroke: hsl(var(--rose));
+}
 .white-stroke-element {
   stroke: var(--ill-detail-white);
   stroke-width: 2px;
@@ -291,6 +274,7 @@ html[data-theme='light'] .illustration {
   stroke: var(--ill-detail-30);
 }
 .primary-stroke-65,
+.video-production-stroke-track,
 .detail-stroke-4 {
   stroke-width: 10px;
 }

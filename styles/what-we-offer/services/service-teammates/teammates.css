@@ -103,7 +103,7 @@
 .teammates__close-button {
   position: absolute;
   top: 0;
-  right: 0;
+  right: 0.5rem;
   z-index: 100;
 }
 .teammates__close-button::after,
