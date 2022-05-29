@@ -9,23 +9,39 @@
 }
 .rect-button,
 .hire-button {
+  padding: 1rem 2rem;
+  font-size: 1.225rem;
+  text-transform: uppercase;
+  border-radius: 1rem;
+  box-shadow: 0.75rem 0.75rem 0 hsla(var(--accent-shade) / 0.1),
+    0.75rem 0.75rem 1.5rem hsla(var(--accent-shade) / 0.1);
+}
+.rect-button,
+.hire-button,
+.intl_button {
   width: fit-content;
   display: flex;
   column-gap: 0.8rem;
-  padding: 1rem 2rem;
-  font-size: 1.225rem;
   font-weight: bold;
   letter-spacing: 0.5px;
-  text-transform: uppercase;
   white-space: nowrap;
-  border-radius: 1rem;
   line-height: 1.1;
   border: 2px solid transparent;
   transition: all var(--optimal) ease-in-out;
   transform-origin: center bottom;
-  box-shadow: 0.75rem 0.75rem 0 hsla(var(--accent-shade) / 0.1),
-    0.75rem 0.75rem 1.5rem hsla(var(--accent-shade) / 0.1);
   user-select: none;
+}
+.intl_button {
+  align-items: center;
+  padding: 0.575rem 1rem;
+  font-size: 1rem;
+  background-color: hsla(var(--accent-shade) / 0.05);
+  border-color: hsla(var(--accent-shade) / 0.5);
+  border-radius: 0.725rem;
+  color: var(--secondary-color);
+  text-transform: capitalize;
+  box-shadow: 0.5rem 0.5rem 0 hsla(var(--accent-shade) / 0.1),
+    0.5rem 0.5rem 1.5rem hsla(var(--accent-shade) / 0.1);
 }
 .rect-button {
   fill: var(--secondary-color);
@@ -39,10 +55,9 @@
   background-color: var(--secondary-color);
   border-color: hsla(var(--accent-shade) / 0.5);
 }
-.rect-button:hover,
-.hire-button:hover {
-  box-shadow: 0.75rem 0.75rem 0 hsla(var(--accent-shade) / 0.1),
-    0.75rem 0.75rem 1.5rem hsla(var(--accent-shade) / 0.1);
+.intl_button:active {
+  box-shadow: 0.25rem 0.25rem 0 hsla(var(--accent-shade) / 0.3),
+    0.25rem 0.25rem 1rem hsla(var(--accent-shade) / 0.3);
 }
 .rect-button:active,
 .hire-button:active {
@@ -52,7 +67,9 @@
 .rect-button:hover,
 .rect-button:active,
 .hire-button:hover,
-.hire-button:active {
+.hire-button:active,
+.intl_button:hover,
+.intl_button:active {
   border-color: var(--accent-color);
 }
 .rect-button.disable {
@@ -115,11 +132,6 @@
       hsla(var(--accent-shade) / 0.3),
     calc(0.5rem / var(--division)) calc(0.5rem / var(--division)) calc(1rem / var(--division))
       hsla(var(--accent-shade) / 0.3);
-}
-
-.circle-button.pressed {
-  background-color: var(--accent-color);
-  color: var(--primary-color);
 }
 
 .click:active {

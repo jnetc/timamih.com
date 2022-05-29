@@ -4,15 +4,17 @@ import { useState, useRef, useEffect } from 'react';
 import { useStore } from '@Hooks/useStore';
 import { useTransitionAnimation } from '@Hooks/useTransitionAnimation';
 // Component
-import { LanguageButton } from './LanguageButton';
+import { IntlButton } from './IntlButton';
+import { Flags } from './SVG/Flags';
+import { ArrowCross } from './SVG/ArrowCross';
 // Styles
-import styles from './switch-language.module.css';
+import styles from './intl.module.css';
 // Types
 import { LanguagesType } from '@Types';
 
-export const SwitchLanguageButton = () => {
-  const { asPath, locale } = useRouter();
-  const { languages } = useStore();
+export const SwitchIntlButton = () => {
+  const { asPath } = useRouter();
+  const { languages, language } = useStore();
   const ref = useRef<HTMLButtonElement>(null);
   const animated = useRef<HTMLDivElement>(null);
   const [showMenu, setShowMenu] = useState(false);
@@ -37,7 +39,7 @@ export const SwitchLanguageButton = () => {
 
   const buttonsOrder = languages.map(order => {
     const reType = order as LanguagesType;
-    return <LanguageButton key={order} path={asPath} lang={reType} />;
+    return <IntlButton key={order} path={asPath} lang={reType} />;
   });
 
   return (
@@ -47,14 +49,21 @@ export const SwitchLanguageButton = () => {
         title="language switcher"
         onClick={toggleLanguageMenu}
         ref={ref}
-        className={`circle-button circle-m button-txt ${showMenu ? 'pressed' : ''} click`}
-        id="languages"
+        className={`click intl_button  ${showMenu ? styles.pressed : ''}`}
       >
-        <p className={styles.text}>{locale}</p>
+        <Flags country={language} />
+        <p className={styles.text}>{langs[language]}</p>
+        <ArrowCross />
       </button>
       <div className={styles.buttons} onClick={toggleLanguageMenu} ref={animated}>
         {buttonsOrder}
       </div>
     </>
   );
+};
+
+export const langs = {
+  fi: 'Suomi',
+  ru: 'Русский',
+  en: 'English',
 };

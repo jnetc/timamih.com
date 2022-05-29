@@ -1,0 +1,119 @@
+.pressed {
+  color: var(--primary-color);
+  background-color: var(--accent-color);
+}
+.arrow_cross {
+  width: 18px;
+  height: 20px;
+  transform: translateY(3px);
+  transition: all var(--especial) ease-in-out;
+}
+.pressed .arrow_cross {
+  transform: translateY(-4px);
+}
+
+.arrow_cross line:where(:first-child, :last-child) {
+  fill: none;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+  stroke: var(--accent-color);
+  transition: all var(--especial) ease-in-out;
+}
+.arrow_cross line:first-child {
+  stroke-dashoffset: 13;
+  stroke-dasharray: 24;
+}
+.arrow_cross line:last-child {
+  stroke-dashoffset: -13;
+  stroke-dasharray: 24;
+}
+.pressed .arrow_cross line:where(:first-child, :last-child) {
+  stroke: var(--primary-color);
+}
+.pressed .arrow_cross line:first-child {
+  stroke-dashoffset: -13;
+}
+.pressed .arrow_cross line:last-child {
+  stroke-dashoffset: 13;
+}
+
+.buttons {
+  display: none;
+  opacity: 0;
+  flex-flow: column;
+  gap: 0.4rem;
+  position: absolute;
+  top: 4rem;
+  right: 4.5rem;
+  padding: 1rem;
+  overflow: hidden;
+  background-color: var(--primary-color);
+  border: 2px solid var(--accent-color);
+  border-radius: 0.5rem;
+  box-shadow: 10px 10px 0 hsla(var(--accent-shade) / 0.1),
+    15px 15px 30px hsla(var(--accent-shade) / 0.1);
+  transform: translate3d(0, 0, 0);
+  z-index: 5;
+}
+
+.button {
+  width: 145px;
+  display: flex;
+  align-items: center;
+  column-gap: 0.6rem;
+  padding-block: 0.2rem;
+  position: relative;
+  color: var(--secondary-color);
+  font-size: 1rem;
+  font-weight: 400;
+  user-select: none;
+}
+
+.button strong {
+  width: 1.5rem;
+  font-size: 1rem;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.button::after {
+  content: '';
+  width: 0.5rem;
+  aspect-ratio: 1 / 1;
+  position: absolute;
+  top: 50%;
+  right: -0.5rem;
+  background-color: hsla(var(--accent-shade) / 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+.button.active::after {
+  background-color: var(--accent-color);
+  animation: active-lang 1s ease-in-out infinite;
+}
+@keyframes active-lang {
+  from {
+    box-shadow: 0 0 0 0px hsla(var(--accent-shade) / 0.5);
+  }
+  to {
+    box-shadow: 0 0 0 5px hsla(var(--accent-shade) / 0);
+  }
+}
+
+/* TRANSITION CLASSES */
+.buttons:global(.mountOnEnter) {
+  display: flex;
+}
+
+.buttons:global(.enterActive) {
+  opacity: 1;
+  transform: translate3d(0, 10px, 0);
+  transition: all var(--optimal) cubic-bezier(0, 0.4, 0, 1);
+}
+
+.buttons:global(.exitActive) {
+  opacity: 0;
+  transform: translate3d(0, 0, 0);
+  transition: all var(--optimal) cubic-bezier(0.4, 0, 1, 0);
+}

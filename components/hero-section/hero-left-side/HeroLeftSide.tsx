@@ -17,8 +17,7 @@ export const HeroLeftSide = () => {
 
   // Check data for destruction
   if (!data) return null;
-  const { description, label, playButton, mainVideoUrl, title } =
-    data.heroSection;
+  const { description, label, playButton, mainVideoUrl, title } = data.heroSection;
 
   const splittingTitle = title.split(',').map((titl, idx) => {
     if (idx === 0) {
@@ -45,15 +44,10 @@ export const HeroLeftSide = () => {
     <div className="hero-left">
       <p className="hero-left__label">
         {label}
-        <Star
-          color="accent"
-          size={36}
-          duration={14}
-          customClass={'label-star'}
-        />
+        <Star color="accent" size={36} duration={14} customClass={'label-star'} />
       </p>
       <h1 className="hero-left__title">{splittingTitle}</h1>
-      <p className="hero-left__desc description-main">{description}</p>
+      <p className="hero-left__desc">{description}</p>
       <div className="hero-left__action-buttons">
         <PlayModalStore.Provider
           value={{
@@ -66,13 +60,7 @@ export const HeroLeftSide = () => {
         </PlayModalStore.Provider>
 
         <p>{playButton}</p>
-        <Star
-          color="secondary"
-          size={24}
-          duration={10}
-          customClass={'action-star'}
-          delay={1}
-        />
+        <Star color="secondary" size={24} duration={10} customClass={'action-star'} delay={1} />
         <Arrow />
       </div>
     </div>
