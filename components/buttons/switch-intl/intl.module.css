@@ -42,7 +42,7 @@
   display: none;
   opacity: 0;
   flex-flow: column;
-  gap: 0.4rem;
+  gap: 0.5rem;
   position: absolute;
   top: 4rem;
   right: 4.5rem;
@@ -58,7 +58,7 @@
 }
 
 .button {
-  width: 145px;
+  width: 135px;
   display: flex;
   align-items: center;
   column-gap: 0.6rem;
@@ -66,15 +66,12 @@
   position: relative;
   color: var(--secondary-color);
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: bold;
+  transition: color var(--optimal) ease-in-out;
   user-select: none;
 }
-
-.button strong {
-  width: 1.5rem;
-  font-size: 1rem;
-  text-align: left;
-  text-transform: uppercase;
+.button:hover {
+  color: var(--accent-color);
 }
 
 .button::after {
@@ -94,7 +91,7 @@
 }
 @keyframes active-lang {
   from {
-    box-shadow: 0 0 0 0px hsla(var(--accent-shade) / 0.5);
+    box-shadow: 0 0 0 0px hsla(var(--accent-shade) / 0.8);
   }
   to {
     box-shadow: 0 0 0 5px hsla(var(--accent-shade) / 0);

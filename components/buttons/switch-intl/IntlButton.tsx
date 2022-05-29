@@ -18,7 +18,7 @@ export const IntlButton = ({ path, lang }: { path: string; lang: LanguagesType }
       }}
     >
       <Flags country={lang} />
-      <strong>{lang}</strong> {langs[lang]}
+      {langs[lang]}
       <span />
     </button>
   );
