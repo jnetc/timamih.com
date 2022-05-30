@@ -10,3 +10,14 @@
     row-gap: var(--gap-three);
   }
 }
+
+.contacts {
+  grid-column: 1;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.contact-svg {
+  fill: red;
+}

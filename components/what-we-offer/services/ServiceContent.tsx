@@ -18,7 +18,6 @@ export const ServiceContent = ({ data }: { data: ServiceContentType }) => {
   };
 
   useOutsideClick(ref, setShowTeam);
-  console.log(teammates);
 
   useEffect(() => {
     const preventOnLoadAnimation = setTimeout(() => {

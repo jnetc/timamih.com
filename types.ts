@@ -1,101 +1,104 @@
-import { ReactChild, Dispatch, SetStateAction } from 'react';
-
 // COMPONENTS TIPE
 export type LanguagesType = 'ru' | 'fi' | 'en';
-
 export type ServiceIllustrationType = 'ads' | 'photo' | 'video' | 'graphic' | 'drone';
+export type ContactIconsType = 'telegram' | 'telephone' | 'email' | 'whatsapp';
 
 export type HandlerType = { handler: () => void };
 
-export interface ArticleType<T> {
-  title: T;
-  description: T;
+interface ID {
+  id: string;
+}
+interface Name {
+  name: string;
+}
+interface Url {
+  url: string;
 }
 
-interface ArticleWithIdType<T> {
-  id: T;
-  title: T;
-  description: T;
+export interface ArticleType {
+  title: string;
+  description: string;
 }
 
-interface AvatarType<T> {
-  url: T;
-  blurUpThumb: T;
+interface ArticleWithIdType extends ID, ArticleType {}
+
+interface AvatarType extends Url {
+  blurUpThumb: string;
 }
 
-interface NavigationLinkType<T> {
-  id: T;
-  name: T;
-  navanchor: T;
+interface NavigationLinkType extends ID, Name {
+  navanchor: string;
 }
 
-interface HeaderLinksType<T> {
-  headerlinks: Array<NavigationLinkType<T>>;
+interface HeaderLinksType {
+  headerlinks: Array<NavigationLinkType>;
 }
 
-export interface ChatMessageType<T> {
-  id: T;
-  message: T;
+export interface ChatMessageType extends ID {
+  message: string;
 }
 
 // SECTION TYPES
-interface SEO<T> {
+interface SEO {
   globalSeo: {
-    fallbackSeo: ArticleType<T>;
+    fallbackSeo: ArticleType;
   };
 }
 
-interface HeroSectionType<T> extends ArticleType<T> {
+interface HeroSectionType<T> extends ArticleType {
   label: T;
   playButton: T;
   hireButton: T;
   mainVideoUrl: T;
-  chat: Array<ChatMessageType<T>>;
+  chat: Array<ChatMessageType>;
 }
 
-export interface HowWeWorkType<T> extends ArticleType<T> {
-  steps: Array<ArticleWithIdType<string>>;
+export interface HowWeWorkType<T> extends ArticleType {
+  steps: Array<ArticleWithIdType>;
   nextButton: T;
   prevButton: T;
 }
 
-export interface TeammateType<T> extends ArticleWithIdType<T> {
+export interface TeammateType extends ArticleWithIdType {
   recruit: boolean;
-  proff: T;
-  avatar: AvatarType<T>;
+  proff: string;
+  avatar: AvatarType;
 }
 
-export interface ServiceType<T> extends ArticleWithIdType<T> {
-  price: T;
-  buttonName: T;
+export interface ServiceType extends ArticleWithIdType {
+  price: string;
+  buttonName: string;
   illustration: ServiceIllustrationType;
   order: number;
-  teammates: Array<TeammateType<T>>;
+  teammates: Array<TeammateType>;
 }
 
-export type ServiceContentType = Omit<ServiceType<string>, 'illustration' | 'id'>;
+export type ServiceContentType = Omit<ServiceType, 'illustration' | 'id'>;
 export type ServiceArticleType = {
   data: Omit<ServiceContentType, 'teammates' | 'order'>;
 } & HandlerType;
-export type TeammatesGroupType<T> = Pick<ServiceType<T>, 'teammates'> & HandlerType;
+export type TeammatesGroupType = Pick<ServiceType, 'teammates'> & HandlerType;
 
-export interface WhatWeOfferType<T> extends ArticleType<T> {
-  services: Array<ServiceType<string>>;
+export interface WhatWeOfferType extends ArticleType {
+  services: Array<ServiceType>;
+}
+
+export interface ContactsType extends ID, Url {
+  icon: ContactIconsType;
+}
+export interface GetInTouchType extends ArticleType {
+  copyText: string;
+  contacts: Array<ContactsType>;
 }
 
 export interface DataType {
-  _site: SEO<string>;
-  navigation: HeaderLinksType<string>;
+  _site: SEO;
+  navigation: HeaderLinksType;
   heroSection: HeroSectionType<string>;
   howwework: HowWeWorkType<string>;
-  whatweoffer: WhatWeOfferType<string>;
-  ourlittlestory: ArticleType<string>;
-}
-
-export interface NavMobLinksProps {
-  children: ReactChild;
-  open: boolean;
-  handler: Dispatch<SetStateAction<boolean>>;
+  whatweoffer: WhatWeOfferType;
+  ourlittlestory: ArticleType;
+  getintouch: GetInTouchType;
 }
 
 /**

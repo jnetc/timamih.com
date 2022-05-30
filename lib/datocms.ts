@@ -51,6 +51,9 @@ export const query = gql`
     ourlittlestory(locale: $locale) {
       ...OurlittlestoryRecordFragment
     }
+    getintouch(locale: $locale) {
+      ...GetintouchRecordFragment
+    }
   }
   fragment SiteFragment on Site {
     globalSeo(locale: $locale) {
@@ -115,5 +118,15 @@ export const query = gql`
   fragment OurlittlestoryRecordFragment on OurlittlestoryRecord {
     title
     description(markdown: true)
+  }
+  fragment GetintouchRecordFragment on GetintouchRecord {
+    title
+    description
+    copyText
+    contacts {
+      id
+      icon
+      url
+    }
   }
 `;
