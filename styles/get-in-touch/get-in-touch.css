@@ -4,6 +4,17 @@
   column-gap: var(--gap-column-section);
   row-gap: var(--gap-column-section);
 }
+.contacts {
+  grid-column: 1;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin-block: auto;
+}
+.contacts h2 {
+  padding-block: 5rem 2rem;
+  font-size: 2rem;
+}
 @media screen and (max-width: 960px) {
   #get-in-touch {
     grid-template-columns: 100%;
@@ -11,13 +22,5 @@
   }
 }
 
-.contacts {
-  grid-column: 1;
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-}
-
-.contact-svg {
-  fill: red;
-}
+@import url('./action-contacts.css');
+@import url('./copy-contacts.css');

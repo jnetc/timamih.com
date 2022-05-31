@@ -11,7 +11,7 @@ export const Avatar = () => {
     cssClass: 'transition',
   });
   return (
-    <div title="avatar" aria-labelledby="avatar" className="hero-right__avatar" ref={targetAvatar}>
+    <div className="hero-right__avatar" ref={targetAvatar}>
       <svg
         width="100%"
         height="100%"

@@ -41,9 +41,9 @@ html[data-theme='dark'] .illustration {
   --ill-secondary-60: hsl(337, 80%, 60%);
   --ill-secondary-50: hsl(337, 50%, 50%);
 
-  --ill-soil: hsl(263, 10%, 30%);
-  --ill-soil-shadow-gradient-stop: hsl(263, 10%, 20%);
-  --ill-soil-shadow-gradient-start: hsl(263, 10%, 25%);
+  --ill-soil: hsl(263, 0%, 22%);
+  --ill-soil-shadow-gradient-stop: hsl(263, 0%, 15%);
+  --ill-soil-shadow-gradient-start: hsl(263, 0%, 20%);
 
   --ill-drone-blades: var(--ill-detail-white);
   --ill-smartphone-screen-gradient-start: var(--ill-detail-15);
@@ -69,9 +69,9 @@ html[data-theme='light'] .illustration {
   --ill-secondary-60: hsl(263, 80%, 60%);
   --ill-secondary-50: hsl(263, 50%, 50%);
 
-  --ill-soil: hsl(30, 95%, 90%);
-  --ill-soil-shadow-gradient-stop: hsl(30, 35%, 45%);
-  --ill-soil-shadow-gradient-start: hsl(30, 45%, 65%);
+  --ill-soil: hsl(32, 95%, 90%);
+  --ill-soil-shadow-gradient-stop: hsl(32, 35%, 45%);
+  --ill-soil-shadow-gradient-start: hsl(32, 45%, 65%);
 
   --ill-drone-blades: var(--ill-detail-15);
   --ill-smartphone-screen-gradient-start: var(--ill-secondary-65);

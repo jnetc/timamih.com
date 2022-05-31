@@ -9,7 +9,7 @@ export const CloseButton = ({ handler }: HandlerCloseButtonType) => {
 
   return (
     <button
-      className={`${styles.module} circle-button circle-m`}
+      className={`${styles.module} circle-button circle-m click`}
       title="close button"
       aria-labelledby="close button"
       onClick={closeMe}

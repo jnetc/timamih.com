@@ -1,4 +1,4 @@
-import { Phone } from './Phone';
+import { Telephone } from './Telephone';
 import { Email } from './Email';
 import { Telegram } from './Telegram';
 import { WhatsApp } from './WhatsApp';
@@ -7,7 +7,7 @@ import { ContactIconsType } from '@Types';
 
 export const Icons = ({ icon }: { icon: ContactIconsType }) => {
   const svg = {
-    telephone: <Phone />,
+    telephone: <Telephone />,
     email: <Email />,
     telegram: <Telegram />,
     whatsapp: <WhatsApp />,

@@ -12,7 +12,6 @@ export const NextButton = ({ currentStep, amountSteps, lastStep, handler }: Next
       title={data?.howwework.nextButton}
       aria-labelledby={data?.howwework.nextButton}
     >
-      {/* {lastStep ? 'valmis' : data?.howwework.nextButton} */}
       <NextIcon done={lastStep} direction="right" />
     </button>
   );

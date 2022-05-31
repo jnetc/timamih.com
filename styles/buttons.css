@@ -103,19 +103,22 @@
   --division: 2.4;
 }
 
-.circle-button {
+.circle-button,
+.contact-button {
   width: calc(6rem / var(--division));
   aspect-ratio: 1 / 1;
   position: relative;
   border-radius: 50%;
   border: 2px solid transparent;
+  transition: all var(--optimal) ease-in-out;
+}
+.circle-button {
   border-color: hsla(var(--accent-shade) / 0.5);
   background-color: var(--primary-color);
   box-shadow: calc(0.75rem / var(--division)) calc(0.75rem / var(--division)) 0
       hsla(var(--accent-shade) / 0.1),
     calc(0.75rem / var(--division)) calc(0.75rem / var(--division)) calc(1.5rem / var(--division))
       hsla(var(--accent-shade) / 0.1);
-  transition: all var(--optimal) ease-in-out;
 }
 
 .circle-button:hover {

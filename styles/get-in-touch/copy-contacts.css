@@ -1,0 +1,28 @@
+.copy-contacts {
+  max-width: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.copy-contact {
+  height: 2.825rem;
+  display: flex;
+  flex: 1 0 calc(50% - 1rem);
+}
+
+.copy-data {
+  align-self: flex-end;
+  position: relative;
+  font-size: 1.2rem;
+}
+.copy-data::after {
+  content: attr(data-label);
+  position: absolute;
+  top: -1.3rem;
+  left: 0;
+  font-size: 0.9rem;
+  color: hsla(var(--secondary-shade) / 0.6);
+}
+.copy-contact button {
+  align-self: center;
+}
