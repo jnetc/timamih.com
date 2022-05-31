@@ -4,7 +4,7 @@ import { useStore } from '@Hooks/useStore';
 // Types
 import { TeammateType } from '@Types';
 
-export const ServiceTeammate = ({ data }: { data: TeammateType<string> }) => {
+export const ServiceTeammate = ({ data }: { data: TeammateType }) => {
   const { language } = useStore();
   return (
     <article className="service-teammate">

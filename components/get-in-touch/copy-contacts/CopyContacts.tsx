@@ -29,7 +29,6 @@ function urlSelect(icon: ContactIconsType, url: string) {
     const SecondNum = url.substring(5, 8);
     const ThirdNum = url.substring(8, 12);
     phone = `${country} ${firstNum} ${SecondNum} ${ThirdNum}`;
-    console.log(url);
   }
   const urls = {
     telephone: { label: { en: 'Phone', ru: 'Телефон', fi: 'Puhelin' }, url: `+${phone}` },

@@ -3,7 +3,7 @@ import { ServiceContent } from './ServiceContent';
 // Type
 import { ServiceType } from '@Types';
 
-export const Service = ({ data }: { data: ServiceType<string> }) => {
+export const Service = ({ data }: { data: ServiceType }) => {
   const { id, illustration, ...article } = data;
 
   return (
