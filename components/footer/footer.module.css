@@ -1,3 +1,15 @@
 .module {
   display: flex;
+  flex-flow: column;
+  padding-block: 3rem 1rem;
+  justify-content: center;
+  align-items: center;
+  row-gap: 0.5rem;
+}
+.module p:last-child {
+  font-size: 0.8em;
+  color: hsla(var(--secondary-shade) / 0.7);
+}
+.module a {
+  color: hsla(var(--secondary-shade) / 1);
 }

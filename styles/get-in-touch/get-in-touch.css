@@ -20,6 +20,9 @@
     grid-template-columns: 100%;
     row-gap: var(--gap-three);
   }
+  #get-in-touch .illustration {
+    display: none;
+  }
 }
 
 @import url('./action-contacts.css');
