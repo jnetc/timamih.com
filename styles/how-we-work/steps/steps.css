@@ -59,7 +59,7 @@
   width: 1.5rem;
   aspect-ratio: 1 / 1;
 }
-.arrow-svg.right {
+.arrow-svg.left {
   transform: rotate(180deg);
 }
 .rect-button .arrow-icon {
@@ -69,14 +69,55 @@
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-miterlimit: 10;
-  stroke-dashoffset: 261;
-  stroke-dasharray: 153;
-  transition: all 0.8s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
+
+.rect-button .line1-right {
+  stroke-dashoffset: 20;
+  stroke-dasharray: 45;
+}
+.rect-button.complete .line1-right {
+  stroke-dashoffset: 45;
+}
+.rect-button .line2-right {
+  stroke-dashoffset: 20;
+  stroke-dasharray: 35;
+}
+.rect-button.complete .line2-right {
+  stroke-dashoffset: 35;
+}
+.rect-button .line3-right {
+  stroke-dashoffset: -30;
+  stroke-dasharray: 15;
+}
+.rect-button.complete .line3-right {
+  stroke-dashoffset: -45;
+}
+.rect-button .line1-right,
+.rect-button .line2-right,
+.rect-button .line3-right {
+  transition-delay: 0.5s;
+}
+.rect-button.complete .line1-right,
+.rect-button.complete .line2-right,
+.rect-button.complete .line3-right {
+  transition-delay: 0s;
+}
+.rect-button .polyline-right {
+  stroke-dashoffset: 90;
+  stroke-dasharray: 64;
+  transition-delay: 0s;
+}
+.rect-button.complete .polyline-right {
+  stroke-dashoffset: 90;
+  stroke-dasharray: 42;
+  stroke: var(--accent-color);
+  transition-delay: 0s;
+}
+
 .rect-button .arrow-icon.done {
   stroke-dashoffset: 117;
   stroke-dasharray: 153;
-  stroke: var(--accent-color);
 }
 
 @media screen and (max-width: 960px) {

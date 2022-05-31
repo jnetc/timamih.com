@@ -20,7 +20,7 @@ export const ActionContacts = ({ links }: { links: Array<ContactsType> }) => {
 // Helper function to separate each links
 function urlSelect(icon: ContactIconsType, url: string) {
   const urls = {
-    telephone: `tel:${url}`,
+    telephone: `tel:+${url}`,
     telegram: `tg://resolve?domain=${url}`,
     whatsapp: `https://wa.me/${url}`,
     email: `mailto:${url}`,

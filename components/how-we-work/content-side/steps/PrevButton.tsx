@@ -14,7 +14,7 @@ export const PrevButton = ({ currentStep, handler }: PrevButtonProps) => {
       aria-labelledby={data?.howwework.prevButton}
     >
       {/* {data?.howwework.prevButton} */}
-      <NextIcon direction="right" />
+      <NextIcon direction="left" />
     </button>
   );
 };
