@@ -2,7 +2,7 @@ import { useStore } from '@Hooks/useStore';
 import { NextIcon } from './NextIcon';
 // Type
 import { NextButtonProps } from '@Types';
-export const NextButton = ({ currentStep, amountSteps, lastStep, handler }: NextButtonProps) => {
+export const NextButton = ({ currentStep, amountSteps, handler }: NextButtonProps) => {
   const { data } = useStore();
   return (
     <button
@@ -12,7 +12,7 @@ export const NextButton = ({ currentStep, amountSteps, lastStep, handler }: Next
       title={data?.howwework.nextButton}
       aria-labelledby={data?.howwework.nextButton}
     >
-      <NextIcon done={lastStep} direction="right" />
+      <NextIcon direction="right" />
     </button>
   );
 };

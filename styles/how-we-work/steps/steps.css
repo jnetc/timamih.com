@@ -36,6 +36,7 @@
   position: relative;
   background-color: hsla(var(--accent-shade) / 0.3);
   border-radius: 50%;
+  transition: all var(--optimal) ease-in-out;
 }
 .step-dot::after {
   content: '';
@@ -69,34 +70,30 @@
   stroke-linecap: round;
   stroke-linejoin: round;
   stroke-miterlimit: 10;
-  transition: all 0.2s ease-in-out;
+  transition: all var(--optimal) ease-in-out;
 }
 
 .rect-button .line1-right {
-  stroke-dashoffset: 20;
-  stroke-dasharray: 45;
+  stroke-dashoffset: 70;
+  stroke-dasharray: 95;
 }
 .rect-button.complete .line1-right {
-  stroke-dashoffset: 45;
+  stroke-dasharray: 70;
 }
-.rect-button .line2-right {
-  stroke-dashoffset: 20;
-  stroke-dasharray: 35;
-}
-.rect-button.complete .line2-right {
-  stroke-dashoffset: 35;
-}
+.rect-button .line2-right,
 .rect-button .line3-right {
-  stroke-dashoffset: -30;
-  stroke-dasharray: 15;
+  stroke-dashoffset: 70;
+  stroke-dasharray: 95;
 }
+.rect-button.complete .line2-right,
 .rect-button.complete .line3-right {
-  stroke-dashoffset: -45;
+  stroke-dasharray: 70;
 }
+
 .rect-button .line1-right,
 .rect-button .line2-right,
 .rect-button .line3-right {
-  transition-delay: 0.5s;
+  transition-delay: 0.3s;
 }
 .rect-button.complete .line1-right,
 .rect-button.complete .line2-right,
@@ -106,18 +103,13 @@
 .rect-button .polyline-right {
   stroke-dashoffset: 90;
   stroke-dasharray: 64;
-  transition-delay: 0s;
+  /* transition-delay: 0s; */
 }
 .rect-button.complete .polyline-right {
+  stroke: var(--accent-color);
   stroke-dashoffset: 90;
   stroke-dasharray: 42;
-  stroke: var(--accent-color);
-  transition-delay: 0s;
-}
-
-.rect-button .arrow-icon.done {
-  stroke-dashoffset: 117;
-  stroke-dasharray: 153;
+  transition-delay: 0.3s;
 }
 
 @media screen and (max-width: 960px) {

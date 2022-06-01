@@ -21,7 +21,9 @@
 }
 
 .hww-article__title {
+  color: var(--secondary-color);
   font-size: clamp(1.5rem, 5vw, 3rem);
+  transition: all var(--optimal) ease-in-out;
 }
 
 @media screen and (max-width: 960px) {

@@ -107,77 +107,98 @@ html[data-theme='light'] .illustration {
 /* ILLUSTRATION OPTION PROPERTIES */
 .primary-30 {
   fill: var(--ill-primary-30);
+  transition: all var(--optimal) ease-in-out;
 }
 .primary-40 {
   fill: var(--ill-primary-40);
+  transition: all var(--optimal) ease-in-out;
 }
 .primary-50 {
   fill: var(--ill-primary-50);
-  transition: all 0.3s ease-in-out;
+  transition: all var(--optimal) ease-in-out;
 }
 .primary-60 {
-  fill: var(--ill-primary-70);
+  fill: var(--ill-primary-60);
+  transition: all var(--optimal) ease-in-out;
 }
 .primary-65 {
   fill: var(--ill-primary-65);
-  transition: all 0.3s ease-in-out;
+  transition: all var(--optimal) ease-in-out;
 }
 .primary-70 {
   fill: var(--ill-primary-70);
+  transition: all var(--optimal) ease-in-out;
 }
 .primary-75 {
-  fill: var(--ill-primary-70);
+  fill: var(--ill-primary-75);
+  transition: all var(--optimal) ease-in-out;
 }
 .primary-80 {
-  fill: var(--ill-primary-70);
+  fill: var(--ill-primary-80);
+  transition: all var(--optimal) ease-in-out;
 }
 
 .secondary-50 {
   fill: var(--ill-secondary-50);
+  transition: all var(--optimal) ease-in-out;
 }
 .secondary-60 {
   fill: var(--ill-secondary-60);
+  transition: all var(--optimal) ease-in-out;
 }
 .secondary-65 {
   fill: var(--ill-secondary-65);
+  transition: all var(--optimal) ease-in-out;
 }
 .secondary-70 {
   fill: var(--ill-secondary-70);
+  transition: all var(--optimal) ease-in-out;
 }
 .secondary-75 {
   fill: var(--ill-secondary-75);
+  transition: all var(--optimal) ease-in-out;
 }
 .secondary-80 {
   fill: var(--ill-secondary-80);
+  transition: all var(--optimal) ease-in-out;
 }
 
 .detail-black {
   fill: var(--ill-detail-black);
+  transition: all var(--optimal) ease-in-out;
 }
 .detail-15 {
   fill: var(--ill-detail-15);
+  transition: all var(--optimal) ease-in-out;
 }
 .detail-20 {
   fill: var(--ill-detail-20);
+  transition: all var(--optimal) ease-in-out;
 }
 .detail-30 {
   fill: var(--ill-detail-30);
+  transition: all var(--optimal) ease-in-out;
 }
 .detail-50 {
   fill: var(--ill-detail-50);
+  transition: all var(--optimal) ease-in-out;
 }
 .detail-80 {
   fill: var(--ill-detail-80);
+  transition: all var(--optimal) ease-in-out;
 }
 .detail-95 {
   fill: var(--ill-detail-95);
+  transition: all var(--optimal) ease-in-out;
 }
 .detail-white {
   fill: var(--ill-detail-white);
+  transition: all var(--optimal) ease-in-out;
 }
 
 .soil {
   fill: var(--ill-soil);
+  transition: all var(--optimal) ease-in-out;
 }
 .body-black-skin {
   fill: var(--ill-body-black-skin);
@@ -284,12 +305,14 @@ html[data-theme='light'] .illustration {
   stroke: var(--ill-detail-95);
   fill: var(--ill-detail-white);
   stroke-miterlimit: 10;
+  transition: all var(--optimal) ease-in-out;
 }
 .notepad-paper,
 .pen-ereaser {
   stroke: var(--ill-detail-50);
   fill: var(--ill-detail-white);
   stroke-miterlimit: 10;
+  transition: all var(--optimal) ease-in-out;
 }
 
 /* GET IN TOUCH PROPERTIES */

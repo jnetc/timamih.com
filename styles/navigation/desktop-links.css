@@ -1,7 +1,7 @@
 .desktop-links {
   display: flex;
-  gap: 1rem;
-  margin-inline-end: auto;
+  gap: 2rem;
+  margin-inline-end: 3rem;
 }
 .desktop-link {
   position: relative;

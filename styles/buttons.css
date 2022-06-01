@@ -1,12 +1,12 @@
 /* buttons styles*/
-.button-txt {
+/* .button-txt {
   color: var(--secondary-color);
   font-size: 1rem;
   font-weight: bold;
   letter-spacing: 0.5px;
   text-transform: uppercase;
   user-select: none;
-}
+} */
 .rect-button,
 .hire-button {
   padding: 1rem 2rem;
@@ -18,7 +18,7 @@
 }
 .rect-button,
 .hire-button,
-.intl_button {
+.intl-button {
   width: fit-content;
   display: flex;
   column-gap: 0.8rem;
@@ -31,7 +31,7 @@
   transform-origin: center bottom;
   user-select: none;
 }
-.intl_button {
+.intl-button {
   align-items: center;
   padding: 0.575rem 1rem;
   font-size: 1rem;
@@ -55,7 +55,7 @@
   background-color: var(--secondary-color);
   border-color: hsla(var(--accent-shade) / 0.5);
 }
-.intl_button:active {
+.intl-button:active {
   box-shadow: 0.25rem 0.25rem 0 hsla(var(--accent-shade) / 0.3),
     0.25rem 0.25rem 1rem hsla(var(--accent-shade) / 0.3);
 }
@@ -68,8 +68,8 @@
 .rect-button:active,
 .hire-button:hover,
 .hire-button:active,
-.intl_button:hover,
-.intl_button:active {
+.intl-button:hover,
+.intl-button:active {
   border-color: var(--accent-color);
 }
 .rect-button.disable {
@@ -147,5 +147,8 @@
     padding: 1rem 1.5rem;
     font-size: 1rem;
     border-radius: 0.8rem;
+  }
+  .intl-button {
+    display: none;
   }
 }

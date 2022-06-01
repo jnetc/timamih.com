@@ -49,7 +49,7 @@ export const SwitchIntlButton = () => {
         title="language switcher"
         onClick={toggleLanguageMenu}
         ref={ref}
-        className={`click intl_button  ${showMenu ? styles.pressed : ''}`}
+        className={`click intl-button  ${showMenu ? styles.pressed : ''}`}
       >
         <Flags country={language} />
         <p className={styles.text}>{langs[language]}</p>

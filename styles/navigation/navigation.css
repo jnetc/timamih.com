@@ -1,6 +1,7 @@
 .navigation {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   column-gap: var(--gap-one);
   padding-block-start: var(--gap-one);
   position: relative;

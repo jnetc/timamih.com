@@ -42,14 +42,10 @@ export const ContentSide = () => {
       <Articles move={moveStep} />
       <div className="section-content__actions">
         <StepDots activeStep={moveStep.num} />
-        <PrevButton
-          currentStep={moveStep.num}
-          handler={() => stepHandler('prev')}
-        />
+        <PrevButton currentStep={moveStep.num} handler={() => stepHandler('prev')} />
         <NextButton
           amountSteps={stepsSum}
           currentStep={moveStep.num}
-          lastStep={moveStep.num === stepsSum}
           handler={() => stepHandler('next')}
         />
       </div>
