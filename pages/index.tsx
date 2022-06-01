@@ -22,8 +22,6 @@ const Home: NextPage = ({
   language,
   languages,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
-  console.log(data);
-
   if (!data) {
     return <main>Sorry! This page not found.</main>;
   }

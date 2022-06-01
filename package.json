@@ -4,7 +4,6 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "test \"$CI\" = true && npx pnpm install -r --store=node_modules/.pnpm-store || echo skipping pnpm install",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -29,5 +28,6 @@
     "netlify-cli": "^10.4.0",
     "typescript": "4.6.4",
     "webpack": "^5.72.1"
-  }
+  },
+  "packageManager": "yarn@3.2.1"
 }
