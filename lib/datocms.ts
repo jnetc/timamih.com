@@ -117,7 +117,7 @@ export const query = gql`
   }
   fragment OurlittlestoryRecordFragment on OurlittlestoryRecord {
     title
-    description(markdown: true)
+    description
   }
   fragment GetintouchRecordFragment on GetintouchRecord {
     title

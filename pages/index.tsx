@@ -3,8 +3,8 @@ import type { NextPage, GetStaticProps, InferGetStaticPropsType } from 'next';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
 
-// import { request, query } from 'lib/datocms';
-import { data } from 'dummy_content';
+import { request, query } from 'lib/datocms';
+// import { data } from 'dummy_content';
 // Hooks
 import { Store } from '@Hooks/useStore';
 
@@ -51,7 +51,7 @@ const Home: NextPage = ({
 export default Home;
 
 export const getStaticProps: GetStaticProps = async context => {
-  // const data = await request({ query, variables: { locale: context.locale } });
+  const data = await request({ query, variables: { locale: context.locale } });
 
   return {
     props: {
