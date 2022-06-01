@@ -15,7 +15,7 @@
   publish = ".next"
 
   # Default build command.
-  command = "yarn build"
+  command = "pnpm build"
 [[plugins]]
   # Installs the Plugin for all deploy contexts
   package = "@netlify/plugin-nextjs"
