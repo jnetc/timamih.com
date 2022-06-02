@@ -8,14 +8,16 @@ import { request, query } from 'lib/datocms';
 // Hooks
 import { Store } from '@Hooks/useStore';
 
-import Navigation from '@Components/navigation';
-import HeroSection from '@Components/hero-section';
+// import Navigation from '@Components/navigation';
+// import HeroSection from '@Components/hero-section';
 
-const HowWeWork = dynamic(() => import('@Components/how-we-work'));
-const WhatWeOffer = dynamic(() => import('@Components/what-we-offer'));
-const OurLittleStory = dynamic(() => import('@Components/our-little-story'));
-const GetInTouch = dynamic(() => import('@Components/get-in-touch'));
-const Footer = dynamic(() => import('@Components/footer'));
+const Navigation = dynamic(() => import('@Components/navigation'), { ssr: false });
+const HeroSection = dynamic(() => import('@Components/hero-section'), { ssr: false });
+const HowWeWork = dynamic(() => import('@Components/how-we-work'), { ssr: false });
+const WhatWeOffer = dynamic(() => import('@Components/what-we-offer'), { ssr: false });
+const OurLittleStory = dynamic(() => import('@Components/our-little-story'), { ssr: false });
+const GetInTouch = dynamic(() => import('@Components/get-in-touch'), { ssr: false });
+const Footer = dynamic(() => import('@Components/footer'), { ssr: false });
 
 const Home: NextPage = ({
   data,
