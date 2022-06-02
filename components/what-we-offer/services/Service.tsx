@@ -1,4 +1,4 @@
-import { Illustrations } from './illustrations/Illustrations';
+import { Illustrations } from './SVG/Illustrations';
 import { ServiceContent } from './ServiceContent';
 // Type
 import { ServiceType } from '@Types';
