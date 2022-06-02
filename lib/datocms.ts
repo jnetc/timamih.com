@@ -110,6 +110,7 @@ export const query = gql`
         description
         avatar {
           url
+          blurUpThumb
         }
       }
     }

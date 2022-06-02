@@ -15,9 +15,9 @@ export interface ArticleType {
 
 interface ArticleWithIdType extends ID, ArticleType {}
 
-// interface AvatarType extends Url {
-//   blurUpThumb: string;
-// }
+interface AvatarType extends Url {
+  blurUpThumb: string;
+}
 
 interface NavigationLinkType extends ID, Name {
   navanchor: string;
@@ -55,7 +55,7 @@ export interface HowWeWorkType<T> extends ArticleType {
 export interface TeammateType extends ArticleWithIdType {
   recruit: boolean;
   proff: string;
-  avatar: Url;
+  avatar: AvatarType;
 }
 
 export interface ServiceType extends ArticleWithIdType {

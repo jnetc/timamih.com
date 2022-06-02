@@ -11,7 +11,14 @@ export const ServiceTeammate = ({ data }: { data: TeammateType }) => {
       {data.recruit && <span className="teammate-recruit">{recruit[language]}</span>}
 
       <div className="teammate-avatar">
-        <Image src={data.avatar.url} alt={data.title} layout="fill" objectFit="cover" priority />
+        <Image
+          src={data.avatar.url}
+          blurDataURL={data.avatar.blurUpThumb}
+          alt={data.title}
+          layout="fill"
+          objectFit="cover"
+          priority
+        />
       </div>
       <h1 className="teammate-name">{data.title}</h1>
       <h2 className="teammate-proff">{data.proff}</h2>
