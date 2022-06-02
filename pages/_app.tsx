@@ -1,9 +1,8 @@
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
-// Font style
+// STYLES
 import '@Styles/fonts.css';
 import '@Styles/globals.css';
-import '@Styles/illustrations.css';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -26,11 +25,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           media="(prefers-color-scheme: light)"
           content="hsl(32, 100%, 95%)"
         />
-        <meta
-          name="theme-color"
-          media="(prefers-color-scheme: dark)"
-          content="hsl(0, 0%, 22%)"
-        />
+        <meta name="theme-color" media="(prefers-color-scheme: dark)" content="hsl(0, 0%, 22%)" />
 
         <link rel="alternate" href="https://timamih.com/ru" hrefLang="ru" />
         <link rel="alternate" href="https://timamih.com/en" hrefLang="en" />
@@ -39,11 +34,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         {/* Apple */}
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-title" content="timamih.com" />
-        <link
-          rel="apple-touch-icon"
-          sizes="192x192"
-          href="/icons/icon-192x192.png"
-        />
+        <link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png" />
 
         {/* <link
           rel="preload"

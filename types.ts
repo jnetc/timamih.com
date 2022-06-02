@@ -3,17 +3,10 @@ export type LanguagesType = 'ru' | 'fi' | 'en';
 export type ServiceIllustrationType = 'ads' | 'photo' | 'video' | 'graphic' | 'drone';
 export type ContactIconsType = 'telegram' | 'telephone' | 'email' | 'whatsapp';
 
+export type ID = { id: string };
+export type Name = { name: string };
+export type Url = { url: string };
 export type HandlerType = { handler: () => void };
-
-interface ID {
-  id: string;
-}
-interface Name {
-  name: string;
-}
-interface Url {
-  url: string;
-}
 
 export interface ArticleType {
   title: string;
@@ -22,9 +15,9 @@ export interface ArticleType {
 
 interface ArticleWithIdType extends ID, ArticleType {}
 
-interface AvatarType extends Url {
-  blurUpThumb: string;
-}
+// interface AvatarType extends Url {
+//   blurUpThumb: string;
+// }
 
 interface NavigationLinkType extends ID, Name {
   navanchor: string;
@@ -62,7 +55,7 @@ export interface HowWeWorkType<T> extends ArticleType {
 export interface TeammateType extends ArticleWithIdType {
   recruit: boolean;
   proff: string;
-  avatar: AvatarType;
+  avatar: Url;
 }
 
 export interface ServiceType extends ArticleWithIdType {
@@ -104,10 +97,8 @@ export interface DataType {
 /**
  * Button Types Props
  */
-export interface ButtonProps {
-  handler: () => void;
-}
-export interface PrevButtonProps extends ButtonProps {
+
+export interface PrevButtonProps extends HandlerType {
   currentStep: number;
 }
 export interface NextButtonProps extends PrevButtonProps {
