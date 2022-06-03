@@ -1,7 +1,7 @@
 .section-content__actions {
   display: flex;
   flex-wrap: wrap;
-  column-gap: var(--gap-one);
+  column-gap: 2rem;
   row-gap: var(--gap-three);
   justify-content: space-between;
   align-items: center;

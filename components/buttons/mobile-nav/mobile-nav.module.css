@@ -1,24 +1,6 @@
 .module {
-  --size: 2.5rem;
-  width: var(--size);
-  aspect-ratio: 1 / 1;
-  position: relative;
   overflow: hidden;
-  border-radius: 50%;
-  border: 2px solid transparent;
-  border-color: hsla(var(--accent-shade) / 0.5);
-  background-color: var(--primary-color);
-  box-shadow: 0.5rem 0.5rem 0 hsla(var(--accent-shade) / 0.1),
-    0.5rem 0.5rem 1.5rem hsla(var(--accent-shade) / 0.1);
-  transition: all var(--optimal) ease-in-out;
   z-index: 1000;
-}
-.circle-button:hover {
-  border-color: var(--accent-color);
-}
-.module:active {
-  box-shadow: 0.25rem 0.25rem 0 hsla(var(--accent-shade) / 0.3),
-    0.25rem 0.25rem 1rem hsla(var(--accent-shade) / 0.3);
 }
 
 .icon {

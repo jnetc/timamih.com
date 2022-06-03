@@ -25,13 +25,13 @@
   grid-column: 2;
   grid-row: 1;
   justify-content: flex-end;
-  padding-inline: 0 var(--gap-one);
+  padding-inline: 0 var(--body-padding);
 }
 .service:nth-child(even) .service-content,
 .service:nth-child(odd) .illustration {
   grid-column: 1;
   grid-row: 1;
-  padding-inline: var(--gap-one) 0;
+  padding-inline: var(--body-padding) 0;
 }
 /* - */
 .service-teammates,

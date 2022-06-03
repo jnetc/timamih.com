@@ -1,5 +1,5 @@
 .underline {
-  width: 250px;
+  width: clamp(220px, 20vw, 450px);
   display: flex;
   position: absolute;
   bottom: -1rem;
@@ -19,6 +19,6 @@
 }
 @media screen and (max-width: 960px) {
   .underline {
-    width: clamp(100px, 40vw, 250px);
+    width: clamp(100px, 40vw, 350px);
   }
 }

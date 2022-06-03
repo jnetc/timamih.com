@@ -11,7 +11,7 @@ export const TeammateGroup = ({ teammates, handler }: TeammatesGroupType) => {
   return (
     <div className="service-teammates" style={{ visibility: 'hidden' }}>
       <button
-        className="circle-button circle-m teammates__close-button click"
+        className="small-button teammates__close-button click"
         title="close button"
         aria-labelledby="close teammates"
         onClick={handler}

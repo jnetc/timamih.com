@@ -3,7 +3,7 @@
 .how-we-work,
 .our-little-story,
 .get-in-touch {
-  padding-inline: 1rem;
+  padding-inline: var(--body-padding);
 }
 
 .section-header {
