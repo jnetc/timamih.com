@@ -1,5 +1,5 @@
 export const WhatsApp = () => (
-  <div className="contact-button circle-l whatsapp-button click">
+  <div className="contact-button  whatsapp-button click">
     <svg
       width="48"
       height="48"

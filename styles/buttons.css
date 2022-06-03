@@ -96,16 +96,9 @@
   pointer-events: none;
 }
 
-.circle-l {
-  --division: 1;
-}
-.circle-m {
-  --division: 2.4;
-}
-
 .circle-button,
 .contact-button {
-  width: calc(6rem / var(--division));
+  width: 6rem;
   aspect-ratio: 1 / 1;
   position: relative;
   border-radius: 50%;
@@ -115,26 +108,18 @@
 .circle-button {
   border-color: hsla(var(--accent-shade) / 0.5);
   background-color: var(--primary-color);
-  box-shadow: calc(0.75rem / var(--division)) calc(0.75rem / var(--division)) 0
-      hsla(var(--accent-shade) / 0.1),
-    calc(0.75rem / var(--division)) calc(0.75rem / var(--division)) calc(1.5rem / var(--division))
-      hsla(var(--accent-shade) / 0.1);
+  box-shadow: 0.75rem 0.75rem 0 hsla(var(--accent-shade) / 0.1),
+    0.75rem 0.75rem 1.5rem hsla(var(--accent-shade) / 0.1);
 }
 
 .circle-button:hover {
   border-color: var(--accent-color);
-  box-shadow: calc(0.75rem / var(--division)) calc(0.75rem / var(--division)) 0
-      hsla(var(--accent-shade) / 0.1),
-    calc(0.75rem / var(--division)) calc(0.75rem / var(--division)) calc(1.5rem / var(--division))
-      hsla(var(--accent-shade) / 0.1);
 }
 
 .circle-button:active {
   border-color: var(--accent-color);
-  box-shadow: calc(0.5rem / var(--division)) calc(0.5rem / var(--division)) 0
-      hsla(var(--accent-shade) / 0.3),
-    calc(0.5rem / var(--division)) calc(0.5rem / var(--division)) calc(1rem / var(--division))
-      hsla(var(--accent-shade) / 0.3);
+  box-shadow: 0.5rem 0.5rem 0 hsla(var(--accent-shade) / 0.3),
+    0.5rem 0.5rem 1rem hsla(var(--accent-shade) / 0.3);
 }
 
 .click:active {

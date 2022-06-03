@@ -98,6 +98,9 @@ export interface DataType {
  * Button Types Props
  */
 
+// export interface MobileNavigationButtonProps extends HandlerType {
+//   openNavMenu: boolean;
+// }
 export interface PrevButtonProps extends HandlerType {
   currentStep: number;
 }

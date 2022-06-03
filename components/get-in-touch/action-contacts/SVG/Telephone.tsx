@@ -1,5 +1,5 @@
 export const Telephone = () => (
-  <div className="contact-button circle-l telephone-button click">
+  <div className="contact-button  telephone-button click">
     <svg
       width="48"
       height="48"

@@ -5,9 +5,6 @@
   justify-content: center;
 }
 
-.contact-svg {
-  fill: red;
-}
 .contact-button {
   display: grid;
   place-content: center;
@@ -18,74 +15,49 @@
 .telephone-button {
   border-color: hsla(var(--primary-shade) / 0.5);
   background-color: hsla(var(--violet) / 1);
-  box-shadow: calc(0.75rem / var(--division)) calc(0.75rem / var(--division)) 0
-      hsla(var(--violet) / 0.1),
-    calc(0.75rem / var(--division)) calc(0.75rem / var(--division)) calc(1.5rem / var(--division))
-      hsla(var(--violet) / 0.1);
+  box-shadow: 0.75rem 0.75rem 0 hsla(var(--violet) / 0.1),
+    0.75rem 0.75rem 1.5rem hsla(var(--violet) / 0.1);
 }
 .telephone-button:hover {
   border-color: hsla(var(--light) / 1);
-  box-shadow: calc(0.75rem / var(--division)) calc(0.75rem / var(--division)) 0
-      hsla(var(--violet) / 0.1),
-    calc(0.75rem / var(--division)) calc(0.75rem / var(--division)) calc(1.5rem / var(--division))
-      hsla(var(--violet) / 0.1);
 }
 
 .telephone-button:active {
   border-color: hsla(var(--light) / 1);
-  box-shadow: calc(0.5rem / var(--division)) calc(0.5rem / var(--division)) 0
-      hsla(var(--violet) / 0.3),
-    calc(0.5rem / var(--division)) calc(0.5rem / var(--division)) calc(1rem / var(--division))
-      hsla(var(--violet) / 0.3);
+  box-shadow: 0.5rem 0.5rem 0 hsla(var(--violet) / 0.3),
+    0.5rem 0.5rem 1rem hsla(var(--violet) / 0.3);
 }
 
 .email-button {
   border-color: hsla(var(--primary-shade) / 0.5);
   background-color: hsla(var(--red) / 1);
-  box-shadow: calc(0.75rem / var(--division)) calc(0.75rem / var(--division)) 0
-      hsla(var(--red) / 0.1),
-    calc(0.75rem / var(--division)) calc(0.75rem / var(--division)) calc(1.5rem / var(--division))
-      hsla(var(--red) / 0.1);
+  box-shadow: 0.75rem 0.75rem 0 hsla(var(--red) / 0.1),
+    0.75rem 0.75rem 1.5rem hsla(var(--red) / 0.1);
 }
 
 .email-button:hover {
   border-color: hsla(var(--light) / 1);
-  box-shadow: calc(0.75rem / var(--division)) calc(0.75rem / var(--division)) 0
-      hsla(var(--red) / 0.1),
-    calc(0.75rem / var(--division)) calc(0.75rem / var(--division)) calc(1.5rem / var(--division))
-      hsla(var(--red) / 0.1);
 }
 
 .email-button:active {
   border-color: hsla(var(--light) / 1);
-  box-shadow: calc(0.5rem / var(--division)) calc(0.5rem / var(--division)) 0 hsla(var(--red) / 0.3),
-    calc(0.5rem / var(--division)) calc(0.5rem / var(--division)) calc(1rem / var(--division))
-      hsla(var(--red) / 0.3);
+  box-shadow: 0.5rem 0.5rem 0 hsla(var(--red) / 0.3), 0.5rem 0.5rem 1rem hsla(var(--red) / 0.3);
 }
 
 .telegram-button {
   border-color: hsla(var(--primary-shade) / 0.5);
   background-color: hsla(var(--blue) / 1);
-  box-shadow: calc(0.75rem / var(--division)) calc(0.75rem / var(--division)) 0
-      hsla(var(--blue) / 0.1),
-    calc(0.75rem / var(--division)) calc(0.75rem / var(--division)) calc(1.5rem / var(--division))
-      hsla(var(--blue) / 0.1);
+  box-shadow: 0.75rem 0.75rem 0 hsla(var(--blue) / 0.1),
+    0.75rem 0.75rem 1.5rem hsla(var(--blue) / 0.1);
 }
 
 .telegram-button:hover {
   border-color: hsla(var(--light) / 1);
-  box-shadow: calc(0.75rem / var(--division)) calc(0.75rem / var(--division)) 0
-      hsla(var(--blue) / 0.1),
-    calc(0.75rem / var(--division)) calc(0.75rem / var(--division)) calc(1.5rem / var(--division))
-      hsla(var(--blue) / 0.1);
 }
 
 .telegram-button:active {
   border-color: hsla(var(--light) / 1);
-  box-shadow: calc(0.5rem / var(--division)) calc(0.5rem / var(--division)) 0
-      hsla(var(--blue) / 0.3),
-    calc(0.5rem / var(--division)) calc(0.5rem / var(--division)) calc(1rem / var(--division))
-      hsla(var(--blue) / 0.3);
+  box-shadow: 0.5rem 0.5rem 0 hsla(var(--blue) / 0.3), 0.5rem 0.5rem 1rem hsla(var(--blue) / 0.3);
 }
 
 .whatsapp-button {
@@ -110,14 +82,10 @@
 }
 .whatsapp-button:hover {
   border-color: hsla(var(--light) / 1);
-  box-shadow: calc(0.75rem / var(--division)) calc(0.75rem / var(--division))
-    calc(1.5rem / var(--division)) hsla(var(--green) / 0.1);
-  filter: drop-shadow(0.75rem 0.75rem 0 hsla(var(--green) / 0.1));
 }
 
 .whatsapp-button:active {
   border-color: hsla(var(--light) / 1);
-  box-shadow: calc(0.5rem / var(--division)) calc(0.5rem / var(--division))
-    calc(1rem / var(--division)) hsla(var(--green) / 0.3);
+  box-shadow: 0.5rem 0.5rem 1rem hsla(var(--green) / 0.3);
   filter: drop-shadow(0.5rem 0.5rem 0 hsla(var(--green) / 0.3));
 }

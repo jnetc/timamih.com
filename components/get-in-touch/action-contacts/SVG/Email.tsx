@@ -1,5 +1,5 @@
 export const Email = () => (
-  <div className="contact-button circle-l email-button click">
+  <div className="contact-button  email-button click">
     <svg
       width="48"
       height="48"

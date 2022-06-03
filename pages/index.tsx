@@ -1,4 +1,3 @@
-// import { useRef, useEffect, RefObject } from 'react';
 import type { NextPage, GetStaticProps, InferGetStaticPropsType } from 'next';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
@@ -7,9 +6,6 @@ import { request, query } from 'lib/datocms';
 // import { data } from 'dummy_content';
 // Hooks
 import { Store } from '@Hooks/useStore';
-
-// import Navigation from '@Components/navigation';
-// import HeroSection from '@Components/hero-section';
 
 const Navigation = dynamic(() => import('@Components/navigation'), { ssr: false });
 const HeroSection = dynamic(() => import('@Components/hero-section'), { ssr: false });

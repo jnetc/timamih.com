@@ -17,7 +17,6 @@ export const ServiceTeammate = ({ data }: { data: TeammateType }) => {
           alt={data.title}
           layout="fill"
           objectFit="cover"
-          priority
         />
       </div>
       <h1 className="teammate-name">{data.title}</h1>

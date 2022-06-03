@@ -11,7 +11,7 @@ export const PlayButton = ({ link }: { link: string }) => {
     <button
       title="play video button"
       aria-labelledby="play video button"
-      className="circle-button circle-l click"
+      className="circle-button click"
       onClick={modal}
     >
       <PlayIcon />

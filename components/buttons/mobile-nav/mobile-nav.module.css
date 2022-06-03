@@ -1,0 +1,66 @@
+.module {
+  --size: 2.5rem;
+  width: var(--size);
+  aspect-ratio: 1 / 1;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-color: hsla(var(--accent-shade) / 0.5);
+  background-color: var(--primary-color);
+  box-shadow: 0.5rem 0.5rem 0 hsla(var(--accent-shade) / 0.1),
+    0.5rem 0.5rem 1.5rem hsla(var(--accent-shade) / 0.1);
+  transition: all var(--optimal) ease-in-out;
+  z-index: 1000;
+}
+.circle-button:hover {
+  border-color: var(--accent-color);
+}
+.module:active {
+  box-shadow: 0.25rem 0.25rem 0 hsla(var(--accent-shade) / 0.3),
+    0.25rem 0.25rem 1rem hsla(var(--accent-shade) / 0.3);
+}
+
+.icon {
+  width: 24px;
+  aspect-ratio: 1 / 1;
+  position: absolute;
+  top: 54%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.icon_menu,
+.icon_cross {
+  stroke: var(--secondary-color);
+  fill: none;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+  transition: all var(--optimal) ease-in-out;
+}
+.icon_menu {
+  stroke-dashoffset: 40;
+  stroke-dasharray: 20;
+  transition-delay: 0.3s;
+}
+:global(.mobile-menu.show-menu) ~ .module .icon_menu {
+  stroke-dasharray: 29;
+  transition-delay: 0s;
+}
+
+.icon_cross {
+  stroke-dashoffset: 30;
+  stroke-dasharray: 25;
+  transition-delay: 0s;
+}
+:global(.mobile-menu.show-menu) ~ .module .icon_cross {
+  stroke-dasharray: 16;
+  transition-delay: 0.3s;
+}
+
+@media screen and (min-width: 961px) {
+  .module {
+    display: none;
+  }
+}

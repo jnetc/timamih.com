@@ -1,5 +1,5 @@
 export const Telegram = () => (
-  <div className="contact-button circle-l telegram-button click">
+  <div className="contact-button  telegram-button click">
     <svg
       width="48"
       height="48"
