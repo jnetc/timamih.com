@@ -10,10 +10,7 @@ import { MobileNavigation } from './mobile-navigation';
 const Navigation = () => {
   const [navMenu, setNavMenu] = useState(false);
 
-  const openMenu = () => {
-    setNavMenu(!navMenu);
-  };
-  console.log('open', navMenu);
+  const openMenu = () => setNavMenu(!navMenu);
 
   return (
     <header className="navigation">

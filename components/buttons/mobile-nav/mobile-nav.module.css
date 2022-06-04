@@ -25,6 +25,7 @@
   stroke-dashoffset: 40;
   stroke-dasharray: 20;
   transition-delay: 0.3s;
+  transition: all var(--optimal) ease-in-out;
 }
 :global(.mobile-menu.show-menu) ~ .module .icon_menu {
   stroke-dasharray: 29;

@@ -8,7 +8,7 @@ import { useStore } from '@Hooks/useStore';
 import { MobileNavigationButtonProps, LanguagesType } from '@Types';
 
 export const MobileNavigation = ({ openNavMenu, handler }: MobileNavigationButtonProps) => {
-  const { languages, language } = useStore();
+  const { languages } = useStore();
   const { asPath } = useRouter();
 
   const buttonsOrder = languages.map(order => {
