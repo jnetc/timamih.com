@@ -1,21 +1,100 @@
 .mobile-menu {
   width: 100vw;
   height: 100vh;
-  display: flex;
+  display: grid;
+  grid-template-rows: 1fr auto auto 1fr;
   justify-content: center;
+  row-gap: 3rem;
   position: fixed;
   inset: 0;
   clip-path: circle(0rem at calc(100vw - 36px) 40px);
   background-color: hsla(var(--accent-shade) / 0.9);
   backdrop-filter: blur(5px);
   transition: all 0.5s ease-in-out;
+  transition-delay: 0.5s;
   z-index: 999;
 }
 .mobile-menu.show-menu {
   clip-path: circle(250vw at calc(100vw - 36px) 40px);
   background-color: hsla(var(--primary-shade) / 0.9);
+  transition-delay: 0s;
 }
-@media screen and (min-width: 961px) {
+
+.mobile-links {
+  grid-row: 2;
+  display: flex;
+  flex-flow: column;
+  row-gap: 1rem;
+  margin-block: auto;
+}
+
+.mobile-link {
+  padding: 0.5rem 1rem;
+  position: relative;
+  opacity: 0;
+  color: var(--secondary-color);
+  font-size: 1.3em;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all var(--optimal) cubic-bezier(0.61, -0.04, 1, 0.34);
+  transform: translateY(-5rem);
+}
+.mobile-link:first-child {
+  transition-delay: 0.5s;
+}
+.mobile-link:nth-child(2) {
+  transition-delay: 0.4s;
+}
+.mobile-link:nth-child(3) {
+  transition-delay: 0.3s;
+}
+.mobile-link:nth-child(4) {
+  transition-delay: 0.2s;
+}
+.mobile-link:last-child {
+  transition-delay: 0.1s;
+}
+
+.show-menu .mobile-link {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all var(--optimal) cubic-bezier(0.1, 0.8, 0.6, 1);
+}
+.show-menu .mobile-link:first-child {
+  transition-delay: 0.55s;
+}
+.show-menu .mobile-link:nth-child(2) {
+  transition-delay: 0.45s;
+}
+.show-menu .mobile-link:nth-child(3) {
+  transition-delay: 0.35s;
+}
+.show-menu .mobile-link:nth-child(4) {
+  transition-delay: 0.25s;
+}
+.show-menu .mobile-link:last-child {
+  transition-delay: 0.15s;
+}
+
+.mobile-languages {
+  grid-row: 3;
+  display: flex;
+  flex-flow: column;
+  gap: 1rem;
+  padding-inline-start: 1rem;
+  opacity: 0;
+  transition: all var(--optimal) cubic-bezier(0.1, 0.8, 0.6, 1);
+  transform: translateY(5rem);
+  transition-delay: 0s;
+}
+.show-menu .mobile-languages {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.5s;
+}
+
+@media screen and (min-width: 1281px) {
   .mobile-menu {
     display: none;
   }

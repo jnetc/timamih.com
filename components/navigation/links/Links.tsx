@@ -1,19 +1,19 @@
 import Link from 'next/link';
-// Hook
-import { useStore } from '@Hooks/useStore';
+// Type
+import { NavigationLinkType } from '@Types';
 
-export const Links = () => {
-  const { data } = useStore();
-
-  const links = data?.navigation.headerlinks.map(link => {
-    return (
-      <Link href={link.navanchor} key={link.id}>
-        <a className="desktop-link click">{link.name}</a>
-      </Link>
-    );
-  });
-
-  return <nav className="desktop-links">{links}</nav>;
+export const Links = ({
+  link,
+  nameClass,
+}: {
+  link: NavigationLinkType;
+  nameClass: 'mobile-link' | 'desktop-link';
+}) => {
+  return (
+    <Link href={link.navanchor} key={link.id}>
+      <a className={`${nameClass} click`}>{link.name}</a>
+    </Link>
+  );
 };
 
 // export const nav_urls = [

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 // Component
 import { Logo } from './Logo/Logo';
-import { Links } from './links/Links';
+import { DesktopLinks } from './links/DesktopLinks';
 import { SwitchThemeButton } from '@Components/buttons/switch-theme';
 import { SwitchIntlButton } from '@Components/buttons/switch-intl';
 import { MobileNavigationButton } from '@Components/buttons/mobile-nav';
@@ -11,17 +11,17 @@ const Navigation = () => {
   const [navMenu, setNavMenu] = useState(false);
 
   const openMenu = () => {
-    console.log('open', navMenu);
     setNavMenu(!navMenu);
   };
+  console.log('open', navMenu);
 
   return (
     <header className="navigation">
       <Logo />
-      <Links />
+      <DesktopLinks />
       <SwitchIntlButton />
       <SwitchThemeButton />
-      <MobileNavigation openNavMenu={navMenu} />
+      <MobileNavigation openNavMenu={navMenu} handler={openMenu} />
       <MobileNavigationButton handler={openMenu} />
     </header>
   );

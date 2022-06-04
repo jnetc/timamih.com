@@ -19,11 +19,11 @@ interface AvatarType extends Url {
   blurUpThumb: string;
 }
 
-interface NavigationLinkType extends ID, Name {
+export interface NavigationLinkType extends ID, Name {
   navanchor: string;
 }
 
-interface HeaderLinksType {
+export interface HeaderLinksType {
   headerlinks: Array<NavigationLinkType>;
 }
 
@@ -98,9 +98,9 @@ export interface DataType {
  * Button Types Props
  */
 
-// export interface MobileNavigationButtonProps extends HandlerType {
-//   openNavMenu: boolean;
-// }
+export interface MobileNavigationButtonProps extends HandlerType {
+  openNavMenu: boolean;
+}
 export interface PrevButtonProps extends HandlerType {
   currentStep: number;
 }

@@ -1,12 +1,4 @@
 /* buttons styles*/
-/* .button-txt {
-  color: var(--secondary-color);
-  font-size: 1rem;
-  font-weight: bold;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  user-select: none;
-} */
 .rect-button,
 .hire-button {
   padding: 1rem 2rem;
@@ -88,6 +80,7 @@
   border-color: hsla(var(--secondary-shade) / 0.1);
   box-shadow: none;
   pointer-events: none;
+  user-select: none;
   transition: all var(--optimal) ease-in-out;
 }
 .rect-button.move {
@@ -153,6 +146,9 @@
     font-size: 1rem;
     border-radius: 0.8rem;
   }
+}
+
+@media screen and (max-width: 1280px) {
   .intl-button {
     display: none;
   }
