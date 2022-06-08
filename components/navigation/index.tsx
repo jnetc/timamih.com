@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 // Component
 import { Logo } from './Logo/Logo';
 import { DesktopLinks } from './links/DesktopLinks';
@@ -11,6 +11,14 @@ const Navigation = () => {
   const [navMenu, setNavMenu] = useState(false);
 
   const openMenu = () => setNavMenu(!navMenu);
+
+  useEffect(() => {
+    if (navMenu) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.removeAttribute('style');
+    }
+  }, [navMenu]);
 
   return (
     <header className="navigation">

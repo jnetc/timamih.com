@@ -11,8 +11,8 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.icon_menu,
-.icon_cross {
+.line,
+.polyline {
   stroke: var(--secondary-color);
   fill: none;
   stroke-width: 3;
@@ -21,23 +21,23 @@
   stroke-miterlimit: 10;
   transition: all var(--optimal) ease-in-out;
 }
-.icon_menu {
+.line {
   stroke-dashoffset: 40;
   stroke-dasharray: 20;
-  transition-delay: 0.3s;
   transition: all var(--optimal) ease-in-out;
+  transition-delay: 0.3s;
 }
-:global(.mobile-menu.show-menu) ~ .module .icon_menu {
+:global(.mobile-menu.show-menu) ~ .module .line {
   stroke-dasharray: 29;
   transition-delay: 0s;
 }
 
-.icon_cross {
+.polyline {
   stroke-dashoffset: 30;
   stroke-dasharray: 25;
   transition-delay: 0s;
 }
-:global(.mobile-menu.show-menu) ~ .module .icon_cross {
+:global(.mobile-menu.show-menu) ~ .module .polyline {
   stroke-dasharray: 16;
   transition-delay: 0.3s;
 }
