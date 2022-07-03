@@ -1,11 +1,10 @@
-// import Link from 'next/link';
 import { useRef, useEffect } from 'react';
 // Hook
 import { useObserver } from '@Hooks/useObserver';
 import { useStore } from '@Hooks/useStore';
 
-const FOR_DARK_THEME = '/images/dark_theme_tima.png';
-const FOR_LIGHT_THEME = '/images/light_theme_tima.png';
+const FOR_DARK_THEME = '/images/dark_theme_tima.webp';
+const FOR_LIGHT_THEME = '/images/light_theme_tima.webp';
 
 export const Avatar = () => {
   const targetAvatar = useRef<HTMLDivElement>(null);
@@ -14,12 +13,11 @@ export const Avatar = () => {
   useEffect(() => {
     const el = targetAvatar.current;
     const avatar = el?.querySelector('.hero-right__image');
-    console.log('avatar load', darkTheme ? FOR_DARK_THEME : FOR_LIGHT_THEME);
     const setClass = setTimeout(() => {
       if (darkTheme) {
-        avatar?.setAttribute('href', '/images/dark_theme_tima.png');
+        avatar?.setAttribute('href', FOR_DARK_THEME);
       } else {
-        avatar?.setAttribute('href', '/images/light_theme_tima.png');
+        avatar?.setAttribute('href', FOR_LIGHT_THEME);
       }
       clearTimeout(setClass);
     }, 700);
@@ -72,7 +70,6 @@ export const Avatar = () => {
           width="550"
           height="800"
           x={45}
-          // href="/images/dark_theme_tima.png"
           className="hero-right__image"
         />
       </svg>

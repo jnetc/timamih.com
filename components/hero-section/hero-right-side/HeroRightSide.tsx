@@ -47,9 +47,3 @@ export const HeroRightSide = () => {
     </div>
   );
 };
-
-// const messages = [
-//   'Hello, I’m Timofei',
-//   'Can i help you?',
-//   'All you need is to get in touch, maybe in monday at 7',
-// ];
