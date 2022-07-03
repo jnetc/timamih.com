@@ -44,7 +44,6 @@ export const SwitchThemeButton = () => {
       onClick={toggleTheme}
     >
       <OnOffIcon />
-      <span className={styles.background} />
     </button>
   );
 };

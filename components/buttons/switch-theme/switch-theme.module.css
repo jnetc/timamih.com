@@ -10,23 +10,11 @@
     0.5rem 0.5rem 1.5rem hsla(var(--switch-button-bg) / 0.1);
   transition: all var(--optimal) ease-in-out;
 }
-.background {
-  width: var(--size);
-  aspect-ratio: 1 / 1;
-  position: absolute;
-  bottom: -2rem;
-  right: -2rem;
+
+html[data-theme='light'] .module {
   background-color: hsl(var(--green));
-  border-radius: 50%;
-  transition: all var(--especial) linear;
-  transform: scale(0);
-  z-index: 1;
-  opacity: 0;
-}
-html[data-theme='light'] .background {
-  transform: scale(5);
-  opacity: 1;
-  transition: all var(--especial) linear;
+  box-shadow: 0.5rem 0.5rem 0 hsla(var(--switch-button-bg) / 0.1),
+    0.5rem 0.5rem 1.5rem hsla(var(--switch-button-bg) / 0.1);
 }
 .module:active {
   box-shadow: 0.25rem 0.25rem 0 hsla(var(--switch-button-bg) / 0.3),
