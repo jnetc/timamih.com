@@ -1,31 +1,52 @@
 // import Link from 'next/link';
-import { useRef } from 'react';
+import { useRef, useEffect } from 'react';
 // Hook
 import { useObserver } from '@Hooks/useObserver';
+import { useStore } from '@Hooks/useStore';
+
+const FOR_DARK_THEME = '/images/dark_theme_tima.png';
+const FOR_LIGHT_THEME = '/images/light_theme_tima.png';
 
 export const Avatar = () => {
-  const targetAvatar = useRef(null);
+  const targetAvatar = useRef<HTMLDivElement>(null);
+  const { darkTheme } = useStore();
+
+  useEffect(() => {
+    const el = targetAvatar.current;
+    const avatar = el?.querySelector('.hero-right__image');
+    console.log('avatar load', darkTheme ? FOR_DARK_THEME : FOR_LIGHT_THEME);
+    const setClass = setTimeout(() => {
+      if (darkTheme) {
+        avatar?.setAttribute('href', '/images/dark_theme_tima.png');
+      } else {
+        avatar?.setAttribute('href', '/images/light_theme_tima.png');
+      }
+      clearTimeout(setClass);
+    }, 700);
+  }, [darkTheme]);
+
   useObserver({
     ref: targetAvatar,
     selectorClass: 'hero-right',
     cssClass: 'transition',
   });
+
   return (
     <div className="hero-right__avatar" ref={targetAvatar}>
       <svg
         width="100%"
         height="100%"
-        viewBox="0 0 645 656"
+        viewBox="0 0 645 755"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
         <defs>
           <linearGradient
             id="ellipse-gradient"
-            x1="183.073"
-            y1="537.048"
-            x2="182.286"
-            y2="625.883"
+            x1="185"
+            y1="600"
+            x2="185"
+            y2="700"
             gradientUnits="userSpaceOnUse"
           >
             <stop offset=".1" className="hero-right__gradient" />
@@ -33,14 +54,14 @@ export const Avatar = () => {
           </linearGradient>
           <mask id="avatar-mask">
             <path
-              d="M644.208 604.019C644.208 632.727 500.058 656 322.239 656C144.42 656 0.269165 632.727 0.269165 604.019C0.269165 96.0152 130.252 0.104368 308.071 0.104368C485.89 0.104368 644.208 42.5568 644.208 604.019Z"
+              d="M644.896 702.519C644.896 731.227 500.746 754.5 322.927 754.5C145.108 754.5 0.957031 731.227 0.957031 702.519C0.957031 194.515 129.369 0.5 307.188 0.5C485.007 0.5 644.896 141.057 644.896 702.519Z"
               fill="#fff"
             />
           </mask>
         </defs>
         <ellipse
           cx="322.239"
-          cy="604.018"
+          cy="702"
           rx="0"
           ry="0"
           fill="url(#ellipse-gradient)"
@@ -48,11 +69,10 @@ export const Avatar = () => {
         />
         <image
           mask="url(#avatar-mask)"
-          width="560"
-          height="744"
+          width="550"
+          height="800"
           x={45}
-          // y={45}
-          href="/images/timamih.png"
+          // href="/images/dark_theme_tima.png"
           className="hero-right__image"
         />
       </svg>

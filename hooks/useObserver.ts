@@ -7,12 +7,7 @@ interface ObserverType {
   delayClass?: { class: string; time: number };
 }
 
-export const useObserver = ({
-  ref,
-  selectorClass,
-  cssClass,
-  delayClass,
-}: ObserverType) => {
+export const useObserver = ({ ref, selectorClass, cssClass, delayClass }: ObserverType) => {
   useEffect(() => {
     const element = ref.current;
 

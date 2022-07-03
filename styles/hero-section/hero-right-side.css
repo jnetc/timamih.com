@@ -7,6 +7,7 @@
 }
 
 .hero-right__avatar {
+  display: flex;
   grid-column: 1;
   grid-row: 1;
   width: 80%;
@@ -30,13 +31,11 @@
   will-change: contents;
   transition: all 0.3s ease-in-out;
 }
-.hero-right__avatar:hover .hero-right__image {
-  opacity: 0;
-}
 
-.hero-right__avatar.transition :where(.hero-right__hole, .hero-right__image) {
+.hero-right__avatar.transition :is(.hero-right__hole, .hero-right__image) {
   animation: none;
 }
+
 .hero-right__avatar .hero-right__hole {
   animation: hole 0.7s cubic-bezier(0.21, 0.25, 0, 1.08) forwards;
   animation-delay: 0.4s;
@@ -45,11 +44,21 @@
   animation: avatar 0.5s cubic-bezier(0.72, 0.27, 0.38, 0.98) forwards;
   animation-delay: 0.7s;
 }
+.hero-right__avatar.reverse .hero-right__image {
+  animation: avatar-reverse 0.5s cubic-bezier(0.72, 0.27, 0.38, 0.98) forwards;
+  animation-delay: 0s;
+}
+.hero-right__avatar.reverse .hero-right__hole {
+  rx: 321.97px;
+  ry: 51.9814px;
+  animation: hole-reverse 0.7s cubic-bezier(0.21, 0.25, 0, 1.08) forwards;
+  animation-delay: 0.4s;
+}
 
 @keyframes hole {
   0% {
     rx: 61.97px;
-    ry: 0.9814px;
+    ry: 0px;
   }
 
   100% {
@@ -57,18 +66,43 @@
     ry: 51.9814px;
   }
 }
+@keyframes hole-reverse {
+  0% {
+    rx: 321.97px;
+    ry: 51.9814px;
+  }
+  100% {
+    rx: 61.97px;
+    ry: 0px;
+  }
+}
+
 @keyframes avatar {
   0% {
-    y: 650px;
+    y: 550px;
   }
   1% {
     visibility: visible;
     opacity: 1;
   }
   100% {
-    y: 15px;
+    y: 0px;
     opacity: 1;
     visibility: visible;
+  }
+}
+@keyframes avatar-reverse {
+  0% {
+    y: 0px;
+    opacity: 1;
+    visibility: visible;
+  }
+  99% {
+    visibility: visible;
+    opacity: 1;
+  }
+  100% {
+    y: 800px;
   }
 }
 
