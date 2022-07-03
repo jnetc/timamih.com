@@ -1,10 +1,4 @@
-import Document, {
-  Html,
-  Head,
-  Main,
-  NextScript,
-  DocumentContext,
-} from 'next/document';
+import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
 
 import { setInitialTheme, extraCSS } from '@Helpers/critical';
 
@@ -20,6 +14,8 @@ class MyDocument extends Document {
         <Head>
           <script dangerouslySetInnerHTML={{ __html: setInitialTheme }} />
           <style dangerouslySetInnerHTML={{ __html: extraCSS }} />
+          <link rel="preload" as="image" href="/images/dark_theme_tima.webp" />
+          <link rel="preload" as="image" href="/images/light_theme_tima.webp" />
         </Head>
         <body id="home">
           <Main />
