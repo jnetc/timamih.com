@@ -79,7 +79,7 @@
 
 @keyframes avatar {
   0% {
-    y: 550px;
+    y: 800px;
   }
   1% {
     visibility: visible;
@@ -102,7 +102,7 @@
     opacity: 1;
   }
   100% {
-    y: 700px;
+    y: 800px;
   }
 }
 
