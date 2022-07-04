@@ -7,6 +7,7 @@ import { ContactsType, ContactIconsType } from '@Types';
 export const CopyContacts = ({ links }: { links: Array<ContactsType> }) => {
   const { language } = useStore();
   const copyButtons = links.map(button => {
+    if (button.url.length === 0) return;
     const data = urlSelect(button.icon, button.url);
     return (
       <div key={button.id} className="copy-contact">
@@ -32,7 +33,7 @@ function urlSelect(icon: ContactIconsType, url: string) {
   }
   const urls = {
     telephone: { label: { en: 'Phone', ru: 'Телефон', fi: 'Puhelin' }, url: `+${phone}` },
-    telegram: { label: { en: 'Telegram', ru: 'Телеграм', fi: 'Telegram' }, url },
+    telegram: { label: { en: 'Telegram', ru: 'Телеграм', fi: 'Telegram' }, url: `@${url}` },
     whatsapp: { label: { en: 'WhatsApp', ru: 'WhatsApp', fi: 'WhatsApp' }, url },
     email: { label: { en: 'Email', ru: 'Эл. адрес', fi: 'Sähköposti' }, url },
   };

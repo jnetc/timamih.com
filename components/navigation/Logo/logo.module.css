@@ -1,49 +1,94 @@
 .module {
-  height: var(--gap-three);
-  aspect-ratio: 1.5 / 1;
   margin-inline-end: auto;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 0.5rem;
+  position: relative;
+  overflow: hidden;
 }
-:where(.ribbon_ends, .ribbon_folds, .ribbon, .name) {
-  transition: fill var(--optimal) ease-in-out;
+.module::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--accent-color);
 }
-
-.ribbon_ends {
-  fill: hsla(var(--secondary-shade) / 0.65);
-}
-.ribbon_folds {
-  fill: hsla(var(--secondary-shade) / 0.85);
-}
-.ribbon {
-  fill: var(--secondary-color);
-}
-.name {
-  fill: var(--primary-color);
-}
-
-#saw {
-  transform-origin: 52% 50%;
-  animation: rotation-right 60s linear infinite;
-}
-
-@keyframes rotation-right {
+@keyframes line {
   0% {
-    transform: rotateZ(0deg);
+    transform: translateX(-80px);
+    visibility: visible;
+  }
+  1% {
+    transform: translateX(0);
+  }
+  2% {
+    transform: translateX(80px);
+  }
+  2.0000001% {
+    transform: translateX(-80px);
+    visibility: hidden;
   }
   100% {
-    transform: rotateZ(360deg);
+    transform: translateX(-80px);
+    visibility: hidden;
   }
 }
-
-#stars {
-  transform-origin: 52% 50%;
-  animation: rotation-left 60s linear infinite;
+.module strong,
+.module p {
+  position: relative;
 }
 
-@keyframes rotation-left {
-  0% {
-    transform: rotateZ(0deg);
+.module::after {
+  animation: line 20s ease-in-out infinite;
+}
+
+.module strong:nth-of-type(1) {
+  animation: bounce 20s ease-in-out infinite;
+}
+.module strong:nth-of-type(2) {
+  animation: bounce 20s ease-in-out infinite;
+  animation-delay: 0.1s;
+}
+.module strong:nth-of-type(3) {
+  animation: bounce 20s ease-in-out infinite;
+  animation-delay: 0.2s;
+}
+.module strong:nth-of-type(4) {
+  animation: bounce 20s ease-in-out infinite;
+  animation-delay: 0.3s;
+}
+.module p:nth-of-type(1) {
+  animation: bounce 20s ease-in-out infinite;
+  animation-delay: 0.4s;
+}
+.module p:nth-of-type(2) {
+  animation: bounce 20s ease-in-out infinite;
+  animation-delay: 0.5s;
+}
+.module p:nth-of-type(3) {
+  animation: bounce 20s ease-in-out infinite;
+  animation-delay: 0.6s;
+}
+
+@keyframes bounce {
+  1% {
+    transform: translateY(-16px);
+    opacity: 0;
   }
-  100% {
-    transform: rotateZ(-360deg);
+  2% {
+    transform: translateY(3px);
+  }
+  3% {
+    transform: translateY(-3px);
+  }
+  4% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  5% {
+    opacity: 1;
   }
 }

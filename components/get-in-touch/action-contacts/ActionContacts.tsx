@@ -5,6 +5,7 @@ import { ContactsType, ContactIconsType } from '@Types';
 
 export const ActionContacts = ({ links }: { links: Array<ContactsType> }) => {
   const actionButtons = links.map(button => {
+    if (button.url.length === 0) return;
     const href = urlSelect(button.icon, button.url);
     return (
       <Link href={href} key={button.id}>
