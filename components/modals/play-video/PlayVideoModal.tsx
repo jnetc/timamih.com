@@ -11,7 +11,7 @@ import { CloseButton } from '@Components/buttons/close';
 
 export const PlayVideoModal = () => {
   const { modal, openModal } = usePlayModalStore();
-  const ref = useRef<HTMLElement>(null);
+  const ref = useRef<HTMLDialogElement>(null);
 
   const closeButtonHandler = (res: boolean) => {
     openModal({ open: res });

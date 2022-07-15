@@ -1,7 +1,6 @@
 import { useStore } from '@Hooks/useStore';
 // Component
 import { ContentSide } from './content-side/ContentSide';
-// import { Illustration } from './Illustration';
 import { Illustration } from './HowWeWorkSVG';
 
 const HowWeWork = () => {

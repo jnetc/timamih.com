@@ -53,7 +53,6 @@
 .section-content {
   display: flex;
   flex-flow: column;
-  /* row-gap: 1rem; */
   align-self: center;
   position: relative;
   padding-block-end: 1rem;

@@ -1,4 +1,3 @@
-// import Link from 'next/link';
 import { useRef } from 'react';
 // Hook
 import { useObserver } from '@Hooks/useObserver';
@@ -7,7 +6,6 @@ import { useStore } from '@Hooks/useStore';
 import { Avatar } from './Avatar';
 import { Star } from '@Components/star';
 import { Message } from './message/Message';
-// import { HandShakeIcon } from './HandShakeIcon';
 
 export const HeroRightSide = () => {
   const { data } = useStore();
@@ -37,13 +35,6 @@ export const HeroRightSide = () => {
         customClass={'tima-left-sec-star'}
       />
       <Star color="accent" size={24} duration={22} customClass={'tima-right-acc-star'} />
-      {/* <Star
-        color="secondary"
-        size={24}
-        duration={10}
-        delay={2}
-        customClass={'tima-bottom-sec-star'}
-      /> */}
     </div>
   );
 };

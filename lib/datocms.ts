@@ -76,7 +76,6 @@ export const query = gql`
     description
     playButton
     mainVideoUrl
-    hireButton
     chat {
       id
       message
@@ -89,8 +88,6 @@ export const query = gql`
       title
       description
     }
-    nextButton
-    prevButton
   }
   fragment WhatweofferRecordFragment on WhatweofferRecord {
     title

@@ -159,21 +159,6 @@ main {
     row-gap: 10rem;
   }
 }
-/* @media only screen and (orientation: landscape) and (max-device-height: 480px) {
-  body {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  #orientation-landscape {
-    display: flex;
-  }
-  #__next {
-    display: none;
-  }
-} */
 
 @import url('./common.css');
 @import url('./buttons.css');

@@ -1,4 +1,3 @@
-// SVG
 import { PlayIcon } from './PlayIcon';
 // Hook
 import { usePlayModalStore } from '@Hooks/usePlayModalStore';

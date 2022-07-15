@@ -103,7 +103,6 @@
 .rect-button .polyline-right {
   stroke-dashoffset: 90;
   stroke-dasharray: 64;
-  /* transition-delay: 0s; */
 }
 .rect-button.complete .polyline-right {
   stroke: var(--accent-color);

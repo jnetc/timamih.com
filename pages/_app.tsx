@@ -30,17 +30,11 @@ function MyApp({ Component, pageProps }: AppProps) {
         <link rel="alternate" href="https://timamih.com/ru" hrefLang="ru" />
         <link rel="alternate" href="https://timamih.com/en" hrefLang="en" />
         <link rel="icon" href="/icons/favicon.svg" type="image/svg+xml" />
-        {/* <link rel="manifest" href="/manifest.webmanifest" /> */}
+        <link rel="manifest" href="/manifest.webmanifest" />
         {/* Apple */}
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-title" content="timamih.com" />
         <link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png" />
-
-        {/* <link
-          rel="preload"
-          href="https://www.youtube.com/embed/liW6bDLnuuk"
-          as="document"
-        /> */}
       </Head>
       <Component {...pageProps} />
     </>

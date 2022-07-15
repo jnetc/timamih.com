@@ -1,5 +1,4 @@
 .hero-section {
-  /* height: max(600px, calc(100vh - var(--gap-one) - var(--gap-three))); */
   min-height: 1000px;
   display: flex;
   flex-wrap: wrap;
