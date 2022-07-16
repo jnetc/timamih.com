@@ -20,7 +20,6 @@
   scroll-padding-left: 1rem;
   scrollbar-width: thin;
   scrollbar-color: var(--accent-color) hsla(var(--secondary-shade) / 0.1);
-  /* z-index: 5; */
 }
 /* scroll properties */
 .teammate-group::-webkit-scrollbar {
@@ -50,10 +49,10 @@
   scroll-snap-align: start;
 }
 .service-teammate:first-child {
-  margin-inline-start: 3rem;
+  margin-inline-start: 1rem;
 }
 .service-teammate:last-child {
-  margin-inline-end: 3rem;
+  margin-inline-end: 4rem;
 }
 
 .teammate-recruit {
