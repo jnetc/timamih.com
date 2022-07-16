@@ -30,10 +30,10 @@ export const ServiceContent = ({ data }: { data: ServiceContentType }) => {
   return (
     <div ref={ref} className={`service-content ${showTeam ? 'show-teammates' : 'hide-teammates'}`}>
       <ServiceArticle data={article} handler={openTeammates} />
-      <span
+      {/* <span
         className="background-article"
         style={{ visibility: 'hidden', animationDuration: '0s' }}
-      />
+      /> */}
       <TeammateGroup teammates={teammates} handler={() => setShowTeam(false)} />
     </div>
   );
