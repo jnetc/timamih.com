@@ -1,6 +1,7 @@
 .service-teammates {
   display: flex;
   padding-block-end: 1rem;
+  position: relative;
   overflow-x: hidden;
   transform: rotate3d(0, 1, 0, 180deg) translate3d(0, 0, 150px);
   transform-origin: center;
