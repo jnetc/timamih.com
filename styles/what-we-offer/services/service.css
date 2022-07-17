@@ -52,7 +52,7 @@
   border: 2px solid transparent;
   transform: rotate3d(0, 1, 0, 0) translate3d(0, 0, 0);
   transform: rotateY(0);
-  backdrop-filter: blur(5px);
+  /* backdrop-filter: blur(5px); */
   border-radius: 0.5rem;
   pointer-events: none;
   user-select: none;
@@ -100,27 +100,33 @@
 @keyframes backdrop-foward {
   0% {
     background-color: hsl(var(--primary-shade) / 1);
+    backdrop-filter: blur(5px);
   }
   50% {
     background-color: hsl(var(--accent-shade) / 0.05);
     border: 2px solid hsla(var(--accent-shade) / 0.4);
     box-shadow: inset 0 0 1rem hsla(var(--light) / 0.2);
+    backdrop-filter: blur(5px);
   }
   100% {
     background-color: hsl(var(--primary-shade) / 0);
+    backdrop-filter: blur(0);
   }
 }
 @keyframes backdrop-backward {
   0% {
     background-color: hsl(var(--primary-shade) / 0);
+    backdrop-filter: blur(0);
   }
   50% {
     background-color: hsl(var(--accent-shade) / 0.05);
     border: 2px solid hsla(var(--accent-shade) / 0.4);
     box-shadow: inset 0 0 1rem hsla(var(--light) / 0.2);
+    backdrop-filter: blur(5px);
   }
   100% {
     background-color: hsl(var(--primary-shade) / 1);
+    backdrop-filter: blur(5px);
   }
 }
 
