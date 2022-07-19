@@ -26,14 +26,8 @@ export const HeroRightSide = () => {
       <section className="hero-right__messages transition delay" ref={targetMessages}>
         {message}
       </section>
-      <Star color="accent" size={32} duration={14} delay={4} customClass={'tima-left-acc-star'} />
-      <Star
-        color="secondary"
-        size={24}
-        duration={18}
-        delay={3}
-        customClass={'tima-left-sec-star'}
-      />
+      <Star color="accent" size={32} duration={14} customClass={'tima-left-acc-star'} />
+      <Star color="secondary" size={24} duration={18} customClass={'tima-left-sec-star'} />
       <Star color="accent" size={24} duration={22} customClass={'tima-right-acc-star'} />
     </div>
   );

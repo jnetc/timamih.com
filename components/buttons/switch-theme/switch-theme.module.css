@@ -46,8 +46,8 @@ html[data-theme='light'] .module {
 }
 .line_two {
   transition: all 0.5s linear;
-  stroke-dasharray: 52;
-  stroke-dashoffset: 0;
+  stroke-dasharray: 92;
+  stroke-dashoffset: 225;
 }
 html[data-theme='light'] .line_one {
   stroke-dashoffset: -10;
@@ -56,6 +56,6 @@ html[data-theme='light'] .line_one {
 html[data-theme='light'] .line_two {
   stroke-width: 4;
   stroke-linecap: round;
-  stroke-dasharray: 63;
-  stroke-dashoffset: -60;
+  stroke-dasharray: 92;
+  stroke-dashoffset: 125;
 }

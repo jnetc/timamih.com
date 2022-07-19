@@ -1,8 +1,12 @@
 .module {
+  width: 32px;
+  height: 32px;
+  display: block;
   position: absolute;
   animation-name: shine;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
+  z-index: 100;
 }
 
 .module:global(.label-star) {

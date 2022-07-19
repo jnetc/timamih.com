@@ -21,21 +21,21 @@
   transition: all var(--especial) ease-in-out;
 }
 .arrow_cross line:first-child {
-  stroke-dashoffset: 13;
+  stroke-dashoffset: 61;
   stroke-dasharray: 24;
 }
 .arrow_cross line:last-child {
-  stroke-dashoffset: -13;
-  stroke-dasharray: 24;
+  stroke-dashoffset: 15;
+  stroke-dasharray: 13;
 }
 .pressed .arrow_cross line:where(:first-child, :last-child) {
   stroke: var(--primary-color);
 }
 .pressed .arrow_cross line:first-child {
-  stroke-dashoffset: -13;
+  stroke-dashoffset: 37;
 }
 .pressed .arrow_cross line:last-child {
-  stroke-dashoffset: 13;
+  stroke-dashoffset: 29;
 }
 
 .buttons {

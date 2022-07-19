@@ -52,7 +52,7 @@
   border: 2px solid transparent;
   transform: rotate3d(0, 1, 0, 0) translate3d(0, 0, 0);
   transform: rotateY(0);
-  /* backdrop-filter: blur(5px); */
+  backdrop-filter: blur(5px);
   border-radius: 0.5rem;
   pointer-events: none;
   user-select: none;

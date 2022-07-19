@@ -7,6 +7,7 @@
   row-gap: 0.5rem;
 }
 .module p:last-child {
+  white-space: nowrap;
   font-size: 0.8em;
   color: hsla(var(--secondary-shade) / 0.7);
 }

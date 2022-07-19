@@ -26,7 +26,6 @@
 }
 .hero-left__title span {
   width: fit-content;
-  position: relative;
   font-size: clamp(3rem, 5vw, 6rem);
   color: var(--secondary-color);
   transition: color 0.3s ease-in-out;

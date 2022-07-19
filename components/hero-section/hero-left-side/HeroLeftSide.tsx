@@ -29,14 +29,6 @@ export const HeroLeftSide = () => {
         </span>
       );
     }
-    if (idx === 2) {
-      return (
-        <span key={idx}>
-          {titl}
-          <Underline />
-        </span>
-      );
-    }
     return <span key={idx}>{titl}</span>;
   });
 
@@ -46,7 +38,10 @@ export const HeroLeftSide = () => {
         {label}
         <Star color="accent" size={36} duration={14} customClass={'label-star'} />
       </p>
-      <h1 className="hero-left__title">{splittingTitle}</h1>
+      <h1 className="hero-left__title">
+        {splittingTitle}
+        <Underline />
+      </h1>
       <p className="hero-left__desc">{description}</p>
       <div className="hero-left__action-buttons">
         <PlayModalStore.Provider
@@ -60,7 +55,7 @@ export const HeroLeftSide = () => {
         </PlayModalStore.Provider>
 
         <p>{playButton}</p>
-        <Star color="secondary" size={24} duration={10} customClass={'action-star'} delay={1} />
+        <Star color="secondary" size={24} duration={10} customClass={'action-star'} />
         <Arrow />
       </div>
     </div>

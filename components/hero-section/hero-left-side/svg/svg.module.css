@@ -1,8 +1,6 @@
 .underline {
   width: clamp(220px, 20vw, 450px);
-  display: flex;
-  position: absolute;
-  bottom: -1rem;
+  height: 2rem;
 }
 .underline svg {
   width: inherit;

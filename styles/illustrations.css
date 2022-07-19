@@ -80,10 +80,11 @@ html[data-theme='light'] .illustration {
 
 /* ILLUSTRATION PROPERTIES */
 .illustration {
-  display: flex;
-  height: 470px;
-  position: relative;
+  margin-block: auto;
   user-select: none;
+}
+.illustration > svg {
+  max-height: 470px;
 }
 .illustration-right {
   grid-column: 2;
@@ -95,7 +96,10 @@ html[data-theme='light'] .illustration {
 
 @media screen and (max-width: 960px) {
   .illustration {
-    height: clamp(200px, 55vw, 270px);
+    margin-inline: auto;
+  }
+  .illustration > svg {
+    height: clamp(200px, 55vw, 370px);
   }
   .illustration-right {
     grid-column: 1;
