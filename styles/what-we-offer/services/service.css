@@ -81,6 +81,8 @@
   /* pointer-events: none;
   user-select: none; */
   opacity: 0;
+  user-select: none;
+  pointer-events: none;
 }
 .service-content.show-teammates .background-article {
   animation: backdrop-foward 0.7s linear forwards;
@@ -95,6 +97,11 @@
 .service-content.show-teammates .service-teammates {
   transform: rotate3d(0, 1, 0, 360deg) translate3d(0, 0, 0);
   opacity: 1;
+}
+.service-content.hide-teammates .service-teammates {
+  opacity: 0;
+  user-select: none;
+  pointer-events: none;
 }
 
 @keyframes backdrop-foward {
