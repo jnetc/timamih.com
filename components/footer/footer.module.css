@@ -7,11 +7,12 @@
 }
 .module p:last-child {
   padding-block-start: 0.5rem;
-  font-size: 0.8em;
+  font-size: 0.8rem;
   color: hsla(var(--secondary-shade) / 0.7);
   white-space: nowrap;
 }
 .module p:nth-of-type(2) {
+  text-align: center;
   padding-block-start: 0.2rem;
   font-size: 0.8em;
   color: hsla(var(--secondary-shade) / 0.7);
