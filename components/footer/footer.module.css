@@ -14,6 +14,7 @@
 .module p:nth-of-type(2) {
   text-align: center;
   padding-block-start: 0.2rem;
+  padding-inline: 1rem;
   font-size: 0.8em;
   color: hsla(var(--secondary-shade) / 0.7);
 }
