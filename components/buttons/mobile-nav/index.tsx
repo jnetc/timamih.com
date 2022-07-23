@@ -4,7 +4,12 @@ import { HandlerType } from '@Types';
 
 export const MobileNavigationButton = ({ handler }: HandlerType) => {
   return (
-    <button className={`small-button click ${styles.module}`} onClick={() => handler()}>
+    <button
+      className={`small-button click ${styles.module}`}
+      title="menu button"
+      aria-label="menu button"
+      onClick={() => handler()}
+    >
       <div className={styles.icon}>
         <svg viewBox="0 0 28 28">
           <line className={styles.line} x1="5.4" y1="13.9" x2="22.6" y2="13.9" />
