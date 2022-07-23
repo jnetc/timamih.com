@@ -125,5 +125,6 @@ export const query = gql`
       icon
       url
     }
+    tunnus
   }
 `;

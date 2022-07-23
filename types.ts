@@ -82,6 +82,7 @@ export interface ContactsType extends ID, Url {
 export interface GetInTouchType extends ArticleType {
   copyText: string;
   contacts: Array<ContactsType>;
+  tunnus: string;
 }
 
 export interface DataType {

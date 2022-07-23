@@ -4,13 +4,19 @@
   padding-block: 3rem 1rem;
   justify-content: center;
   align-items: center;
-  row-gap: 0.5rem;
 }
 .module p:last-child {
+  padding-block-start: 0.5rem;
+  font-size: 0.8em;
+  color: hsla(var(--secondary-shade) / 0.7);
   white-space: nowrap;
+}
+.module p:nth-of-type(2) {
+  padding-block-start: 0.2rem;
   font-size: 0.8em;
   color: hsla(var(--secondary-shade) / 0.7);
 }
 .module a {
+  font-size: 0.9rem;
   color: hsla(var(--secondary-shade) / 1);
 }

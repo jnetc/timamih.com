@@ -17,6 +17,8 @@
 .service-button {
   height: fit-content;
   margin-block: auto;
+  padding-inline: 1.5rem;
+  font-size: 1.125rem;
 }
 .service-price {
   justify-self: flex-end;
