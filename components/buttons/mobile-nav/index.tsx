@@ -1,13 +1,16 @@
 import styles from './mobile-nav.module.css';
+// Hook
+import { useStore } from '@Hooks/useStore';
 // Type
 import { HandlerType } from '@Types';
 
 export const MobileNavigationButton = ({ handler }: HandlerType) => {
+  const { language } = useStore();
   return (
     <button
       className={`small-button click ${styles.module}`}
-      title="menu button"
-      aria-label="menu button"
+      title={data[language]}
+      aria-label={data[language]}
       onClick={() => handler()}
     >
       <div className={styles.icon}>
@@ -19,4 +22,10 @@ export const MobileNavigationButton = ({ handler }: HandlerType) => {
       </div>
     </button>
   );
+};
+
+const data = {
+  en: 'menu button',
+  ru: 'кнопка меню',
+  fi: 'valikkopainiketta',
 };
