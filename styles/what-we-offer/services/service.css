@@ -58,6 +58,12 @@
   user-select: none;
   z-index: -1;
 }
+.background-article.hidden {
+  /* display: none; */
+  visibility: hidden;
+  /* animation-duration: 0s; */
+}
+
 .background-article::after {
   --position-bg-article: 1200px;
   content: '';
