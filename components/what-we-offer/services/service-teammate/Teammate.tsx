@@ -25,9 +25,6 @@ export const ServiceTeammate = ({ data }: { data: TeammateType }) => {
     }
   }, []);
 
-  const utls = generateUrl(data.url);
-  console.log(utls);
-
   return (
     <article className="service-teammate">
       {data.recruit && <span className="teammate-recruit">{recruit[language]}</span>}
