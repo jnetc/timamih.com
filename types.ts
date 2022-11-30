@@ -52,10 +52,11 @@ export interface HowWeWorkType<T> extends ArticleType {
   prevButton: T;
 }
 
-export interface TeammateType extends ArticleWithIdType {
+export interface TeammateType extends ArticleWithIdType, Url {
   recruit: boolean;
   proff: string;
   avatar: AvatarType;
+  isactivatedurl: boolean;
 }
 
 export interface ServiceType extends ArticleWithIdType {

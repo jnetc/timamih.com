@@ -105,6 +105,8 @@ export const query = gql`
         title
         proff
         description
+        isactivatedurl
+        url
         avatar {
           url
           blurUpThumb
