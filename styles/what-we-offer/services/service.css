@@ -66,6 +66,12 @@
     }
   }
 }
+@media not all and (min-resolution: 0.001dpcm) {
+  .background-article {
+    display: none;
+    visibility: hidden;
+  }
+}
 
 .background-article::after {
   --position-bg-article: 1200px;
