@@ -10,8 +10,8 @@ export const Links = ({
   nameClass: 'mobile-link' | 'desktop-link';
 }) => {
   return (
-    <Link href={link.navanchor} key={link.id}>
-      <a className={`${nameClass} click`}>{link.name}</a>
+    <Link href={link.navanchor} key={link.id} className={`${nameClass} click`}>
+      {link.name}
     </Link>
   );
 };

@@ -75,6 +75,9 @@
   position: relative;
   margin-block: 1rem;
 }
+.teammate-avatar img {
+  border-radius: inherit;
+}
 .teammate-avatar span {
   border-radius: 50%;
 }

@@ -104,6 +104,9 @@ time,
 address {
   font-family: 'Rubik';
 }
+img {
+  user-select: none;
+}
 
 a {
   text-decoration: none;
@@ -164,7 +167,7 @@ main {
 @import url('./buttons.css');
 @import url('./stars.css');
 @import url('./modals.css');
-@import url('./illustrations.css');
+/* @import url('./illustrations.css'); */
 @import url('./navigation/navigation.css');
 @import url('./hero-section/hero-section.css');
 @import url('./how-we-work/how-we-work.css');

@@ -93,6 +93,7 @@ export const query = gql`
     title
     services {
       id
+      active
       order
       title
       description

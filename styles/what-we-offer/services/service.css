@@ -9,6 +9,11 @@
   grid-auto-rows: min-content;
 }
 
+.service img {
+  width: 100%;
+  height: auto;
+}
+
 /* ORDERS */
 .service-content {
   display: grid;
@@ -155,6 +160,11 @@
     grid-template-columns: 100%;
     row-gap: var(--gap-three);
   }
+
+  .service img {
+    height: clamp(200px, 55vw, 370px)
+  }
+
   .service:nth-child(even) .illustration,
   .service:nth-child(odd) .illustration {
     grid-column: 1;

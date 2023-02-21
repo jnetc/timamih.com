@@ -4,12 +4,17 @@ import { ServiceContent } from './ServiceContent';
 import { ServiceType } from '@Types';
 
 export const Service = ({ data }: { data: ServiceType }) => {
-  const { id, illustration, ...article } = data;
+  const { id, active, illustration, ...article } = data;
 
   return (
-    <div className="service">
-      <Illustrations name={data.illustration} />
-      <ServiceContent data={article} />
-    </div>
+    <>
+      {active ?
+      <div className="service">
+        <Illustrations name={data.illustration} />
+        <ServiceContent data={article} />
+      </div> :
+        null
+      }
+    </>
   );
 };

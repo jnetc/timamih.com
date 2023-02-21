@@ -35,20 +35,20 @@ export const ServiceTeammate = ({ data }: { data: TeammateType }) => {
         <a className="teammate-avatar" href={generateUrl(data.url)}>
           <Image
             src={data.avatar.url}
-            blurDataURL={data.avatar.blurUpThumb}
             alt={data.title}
-            layout="fill"
-            objectFit="cover"
+            blurDataURL={data.avatar.blurUpThumb}
+            sizes="100wv"
+            fill={true}
           />
         </a>
       ) : (
         <div className="teammate-avatar">
           <Image
             src={data.avatar.url}
-            blurDataURL={data.avatar.blurUpThumb}
             alt={data.title}
-            layout="fill"
-            objectFit="cover"
+            blurDataURL={data.avatar.blurUpThumb}
+            sizes="100wv"
+            fill={true}
           />
         </div>
       )}

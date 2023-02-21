@@ -1,6 +1,6 @@
 // COMPONENTS TIPE
 export type LanguagesType = 'ru' | 'fi' | 'en';
-export type ServiceIllustrationType = 'ads' | 'photo' | 'video' | 'graphic' | 'drone';
+export type ServiceIllustrationType = 'ads' | 'photo' | 'video' | 'graphic' | 'drone' | 'it';
 export type ContactIconsType = 'telegram' | 'telephone' | 'email' | 'whatsapp';
 
 export type ID = { id: string };
@@ -60,6 +60,7 @@ export interface TeammateType extends ArticleWithIdType, Url {
 }
 
 export interface ServiceType extends ArticleWithIdType {
+  active: boolean;
   price: string;
   buttonName: string;
   illustration: ServiceIllustrationType;
@@ -67,7 +68,7 @@ export interface ServiceType extends ArticleWithIdType {
   teammates: Array<TeammateType>;
 }
 
-export type ServiceContentType = Omit<ServiceType, 'illustration' | 'id'>;
+export type ServiceContentType = Omit<ServiceType, 'illustration' | 'id' | 'active'>;
 export type ServiceArticleType = {
   data: Omit<ServiceContentType, 'teammates' | 'order'>;
 } & HandlerType;
