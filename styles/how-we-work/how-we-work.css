@@ -5,18 +5,10 @@
   row-gap: var(--gap-column-section);
 }
 
-.how-we-work img {
-  width: 100%;
-  height: auto;
-}
-
 @media screen and (max-width: 960px) {
   .how-we-work {
     grid-template-columns: 100%;
     row-gap: var(--gap-three);
-  }
-  .how-we-work img {
-    height: clamp(200px, 55vw, 370px)
   }
 }
 

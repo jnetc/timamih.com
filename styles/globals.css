@@ -137,7 +137,7 @@ main {
   width: 100%;
   display: flex;
   flex-flow: column;
-  row-gap: 10rem;
+  row-gap: 20rem;
   padding-block-start: 5rem;
   margin-inline: auto;
   position: relative;
@@ -152,6 +152,11 @@ main {
 @media screen and (max-width: 560px) {
   main {
     padding-block-start: 0;
+  }
+}
+@media screen and (max-width: 960px) {
+  main {
+   row-gap: 12rem;
   }
 }
 

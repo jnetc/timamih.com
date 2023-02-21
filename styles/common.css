@@ -65,10 +65,21 @@
   order: 2;
 }
 
+img.illustration {
+  width: 100%;
+  height: auto;
+  max-height: 470px;
+  align-self: center;
+}
+
 @media screen and (max-width: 960px) {
   .content-left,
   .content-right {
     order: 2;
+  }
+
+  img.illustration {
+    height: clamp(200px, 55vw, 370px)
   }
 }
 

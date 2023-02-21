@@ -18,6 +18,8 @@ export const Illustrations = ({ name }: { name: ServiceIllustrationType }) => {
     graphic: <Image src={`/images/3d ${switchTheme}.svg`} alt='3D Graphics illustration' width={0} height={0} className="illustration"/>,
     drone: <Image src={`/images/drone ${switchTheme}.svg`} alt='Aerial Filming illustration' width={0} height={0} className="illustration"/>,
     it: <Image src={`/images/it ${switchTheme}.svg`} alt='Development illustration' width={0} height={0} className="illustration"/>,
+    consult: <Image src={`/images/consult ${switchTheme}.svg`} alt='Consultations illustration' width={0} height={0} className="illustration"/>,
+    sound: <Image src={`/images/sound ${switchTheme}.svg`} alt='Audition illustration' width={0} height={0} className="illustration"/>,
   };
   return images[name];
 };

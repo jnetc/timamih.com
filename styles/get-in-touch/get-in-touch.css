@@ -5,11 +5,6 @@
   row-gap: var(--gap-column-section);
 }
 
-#get-in-touch img {
-  width: 100%;
-  height: auto;
-}
-
 .contacts {
   grid-column: 1;
   display: flex;
