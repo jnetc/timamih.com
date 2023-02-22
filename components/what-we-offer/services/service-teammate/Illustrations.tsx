@@ -1,8 +1,3 @@
-// import { Advertising } from './Advertising';
-// import { AerialFilming } from './AerialFilming';
-// import { VideoProduction } from './VideoProduction';
-// import { Graphics3D } from './Graphics3D';
-// import { Photography } from './Photography';
 import Image from "next/image";
 import { useStore } from '@Hooks/useStore';
 // Type
