@@ -31,7 +31,6 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-title" content="timamih.com" />
         <link rel="apple-touch-icon" sizes="192x192" href="/icons/icon-192x192.png" />
-        <meta name="google-site-verification" content="jvPHQnqpJuMI-paWHyI3qR5fLitUYuq4ovNTK8VE0cU" />
       </Head>
       <Component {...pageProps} />
     </>
