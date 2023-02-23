@@ -33,23 +33,11 @@ export const ServiceTeammate = ({ data }: { data: TeammateType }) => {
       {data.recruit && <span className="teammate-recruit">{recruit[language]}</span>}
       {data.isactivatedurl ? (
         <a className="teammate-avatar" href={generateUrl(data.url)}>
-          <Image
-            src={data.avatar.url}
-            alt={data.title}
-            blurDataURL={data.avatar.blurUpThumb}
-            sizes="100wv"
-            fill={true}
-          />
+          <Image src={data.avatar.url} alt={data.title} blurDataURL={data.avatar.blurUpThumb} sizes="100wv" fill={true} />
         </a>
       ) : (
         <div className="teammate-avatar">
-          <Image
-            src={data.avatar.url}
-            alt={data.title}
-            blurDataURL={data.avatar.blurUpThumb}
-            sizes="100wv"
-            fill={true}
-          />
+          <Image src={data.avatar.url} alt={data.title} blurDataURL={data.avatar.blurUpThumb} sizes="100wv" fill={true} />
         </div>
       )}
       <h1 className="teammate-name">{data.title}</h1>

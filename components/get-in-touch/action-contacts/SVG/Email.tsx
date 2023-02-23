@@ -1,12 +1,6 @@
 export const Email = () => (
   <div className="contact-button  email-button click">
-    <svg
-      width="48"
-      height="48"
-      className="contact-svg"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width="48" height="48" className="contact-svg" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M23.977 24.367 6.002 13.65v-.34a2.275 2.275 0 0 1 .689-1.634A2.388 2.388 0 0 1 8.354 11h31.293c.624 0 1.223.243 1.664.677A2.29 2.29 0 0 1 42 13.311v.289L23.977 24.367Z"
         fill="#FFF9F2"

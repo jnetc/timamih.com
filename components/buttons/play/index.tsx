@@ -7,12 +7,7 @@ export const PlayButton = ({ link }: { link: string }) => {
   const modal = () => openModal({ open: true, url: link });
 
   return (
-    <button
-      title="play video button"
-      aria-labelledby="play video button"
-      className="play-button click"
-      onClick={modal}
-    >
+    <button title="play video button" aria-labelledby="play video button" className="play-button click" onClick={modal}>
       <PlayIcon />
     </button>
   );

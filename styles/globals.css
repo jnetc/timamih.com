@@ -156,7 +156,7 @@ main {
 }
 @media screen and (max-width: 960px) {
   main {
-   row-gap: 12rem;
+    row-gap: 12rem;
   }
 }
 

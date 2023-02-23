@@ -43,11 +43,7 @@ export const ContentSide = () => {
       <div className="section-content__actions">
         <StepDots activeStep={moveStep.num} />
         <PrevButton currentStep={moveStep.num} handler={() => stepHandler('prev')} />
-        <NextButton
-          amountSteps={stepsSum}
-          currentStep={moveStep.num}
-          handler={() => stepHandler('next')}
-        />
+        <NextButton amountSteps={stepsSum} currentStep={moveStep.num} handler={() => stepHandler('next')} />
       </div>
     </div>
   );

@@ -1,11 +1,11 @@
-import Image from "next/image";
+import Image from 'next/image';
 import { useStore } from '@Hooks/useStore';
 // Component
 // import { Illustration } from './GetInTouchSVG';
 import { Contacts } from './Contacts';
 const GetInTouch = () => {
   const { data, darkTheme } = useStore();
-  const switchTheme = darkTheme ? 'dark' : 'light'
+  const switchTheme = darkTheme ? 'dark' : 'light';
 
   if (!data) return null;
   const {
@@ -18,7 +18,7 @@ const GetInTouch = () => {
         <p className="description-section">{description}</p>
       </header>
       <Contacts />
-     <Image src={`/images/contact ${switchTheme}.svg`} alt='How we work illustration' width={0} height={0} className="illustration" />
+      <Image src={`/images/contact ${switchTheme}.svg`} alt="How we work illustration" width={0} height={0} className="illustration" />
     </section>
   );
 };

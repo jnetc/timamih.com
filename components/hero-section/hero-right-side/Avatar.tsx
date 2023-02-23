@@ -31,22 +31,9 @@ export const Avatar = () => {
 
   return (
     <div className="hero-right__avatar" ref={targetAvatar}>
-      <svg
-        width="100%"
-        height="100%"
-        viewBox="0 0 645 755"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+      <svg width="100%" height="100%" viewBox="0 0 645 755" fill="none" xmlns="http://www.w3.org/2000/svg">
         <defs>
-          <linearGradient
-            id="ellipse-gradient"
-            x1="185"
-            y1="600"
-            x2="185"
-            y2="700"
-            gradientUnits="userSpaceOnUse"
-          >
+          <linearGradient id="ellipse-gradient" x1="185" y1="600" x2="185" y2="700" gradientUnits="userSpaceOnUse">
             <stop offset=".1" className="hero-right__gradient" />
             <stop offset="1" className="hero-right__gradient" />
           </linearGradient>
@@ -57,21 +44,8 @@ export const Avatar = () => {
             />
           </mask>
         </defs>
-        <ellipse
-          cx="322.239"
-          cy="702"
-          rx="0"
-          ry="0"
-          fill="url(#ellipse-gradient)"
-          className="hero-right__hole"
-        />
-        <image
-          mask="url(#avatar-mask)"
-          width="550"
-          height="800"
-          x={45}
-          className="hero-right__image"
-        />
+        <ellipse cx="322.239" cy="702" rx="0" ry="0" fill="url(#ellipse-gradient)" className="hero-right__hole" />
+        <image mask="url(#avatar-mask)" width="550" height="800" x={45} className="hero-right__image" />
       </svg>
     </div>
   );

@@ -79,7 +79,7 @@ img.illustration {
   }
 
   img.illustration {
-    height: clamp(200px, 55vw, 370px)
+    height: clamp(200px, 55vw, 370px);
   }
 }
 

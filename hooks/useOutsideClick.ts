@@ -1,9 +1,6 @@
 import { useEffect, SetStateAction, RefObject } from 'react';
 
-export const useOutsideClick = (
-  ref: RefObject<HTMLElement | null>,
-  handler: (value: SetStateAction<boolean>) => void
-) => {
+export const useOutsideClick = (ref: RefObject<HTMLElement | null>, handler: (value: SetStateAction<boolean>) => void) => {
   useEffect(() => {
     const listener = (event: Event) => {
       const element = event.target as HTMLElement;

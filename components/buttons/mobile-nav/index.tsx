@@ -7,12 +7,7 @@ import { HandlerType } from '@Types';
 export const MobileNavigationButton = ({ handler }: HandlerType) => {
   const { language } = useStore();
   return (
-    <button
-      className={`small-button click ${styles.module}`}
-      title={data[language]}
-      aria-label={data[language]}
-      onClick={() => handler()}
-    >
+    <button className={`small-button click ${styles.module}`} title={data[language]} aria-label={data[language]} onClick={() => handler()}>
       <div className={styles.icon}>
         <svg viewBox="0 0 28 28">
           <line className={styles.line} x1="5.4" y1="13.9" x2="22.6" y2="13.9" />

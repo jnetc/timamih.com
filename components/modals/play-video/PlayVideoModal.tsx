@@ -22,12 +22,7 @@ export const PlayVideoModal = () => {
 
   return modal.open
     ? createPortal(
-        <dialog
-          className={`${styles.module} modal`}
-          open={modal.open}
-          ref={ref}
-          onClick={closeDialogHandler}
-        >
+        <dialog className={`${styles.module} modal`} open={modal.open} ref={ref} onClick={closeDialogHandler}>
           <CloseButton handler={closeButtonHandler} />
           <div className={styles.video}>
             <Player url={modal.url ?? ''} />

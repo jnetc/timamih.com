@@ -1,9 +1,5 @@
 import { useEffect, RefObject } from 'react';
-export const useTransitionAnimation = (
-  ref: RefObject<HTMLElement>,
-  state: boolean,
-  duration: number
-) => {
+export const useTransitionAnimation = (ref: RefObject<HTMLElement>, state: boolean, duration: number) => {
   useEffect(() => {
     const el = ref.current;
     if (!el) return;

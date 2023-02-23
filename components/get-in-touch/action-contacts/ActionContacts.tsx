@@ -8,7 +8,7 @@ export const ActionContacts = ({ links }: { links: Array<ContactsType> }) => {
     if (button.url.length === 0) return;
     const href = urlSelect(button.icon, button.url);
     return (
-      <Link href={href} key={button.id}className="contact-button" title={`${button.icon}`} aria-label={`${button.icon}`}>
+      <Link href={href} key={button.id} className="contact-button" title={`${button.icon}`} aria-label={`${button.icon}`}>
         <Icons icon={button.icon} />
       </Link>
     );

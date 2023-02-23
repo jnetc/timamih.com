@@ -17,12 +17,9 @@ const OurLittleStory = dynamic(() => import('@Components/our-little-story'), { s
 const GetInTouch = dynamic(() => import('@Components/get-in-touch'), { ssr: false });
 const Footer = dynamic(() => import('@Components/footer'), { ssr: false });
 
-const Home: NextPage = ({
-  data,
-  language,
-  languages,
-}: InferGetStaticPropsType<typeof getStaticProps>) => {
+const Home: NextPage = ({ data, language, languages }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const [darkTheme, switchTheme] = useState(false);
+
   if (!data) {
     return <main>Sorry! This page not found.</main>;
   }
@@ -34,8 +31,8 @@ const Home: NextPage = ({
       <Head>
         <title>{assignType._site.globalSeo.fallbackSeo.title}</title>
         <meta name="description" content={assignType._site.globalSeo.fallbackSeo.description} />
-        <link rel="preload" href="/images/dark_theme_tima.webp"  as='image' type="image/webp" />
-        <link rel="preload" href="/images/light_theme_tima.webp" as='image' type="image/webp" />
+        <link rel="preload" href="/images/dark_theme_tima.webp" as="image" type="image/webp" />
+        <link rel="preload" href="/images/light_theme_tima.webp" as="image" type="image/webp" />
       </Head>
 
       <Navigation />
