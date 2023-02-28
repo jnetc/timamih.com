@@ -31,8 +31,6 @@ const Home: NextPage = ({ data, language, languages }: InferGetStaticPropsType<t
       <Head>
         <title>{assignType._site.globalSeo.fallbackSeo.title}</title>
         <meta name="description" content={assignType._site.globalSeo.fallbackSeo.description} />
-        <link rel="preload" href="/images/dark_theme_tima.webp" as="image" type="image/webp" />
-        <link rel="preload" href="/images/light_theme_tima.webp" as="image" type="image/webp" />
       </Head>
 
       <Navigation />
