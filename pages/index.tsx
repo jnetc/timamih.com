@@ -31,7 +31,6 @@ const Home: NextPage = ({ data, language, languages }: InferGetStaticPropsType<t
       <Head>
         <title>{assignType._site.globalSeo.fallbackSeo.title}</title>
         <meta name="description" content={assignType._site.globalSeo.fallbackSeo.description} />
-        <meta name="subject" content={assignType._site.titleSuffix} />
         {/* Facebook / Open Graph */}
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content={assignType._site.siteName} />
