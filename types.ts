@@ -3,10 +3,10 @@ export type LanguagesType = 'ru' | 'fi' | 'en';
 export type ServiceIllustrationType = 'ads' | 'photo' | 'video' | 'graphic' | 'drone' | 'it' | 'consult' | 'sound';
 export type ContactIconsType = 'telegram' | 'telephone' | 'email' | 'whatsapp';
 
-export type ID = {id: string};
-export type Name = {name: string};
-export type Url = {url: string};
-export type HandlerType = {handler: () => void};
+export type ID = { id: string };
+export type Name = { name: string };
+export type Url = { url: string };
+export type HandlerType = { handler: () => void };
 
 export interface ArticleType {
   title: string;
@@ -32,9 +32,15 @@ export interface ChatMessageType extends ID {
 }
 
 // SECTION TYPES
+interface Favicon {
+  image: { url: string };
+}
 interface SEO {
+  facebookPageUrl: string;
+  titleSuffix: string;
+  siteName: string;
   globalSeo: {
-    fallbackSeo: ArticleType;
+    fallbackSeo: ArticleType & Favicon;
   };
 }
 

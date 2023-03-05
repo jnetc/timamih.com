@@ -49,9 +49,15 @@ export const query = gql`
   }
   fragment SiteFragment on Site {
     globalSeo(locale: $locale) {
+      siteName
+      facebookPageUrl
+      titleSuffix
       fallbackSeo {
         description
         title
+        image {
+          url
+        }
       }
     }
   }
