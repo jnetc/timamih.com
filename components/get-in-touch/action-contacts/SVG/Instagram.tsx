@@ -1,6 +1,6 @@
 export const Instagram = () => (
   <div className="contact-button  instagram-button click">
-    <svg width="48" height="48" className="contact-svg" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width="64" height="64" className="contact-svg" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M32.0016 26.0508C28.7165 26.0508 26.0508 28.7133 26.0508 32.0016C26.0508 35.29 28.7133 37.9524 32.0016 37.9524C35.29 37.9524 37.9524 35.2867 37.9524 32.0016C37.9524 28.7165 35.29 26.0508 32.0016 26.0508Z"
         fill="#FFF9F2"

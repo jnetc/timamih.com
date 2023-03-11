@@ -15,8 +15,7 @@
 .telephone-button {
   border-color: hsla(var(--primary-shade) / 0.5);
   background-color: hsla(var(--violet) / 1);
-  box-shadow: 0.75rem 0.75rem 0 hsla(var(--violet) / 0.1),
-    0.75rem 0.75rem 1.5rem hsla(var(--violet) / 0.1);
+  box-shadow: 0.75rem 0.75rem 0 hsla(var(--violet) / 0.1), 0.75rem 0.75rem 1.5rem hsla(var(--violet) / 0.1);
 }
 .telephone-button:hover {
   border-color: hsla(var(--light) / 1);
@@ -24,15 +23,13 @@
 
 .telephone-button:active {
   border-color: hsla(var(--light) / 1);
-  box-shadow: 0.5rem 0.5rem 0 hsla(var(--violet) / 0.3),
-    0.5rem 0.5rem 1rem hsla(var(--violet) / 0.3);
+  box-shadow: 0.5rem 0.5rem 0 hsla(var(--violet) / 0.3), 0.5rem 0.5rem 1rem hsla(var(--violet) / 0.3);
 }
 
 .email-button {
   border-color: hsla(var(--primary-shade) / 0.5);
   background-color: hsla(var(--red) / 1);
-  box-shadow: 0.75rem 0.75rem 0 hsla(var(--red) / 0.1),
-    0.75rem 0.75rem 1.5rem hsla(var(--red) / 0.1);
+  box-shadow: 0.75rem 0.75rem 0 hsla(var(--red) / 0.1), 0.75rem 0.75rem 1.5rem hsla(var(--red) / 0.1);
 }
 
 .email-button:hover {
@@ -47,8 +44,7 @@
 .telegram-button {
   border-color: hsla(var(--primary-shade) / 0.5);
   background-color: hsla(var(--blue) / 1);
-  box-shadow: 0.75rem 0.75rem 0 hsla(var(--blue) / 0.1),
-    0.75rem 0.75rem 1.5rem hsla(var(--blue) / 0.1);
+  box-shadow: 0.75rem 0.75rem 0 hsla(var(--blue) / 0.1), 0.75rem 0.75rem 1.5rem hsla(var(--blue) / 0.1);
 }
 
 .telegram-button:hover {
@@ -60,11 +56,59 @@
   box-shadow: 0.5rem 0.5rem 0 hsla(var(--blue) / 0.3), 0.5rem 0.5rem 1rem hsla(var(--blue) / 0.3);
 }
 
+.instagram-button {
+  --insta-start: 275 49% 42%; /* hsl(275, 49%, 42%); */
+  --insta-middle: 328 83% 50%; /* hsl(328, 83%, 50%); */
+  --insta-end: 46 88% 56%; /*  hsl(46, 88%, 56%); */
+  border-color: hsla(var(--primary-shade) / 0.5);
+  background: linear-gradient(225deg, hsl(var(--insta-start) / 1) 0%, hsl(var(--insta-middle) / 1) 23%, hsl(var(--insta-end) / 1) 76%);
+  background-size: 120% 120%;
+  background-position: -5px;
+  position: relative;
+  isolation: isolate;
+  /* box-shadow: 0.75rem 0.75rem 0 hsla(var(--blue) / 0.1), 0.75rem 0.75rem 1.5rem hsla(var(--blue) / 0.1); */
+}
+
+.instagram-button::after {
+  content: '';
+  width: var(--size);
+  height: var(--size);
+  position: absolute;
+  bottom: -0.75rem;
+  right: -0.75rem;
+  border-radius: 50%;
+  background: linear-gradient(
+    225deg,
+    hsl(var(--insta-start) / 0.1) 0%,
+    hsl(var(--insta-middle) / 0.1) 23%,
+    hsl(var(--insta-end) / 0.1) 76%
+  );
+  transition: all 0.3s ease-in-out;
+}
+
+.instagram-button:hover {
+  border-color: hsla(var(--light) / 1);
+}
+
+.instagram-button:active {
+  border-color: hsla(var(--light) / 1);
+}
+.instagram-button:active::after {
+  /* bottom: -0.5rem; */
+  /* right: -0.5rem; */
+  transform: translate(-0.25rem, -0.25rem);
+  background: linear-gradient(
+    225deg,
+    hsl(var(--insta-start) / 0.3) 0%,
+    hsl(var(--insta-middle) / 0.3) 23%,
+    hsl(var(--insta-end) / 0.3) 76%
+  );
+}
+
 .whatsapp-button {
   border-color: hsla(var(--primary-shade) / 0.5);
   background-color: hsla(var(--green) / 1);
-  box-shadow: calc(0.75rem / var(--division)) calc(0.75rem / var(--division))
-    calc(1.5rem / var(--division)) hsla(var(--green) / 0.1);
+  box-shadow: calc(0.75rem / var(--division)) calc(0.75rem / var(--division)) calc(1.5rem / var(--division)) hsla(var(--green) / 0.1);
   filter: drop-shadow(0.75rem 0.75rem 0 hsla(var(--green) / 0.1));
 }
 .whatsapp-button::after {

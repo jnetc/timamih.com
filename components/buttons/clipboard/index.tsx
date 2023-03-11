@@ -6,9 +6,17 @@ import { useStore } from '@Hooks/useStore';
 export const CopyButton = (text: { value: string }) => {
   const { language } = useStore();
   const [isCopy, setIsCopy] = useState(false);
+  const regex = new RegExp('[@ | d{5,}]', 'gm');
 
+  if (regex.exec(text.value)) {
+    console.log(text.value);
+  }
   const copyPhoneNumber = () => {
-    navigator.clipboard.writeText(text.value);
+    if (regex.exec(text.value)) {
+      navigator.clipboard.writeText(text.value);
+    }
+    // Instagram href
+    navigator.clipboard.writeText(`https://www.instagram.com/${text.value}`);
     setIsCopy(true);
     const clean = setTimeout(() => {
       setIsCopy(false);
