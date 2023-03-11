@@ -8,9 +8,6 @@ export const CopyButton = (text: { value: string }) => {
   const [isCopy, setIsCopy] = useState(false);
   const regex = new RegExp('[@ | d{5,}]', 'gm');
 
-  if (regex.exec(text.value)) {
-    console.log(text.value);
-  }
   const copyPhoneNumber = () => {
     if (regex.exec(text.value)) {
       navigator.clipboard.writeText(text.value);
