@@ -23,6 +23,7 @@ function urlSelect(icon: ContactIconsType, url: string) {
     telegram: `tg://resolve?domain=${url}`,
     whatsapp: `https://wa.me/${url}`,
     email: `mailto:${url}`,
+    instagram: `https://www.instagram.com/${url}/`,
   };
   return urls[icon];
 }

@@ -36,6 +36,7 @@ function urlSelect(icon: ContactIconsType, url: string) {
     telegram: { label: { en: 'Telegram', ru: 'Телеграм', fi: 'Telegram' }, url: `@${url}` },
     whatsapp: { label: { en: 'WhatsApp', ru: 'WhatsApp', fi: 'WhatsApp' }, url },
     email: { label: { en: 'Email', ru: 'Эл. адрес', fi: 'Sähköposti' }, url },
+    instagram: { label: { en: 'Instagram', ru: 'Инстаграм', fi: 'Instagram' }, url },
   };
   return urls[icon];
 }

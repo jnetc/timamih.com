@@ -29,20 +29,26 @@ export const ServiceTeammate = ({ data }: { data: TeammateType }) => {
   }, []);
 
   return (
-    <article className="service-teammate">
+    <article className="service-teammate" itemScope itemType="https://schema.org/Person">
       {data.recruit && <span className="teammate-recruit">{recruit[language]}</span>}
       {data.isactivatedurl ? (
-        <a className="teammate-avatar" href={generateUrl(data.url)}>
+        <a className="teammate-avatar" href={generateUrl(data.url)} itemProp="image">
           <Image src={data.avatar.url} alt={data.title} blurDataURL={data.avatar.blurUpThumb} sizes="100wv" fill={true} />
         </a>
       ) : (
-        <div className="teammate-avatar">
+        <div className="teammate-avatar" itemProp="image">
           <Image src={data.avatar.url} alt={data.title} blurDataURL={data.avatar.blurUpThumb} sizes="100wv" fill={true} />
         </div>
       )}
-      <h1 className="teammate-name">{data.title}</h1>
-      <h2 className="teammate-proff">{data.proff}</h2>
-      <p className="teammate-desc">{data.description}</p>
+      <h1 className="teammate-name" itemProp="name">
+        {data.title}
+      </h1>
+      <h2 className="teammate-proff" itemProp="jobTitle">
+        {data.proff}
+      </h2>
+      <p className="teammate-desc" itemProp="description">
+        {data.description}
+      </p>
     </article>
   );
 };

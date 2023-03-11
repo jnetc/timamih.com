@@ -8,13 +8,12 @@ export const Service = ({ data }: { data: ServiceType }) => {
 
   return (
     <>
-      {active ?
-      <div className="service">
-        <Illustrations name={data.illustration} />
-        <ServiceContent data={article} />
-      </div> :
-        null
-      }
+      {active ? (
+        <div className="service" itemScope itemType="https://schema.org/Service">
+          <Illustrations name={data.illustration} />
+          <ServiceContent data={article} />
+        </div>
+      ) : null}
     </>
   );
 };

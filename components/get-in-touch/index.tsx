@@ -18,7 +18,7 @@ const GetInTouch = () => {
         <p className="description-section">{description}</p>
       </header>
       <Contacts />
-      <Image src={`/images/contact ${switchTheme}.svg`} alt="How we work illustration" width={0} height={0} className="illustration" />
+      <Image src={`/images/contact ${switchTheme}.svg`} alt="Contact with us" width={0} height={0} className="illustration" />
     </section>
   );
 };

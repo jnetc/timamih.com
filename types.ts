@@ -1,7 +1,7 @@
 // COMPONENTS TIPE
 export type LanguagesType = 'ru' | 'fi' | 'en';
 export type ServiceIllustrationType = 'ads' | 'photo' | 'video' | 'graphic' | 'drone' | 'it' | 'consult' | 'sound';
-export type ContactIconsType = 'telegram' | 'telephone' | 'email' | 'whatsapp';
+export type ContactIconsType = 'telegram' | 'telephone' | 'instagram' | 'whatsapp' | 'email';
 
 export type ID = { id: string };
 export type Name = { name: string };
