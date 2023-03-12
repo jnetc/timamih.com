@@ -74,6 +74,13 @@ export interface ServiceType extends ArticleWithIdType {
   teammates: Array<TeammateType>;
 }
 
+export interface Employees {
+  name: string;
+  image: string;
+  description: string;
+  jobTitle: string;
+}
+
 export type ServiceContentType = Omit<ServiceType, 'illustration' | 'id' | 'active'>;
 export type ServiceArticleType = {
   data: Omit<ServiceContentType, 'teammates' | 'order'>;

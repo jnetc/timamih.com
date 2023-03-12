@@ -4,11 +4,13 @@ import dynamic from 'next/dynamic';
 
 import Head from 'next/head';
 
+import { createSchema } from '@Helpers/transformToSchema';
+
 import { request, query } from 'lib/datocms';
 // Hooks
 import { Store } from '@Hooks/useStore';
 // Types
-import { DataType } from '@Types';
+import type { DataType } from '@Types';
 
 const Navigation = dynamic(() => import('@Components/navigation'), { ssr: false });
 const HeroSection = dynamic(() => import('@Components/hero-section'), { ssr: false });
@@ -27,23 +29,8 @@ const Home: NextPage = ({ data, language, languages }: InferGetStaticPropsType<t
 
   const assignType = data as DataType;
 
-  const schema = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'Timamih',
-    url: 'https://www.timamih.com',
-    logo: 'https://www.timamih.com/icons/icon-512x512.png',
-    sameAs: ['tg://resolve?domain=timamih_com', 'https://wa.me/358453491091', 'https://www.instagram.com/timamih_mainostoimisto'],
-
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: 'Hitsaajankatu 6',
-      addressLocality: 'Helsinki',
-      addressRegion: 'Uusimaa',
-      postalCode: '00810',
-      addressCountry: 'Finland',
-    },
-  };
+  // Create reach results (schema.org) for google search
+  const schema = createSchema(assignType);
 
   return (
     <Store.Provider value={{ language, languages, data, darkTheme, switchTheme }}>
