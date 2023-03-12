@@ -60,13 +60,12 @@
   --insta-start: 275 49% 42%; /* hsl(275, 49%, 42%); */
   --insta-middle: 328 83% 50%; /* hsl(328, 83%, 50%); */
   --insta-end: 46 88% 56%; /*  hsl(46, 88%, 56%); */
+
   border-color: hsla(var(--primary-shade) / 0.5);
   background: linear-gradient(225deg, hsl(var(--insta-start) / 1) 0%, hsl(var(--insta-middle) / 1) 23%, hsl(var(--insta-end) / 1) 76%);
   background-size: 120% 120%;
   background-position: -5px;
   position: relative;
-  isolation: isolate;
-  /* box-shadow: 0.75rem 0.75rem 0 hsla(var(--blue) / 0.1), 0.75rem 0.75rem 1.5rem hsla(var(--blue) / 0.1); */
 }
 
 .instagram-button::after {
@@ -84,6 +83,7 @@
     hsl(var(--insta-end) / 0.1) 76%
   );
   transition: all 0.3s ease-in-out;
+  z-index: -1;
 }
 
 .instagram-button:hover {
@@ -94,8 +94,6 @@
   border-color: hsla(var(--light) / 1);
 }
 .instagram-button:active::after {
-  /* bottom: -0.5rem; */
-  /* right: -0.5rem; */
   transform: translate(-0.25rem, -0.25rem);
   background: linear-gradient(
     225deg,

@@ -1,6 +1,7 @@
 import type { NextPage, GetStaticProps, InferGetStaticPropsType } from 'next';
 import { useState } from 'react';
 import dynamic from 'next/dynamic';
+
 import Head from 'next/head';
 
 import { request, query } from 'lib/datocms';
