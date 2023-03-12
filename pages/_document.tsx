@@ -1,5 +1,5 @@
 import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
-import Script from 'next/script';
+
 import { setInitialTheme, extraCSS } from '@Helpers/critical';
 
 class MyDocument extends Document {
@@ -14,7 +14,6 @@ class MyDocument extends Document {
         <Head>
           <script dangerouslySetInnerHTML={{ __html: setInitialTheme }} />
           <style dangerouslySetInnerHTML={{ __html: extraCSS }} />
-          <Script strategy="beforeInteractive" type="application/ld+json" src="/schema_organization.json" />
         </Head>
         <body id="home">
           <Main />
