@@ -13,7 +13,7 @@ export const Illustrations = ({ name }: { name: ServiceIllustrationType }) => {
         alt="Advertising illustration"
         width={0}
         height={0}
-        className="illustration"
+        className="illustration animated"
         itemProp="image"
       />
     ),
@@ -23,7 +23,7 @@ export const Illustrations = ({ name }: { name: ServiceIllustrationType }) => {
         alt="Photographer illustration"
         width={0}
         height={0}
-        className="illustration"
+        className="illustration animated"
         itemProp="image"
       />
     ),
@@ -33,7 +33,7 @@ export const Illustrations = ({ name }: { name: ServiceIllustrationType }) => {
         alt="Video Production illustration"
         width={0}
         height={0}
-        className="illustration"
+        className="illustration animated"
         itemProp="image"
       />
     ),
@@ -43,7 +43,7 @@ export const Illustrations = ({ name }: { name: ServiceIllustrationType }) => {
         alt="3D Graphics illustration"
         width={0}
         height={0}
-        className="illustration"
+        className="illustration animated"
         itemProp="image"
       />
     ),
@@ -53,7 +53,7 @@ export const Illustrations = ({ name }: { name: ServiceIllustrationType }) => {
         alt="Aerial Filming illustration"
         width={0}
         height={0}
-        className="illustration"
+        className="illustration animated"
         itemProp="image"
       />
     ),
@@ -63,7 +63,7 @@ export const Illustrations = ({ name }: { name: ServiceIllustrationType }) => {
         alt="Development illustration"
         width={0}
         height={0}
-        className="illustration"
+        className="illustration animated"
         itemProp="image"
       />
     ),
@@ -73,7 +73,7 @@ export const Illustrations = ({ name }: { name: ServiceIllustrationType }) => {
         alt="Consultations illustration"
         width={0}
         height={0}
-        className="illustration"
+        className="illustration animated"
         itemProp="image"
       />
     ),
@@ -83,7 +83,7 @@ export const Illustrations = ({ name }: { name: ServiceIllustrationType }) => {
         alt="Audition illustration"
         width={0}
         height={0}
-        className="illustration"
+        className="illustration animated"
         itemProp="image"
       />
     ),

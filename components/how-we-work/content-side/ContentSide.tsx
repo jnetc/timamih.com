@@ -37,7 +37,7 @@ export const ContentSide = () => {
   };
 
   return (
-    <div className="section-content content-left">
+    <div className="section-content content-left animated">
       <StepNumbers currentNumber={moveStep.num} amountNumber={stepsSum} />
       <Articles move={moveStep} />
       <div className="section-content__actions">

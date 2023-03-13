@@ -1,7 +1,11 @@
 import { useStore } from '@Hooks/useStore';
+import { useObserverContent } from '@Hooks/useObserverContent';
 
 const OurLittleStory = () => {
   const { data } = useStore();
+
+  useObserverContent('show');
+
   const story = data?.ourlittlestory.description.split('\n\n').map((sentence, idx) => {
     return (
       <p key={idx} className="description-section story-description">
@@ -12,8 +16,8 @@ const OurLittleStory = () => {
 
   return (
     <section id="who-we-are" className="our-little-story">
-      <h1 className="section-title">{data?.ourlittlestory.title}</h1>
-      <div className="story">{story}</div>
+      <h1 className="section-title animated">{data?.ourlittlestory.title}</h1>
+      <div className="story animated">{story}</div>
     </section>
   );
 };

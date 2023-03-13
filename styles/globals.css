@@ -2,6 +2,18 @@
   html {
     scroll-behavior: smooth !important;
   }
+  .animated {
+    opacity: 0;
+    transform: translateY(50px) scale(0.9);
+    transition: all 1s ease;
+  }
+  .animated.top-hide {
+    transform: translateY(-50px) scale(0.9);
+  }
+  .animated.show {
+    opacity: 1;
+    transform: translateX(0px) scale(1);
+  }
 }
 :root {
   --light: 32 100% 95%; /* hsl(32, 100%, 97%) */
