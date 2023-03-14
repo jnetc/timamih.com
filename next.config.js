@@ -15,6 +15,7 @@ module.exports = withPWA({
     localeDetection: true,
   },
   images: {
+    formats: ['image/webp', 'image/avif'],
     domains: ['www.datocms-assets.com'],
   },
 });

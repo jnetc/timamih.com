@@ -20,7 +20,7 @@ export function createSchema(data: DataType) {
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'Timamih',
+    name: 'TimaMih',
     url: 'https://www.timamih.com',
     logo: 'https://www.timamih.com/icons/icon-512x512.png',
     sameAs: ['tg://resolve?domain=timamih_com', 'https://wa.me/358453491091', 'https://www.instagram.com/timamih_mainostoimisto'],
