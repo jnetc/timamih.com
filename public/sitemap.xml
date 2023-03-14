@@ -1,26 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset
       xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xhtml="http://www.w3.org/1999/xhtml"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
 
 <url>
-  <loc>https://www.timamih.com/</loc>
-  <lastmod>2023-03-13</lastmod>
+  <loc>https://www.timamih.com</loc>
+  <xhtml:link rel="alternate" hreflang="fi" href="https://www.timamih.com"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://www.timamih.com/en"/>
+  <xhtml:link rel="alternate" hreflang="ru" href="https://www.timamih.com/ru"/>
+  <lastmod>2023-03-14</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 
 <url>
   <loc>https://www.timamih.com/ru</loc>
-  <lastmod>2023-03-13</lastmod>
+  <xhtml:link rel="alternate" hreflang="fi" href="https://www.timamih.com"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://www.timamih.com/en"/>
+  <xhtml:link rel="alternate" hreflang="ru" href="https://www.timamih.com/ru"/>
+  <lastmod>2023-03-14</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 
 <url>
   <loc>https://www.timamih.com/en</loc>
-  <lastmod>2023-03-13</lastmod>
+  <xhtml:link rel="alternate" hreflang="fi" href="https://www.timamih.com"/>
+  <xhtml:link rel="alternate" hreflang="en" href="https://www.timamih.com/en"/>
+  <xhtml:link rel="alternate" hreflang="ru" href="https://www.timamih.com/ru"/>
+  <lastmod>2023-03-14</lastmod>
   <changefreq>monthly</changefreq>
 </url>
 

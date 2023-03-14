@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import { useStore } from '@Hooks/useStore';
 // Component
-// import { Illustration } from './GetInTouchSVG';
 import { Contacts } from './Contacts';
 const GetInTouch = () => {
   const { data, darkTheme } = useStore();

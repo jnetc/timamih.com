@@ -20,8 +20,8 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="theme-color" media="(prefers-color-scheme: light)" content="hsl(32, 100%, 95%)" />
         <meta name="theme-color" media="(prefers-color-scheme: dark)" content="hsl(0, 0%, 22%)" />
         {/* Links */}
-        <meta name="url" content="https://timamih.com/" />
         <link rel="canonical" href="https://timamih.com" />
+        <link rel="alternate" href="https://timamih.com" hrefLang="x-default" />
         <link rel="alternate" href="https://timamih.com/ru" hrefLang="ru" />
         <link rel="alternate" href="https://timamih.com/en" hrefLang="en" />
         <link rel="icon" href="/icons/favicon.svg" type="image/svg+xml" />
