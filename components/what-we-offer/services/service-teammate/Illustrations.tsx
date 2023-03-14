@@ -1,10 +1,12 @@
 import Image from 'next/image';
+import { useObserverContent } from '@Hooks/useObserverContent';
 import { useStore } from '@Hooks/useStore';
 // Type
 import { ServiceIllustrationType } from '@Types';
 
 export const Illustrations = ({ name }: { name: ServiceIllustrationType }) => {
   const { darkTheme } = useStore();
+  useObserverContent('show');
   const switchTheme = darkTheme ? 'dark' : 'light';
   const images = {
     ads: (
