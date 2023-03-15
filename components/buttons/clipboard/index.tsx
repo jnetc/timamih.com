@@ -11,9 +11,10 @@ export const CopyButton = (text: { value: string }) => {
   const copyPhoneNumber = () => {
     if (regex.exec(text.value)) {
       navigator.clipboard.writeText(text.value);
+    } else {
+      // Instagram href
+      navigator.clipboard.writeText(`https://www.instagram.com/${text.value}`);
     }
-    // Instagram href
-    navigator.clipboard.writeText(`https://www.instagram.com/${text.value}`);
     setIsCopy(true);
     const clean = setTimeout(() => {
       setIsCopy(false);

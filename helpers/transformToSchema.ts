@@ -19,10 +19,12 @@ export function createSchema(data: DataType) {
 
   const schema = {
     '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'TimaMih',
+    '@type': 'LocalBusiness',
+    name: 'TimaMih Tmi',
     url: 'https://www.timamih.com',
     logo: 'https://www.timamih.com/icons/icon-512x512.png',
+    slogan: data.heroSection.title.replaceAll(',', ''),
+    telephone: '+358453491091',
     sameAs: ['tg://resolve?domain=timamih_com', 'https://wa.me/358453491091', 'https://www.instagram.com/timamih_mainostoimisto'],
 
     address: {
@@ -33,6 +35,17 @@ export function createSchema(data: DataType) {
       postalCode: '00810',
       addressCountry: 'Finland',
     },
+
+    openingHours: ['Mo-Su 10:00-20:00'],
+    currenciesAccepted: 'EUR',
+    paymentAccepted: 'Cash, Credit Card',
+    priceRange: '50€ - 1900€',
+
+    image: [
+      'https://timamih.com/images/1x1/logo.png',
+      'https://timamih.com/images/4x3/logo.png',
+      'https://timamih.com/images/16x9/logo.png',
+    ],
 
     employees: [...Array.from(employees)],
   };
