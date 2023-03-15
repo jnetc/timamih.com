@@ -7,7 +7,7 @@ const Footer = () => {
   const year = new Date().getFullYear();
   return (
     <footer className={styles.module}>
-      <p>TimaMih © {year} </p>
+      <p>TimaMih Tmi © {year} </p>
       <p>{data?.getintouch.tunnus}</p>
       <p>
         Designed by <a href="https://devan.fi">devan.fi</a>
