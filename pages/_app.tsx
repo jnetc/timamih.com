@@ -20,10 +20,10 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="theme-color" media="(prefers-color-scheme: light)" content="hsl(32, 100%, 95%)" />
         <meta name="theme-color" media="(prefers-color-scheme: dark)" content="hsl(0, 0%, 22%)" />
         {/* Links */}
-        <link rel="canonical" href="https://timamih.com" />
-        <link rel="alternate" href="https://timamih.com" hrefLang="x-default" />
-        <link rel="alternate" href="https://timamih.com/ru" hrefLang="ru" />
-        <link rel="alternate" href="https://timamih.com/en" hrefLang="en" />
+        <link rel="canonical" href="https://www.timamih.com" />
+        <link rel="alternate" href="https://www.timamih.com" hrefLang="fi" />
+        <link rel="alternate" href="https://www.timamih.com/ru" hrefLang="ru" />
+        <link rel="alternate" href="https://www.timamih.com/en" hrefLang="en" />
         <link rel="icon" href="/icons/favicon.svg" type="image/svg+xml" />
         {/* Apple */}
         <meta name="apple-mobile-web-app-capable" content="yes" />

@@ -1,37 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xhtml="http://www.w3.org/1999/xhtml"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+<!-- Finnish -->
+  <url>
+    <loc>https://www.timamih.com</loc>
+    <changefreq>monthly</changefreq>
+    <lastmod>2023-03-15</lastmod>
+     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.timamih.com/#how-we-work</loc>
+    <changefreq>monthly</changefreq>
+    <lastmod>2023-03-15</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.timamih.com/#what-we-offer</loc>
+    <changefreq>monthly</changefreq>
+    <lastmod>2023-03-15</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.timamih.com/#who-we-are</loc>
+    <changefreq>monthly</changefreq>
+    <lastmod>2023-03-15</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.timamih.com/#get-in-touch</loc>
+    <changefreq>monthly</changefreq>
+    <lastmod>2023-03-15</lastmod>
+    <priority>0.8</priority>
+  </url>
 
+<!-- Russian -->
+  <url>
+    <loc>https://www.timamih.com/ru</loc>
+    <changefreq>monthly</changefreq>
+    <lastmod>2023-03-15</lastmod>
+     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.timamih.com/ru#how-we-work</loc>
+    <changefreq>monthly</changefreq>
+    <lastmod>2023-03-15</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.timamih.com/ru#what-we-offer</loc>
+    <changefreq>monthly</changefreq>
+    <lastmod>2023-03-15</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.timamih.com/ru#who-we-are</loc>
+    <changefreq>monthly</changefreq>
+    <lastmod>2023-03-15</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.timamih.com/ru#get-in-touch</loc>
+    <changefreq>monthly</changefreq>
+    <lastmod>2023-03-15</lastmod>
+    <priority>0.8</priority>
+  </url>
 
-<url>
-  <loc>https://www.timamih.com</loc>
-  <xhtml:link rel="alternate" hreflang="fi" href="https://www.timamih.com"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://www.timamih.com/en"/>
-  <xhtml:link rel="alternate" hreflang="ru" href="https://www.timamih.com/ru"/>
-  <lastmod>2023-03-14</lastmod>
-  <changefreq>monthly</changefreq>
-</url>
-
-<url>
-  <loc>https://www.timamih.com/ru</loc>
-  <xhtml:link rel="alternate" hreflang="fi" href="https://www.timamih.com"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://www.timamih.com/en"/>
-  <xhtml:link rel="alternate" hreflang="ru" href="https://www.timamih.com/ru"/>
-  <lastmod>2023-03-14</lastmod>
-  <changefreq>monthly</changefreq>
-</url>
-
-<url>
-  <loc>https://www.timamih.com/en</loc>
-  <xhtml:link rel="alternate" hreflang="fi" href="https://www.timamih.com"/>
-  <xhtml:link rel="alternate" hreflang="en" href="https://www.timamih.com/en"/>
-  <xhtml:link rel="alternate" hreflang="ru" href="https://www.timamih.com/ru"/>
-  <lastmod>2023-03-14</lastmod>
-  <changefreq>monthly</changefreq>
-</url>
-
+  <!-- English -->
+  <url>
+    <loc>https://www.timamih.com/en</loc>
+    <changefreq>monthly</changefreq>
+    <lastmod>2023-03-15</lastmod>
+     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.timamih.com/en#how-we-work</loc>
+    <changefreq>monthly</changefreq>
+    <lastmod>2023-03-15</lastmod>
+     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.timamih.com/en#what-we-offer</loc>
+    <changefreq>monthly</changefreq>
+    <lastmod>2023-03-15</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.timamih.com/en#who-we-are</loc>
+    <changefreq>monthly</changefreq>
+    <lastmod>2023-03-15</lastmod>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://www.timamih.com/en#get-in-touch</loc>
+    <changefreq>monthly</changefreq>
+    <lastmod>2023-03-15</lastmod>
+    <priority>0.8</priority>
+  </url>
 </urlset>

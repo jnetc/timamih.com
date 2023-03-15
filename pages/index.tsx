@@ -40,14 +40,14 @@ const Home: NextPage = ({ data, language, languages }: InferGetStaticPropsType<t
         {/* Facebook / Open Graph */}
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content={assignType._site.siteName} />
-        <meta property="og:url" content={`${language === 'fi' ? 'https://timamih.com/' : `https://timamih.com/${language}/`}`} />
+        <meta property="og:url" content={`${language === 'fi' ? 'https://www.timamih.com/' : `https://www.timamih.com/${language}/`}`} />
         <meta property="og:image" content={assignType._site.globalSeo.fallbackSeo.image.url} />
         <meta property="og:title" content={assignType._site.globalSeo.fallbackSeo.title} />
         <meta property="og:description" content={assignType._site.globalSeo.fallbackSeo.description} />
         <meta property="og:locale" content={language} />
         {/* Twitter */}
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:url" content={`${language === 'fi' ? 'https://timamih.com/' : `https://timamih.com/${language}/`}`} />
+        <meta name="twitter:url" content={`${language === 'fi' ? 'https://www.timamih.com/' : `https://www.timamih.com/${language}/`}`} />
         <meta name="twitter:title" content={assignType._site.globalSeo.fallbackSeo.title} />
         <meta name="twitter:description" content={assignType._site.globalSeo.fallbackSeo.description} />
         <meta name="twitter:image" content={assignType._site.globalSeo.fallbackSeo.image.url} />
