@@ -11,6 +11,3 @@
     row-gap: var(--gap-five);
   }
 }
-
-@import url('./articles/articles.css');
-@import url('./steps/steps.css');
