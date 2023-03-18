@@ -1,0 +1,12 @@
+.limited-area {
+  overflow: hidden;
+}
+.slider-articles {
+  display: grid;
+  grid-auto-columns: 100%;
+  grid-auto-flow: column;
+  transition: transform var(--optimal) cubic-bezier(0.77, 0.15, 0.28, 1.07);
+}
+
+@import url('./article.css');
+@import url('./steps.css');

@@ -17,6 +17,7 @@ const HeroSection = dynamic(() => import('@Components/hero-section'), { ssr: fal
 const HowWeWork = dynamic(() => import('@Components/how-we-work'), { ssr: false });
 const WhatWeOffer = dynamic(() => import('@Components/what-we-offer'), { ssr: false });
 const OurLittleStory = dynamic(() => import('@Components/our-little-story'), { ssr: false });
+const Testimonial = dynamic(() => import('@Components/testimonials'), { ssr: false });
 const GetInTouch = dynamic(() => import('@Components/get-in-touch'), { ssr: false });
 const Footer = dynamic(() => import('@Components/footer'), { ssr: false });
 
@@ -27,13 +28,13 @@ const Home: NextPage = ({ data, language, languages }: InferGetStaticPropsType<t
     return <main>Sorry! This page not found.</main>;
   }
 
-  const assignType = data as DataType;
+  const assignType = data as NonNullable<DataType>;
 
   // Create reach results (schema.org) for google search
   const schema = createSchema(assignType);
 
   return (
-    <Store.Provider value={{ language, languages, data, darkTheme, switchTheme }}>
+    <Store.Provider value={{ language, languages, data: assignType, darkTheme, switchTheme }}>
       <Head>
         <title>{assignType._site.globalSeo.fallbackSeo.title}</title>
         <meta name="description" content={assignType._site.globalSeo.fallbackSeo.description} />
@@ -60,6 +61,7 @@ const Home: NextPage = ({ data, language, languages }: InferGetStaticPropsType<t
         <HowWeWork />
         <WhatWeOffer />
         <OurLittleStory />
+        <Testimonial />
         <GetInTouch />
       </main>
       <Footer />

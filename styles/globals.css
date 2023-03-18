@@ -36,6 +36,7 @@
   /* GAPS */
   --gap-one: 1rem;
   --gap-three: 3rem;
+  --gap-five: 5rem;
   --gap-column-section: 8rem;
   --gap-row-section: 8rem;
   --body-padding: 2rem;
@@ -183,10 +184,12 @@ main {
 @import url('./common.css');
 @import url('./buttons.css');
 @import url('./stars.css');
+@import url('./slider/slider.css');
 @import url('./modals.css');
 @import url('./navigation/navigation.css');
 @import url('./hero-section/hero-section.css');
 @import url('./how-we-work/how-we-work.css');
 @import url('./what-we-offer/what-we-offer.css');
 @import url('./our-little-story/our-little-story.css');
+@import url('./testimonials/testimonials.css');
 @import url('./get-in-touch/get-in-touch.css');

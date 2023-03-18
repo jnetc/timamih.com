@@ -1,23 +1,24 @@
 import { useState } from 'react';
 // Hook
 import { useStore } from '@Hooks/useStore';
-// import { useSliderStep } from '@Hooks/useSliderStep';
+import { useObserverContent } from '@Hooks/useObserverContent';
 // Component
 import { Articles } from '@Slider/articles/Articles';
 import { StepDots } from '@Slider/steps/StepDots';
 import { NextButton } from '@Slider/steps/NextButton';
 import { PrevButton } from '@Slider/steps/PrevButton';
 import { StepNumbers } from '@Slider/steps/StepsNumber';
+// Component
+// import { ContentSide } from './content-side/ContentSide';
 
-export const ContentSide = () => {
+const Testimonial = () => {
   const { data } = useStore();
   const [moveStep, setMoveStep] = useState({ num: 0, size: 0 });
-
-  // const hendlerStepHook = useSliderStep(data, 'howwework', 'next')
+  useObserverContent('show');
 
   // Check data for destruction
   if (!data) return null;
-  const { steps } = data.howwework;
+  const { steps } = data.testimonial;
 
   const stepsSum = steps.length - 1 || 0;
   const eachStepSize = 100;
@@ -42,14 +43,19 @@ export const ContentSide = () => {
   };
 
   return (
-    <div className="section-content content-left animated">
-      <StepNumbers currentNumber={moveStep.num} amountNumber={stepsSum} />
-      <Articles move={moveStep} name="howwework" />
-      <div className="section-content__actions-row">
-        <StepDots activeStep={moveStep.num} name="howwework" />
-        <PrevButton currentStep={moveStep.num} handler={() => stepHandler('prev')} />
-        <NextButton amountSteps={stepsSum} currentStep={moveStep.num} handler={() => stepHandler('next')} />
+    <section id="testimonials" className="testimonials">
+      <h1 className="section-title animated">{data?.testimonial.title}</h1>
+      <div className="section-content content-center animated">
+        <StepNumbers currentNumber={moveStep.num} amountNumber={stepsSum} />
+        <Articles move={moveStep} name="testimonial" />
+        <div className="section-content__actions-column">
+          <StepDots activeStep={moveStep.num} name="testimonial" />
+          <PrevButton currentStep={moveStep.num} handler={() => stepHandler('prev')} />
+          <NextButton amountSteps={stepsSum} currentStep={moveStep.num} handler={() => stepHandler('next')} />
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
+
+export default Testimonial;

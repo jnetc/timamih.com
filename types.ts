@@ -2,6 +2,7 @@
 export type LanguagesType = 'ru' | 'fi' | 'en';
 export type ServiceIllustrationType = 'ads' | 'photo' | 'video' | 'graphic' | 'drone' | 'it' | 'consult' | 'sound';
 export type ContactIconsType = 'telegram' | 'telephone' | 'instagram' | 'whatsapp' | 'email';
+export type SliderNameType = 'howwework' | 'testimonial';
 
 export type ID = { id: string };
 export type Name = { name: string };
@@ -13,9 +14,14 @@ export interface ArticleType {
   description: string;
 }
 
-interface ArticleWithIdType extends ID, ArticleType {}
+export interface ProffAndAvatar {
+  proff: string;
+  avatar: AvatarType;
+}
 
-interface AvatarType extends Url {
+export interface ArticleWithIdType extends ID, ArticleType {}
+
+export interface AvatarType extends Url {
   blurUpThumb: string;
 }
 
@@ -44,24 +50,30 @@ interface SEO {
   };
 }
 
-interface HeroSectionType<T> extends ArticleType {
-  label: T;
-  playButton: T;
-  hireButton: T;
-  mainVideoUrl: T;
+interface HeroSectionType extends ArticleType {
+  label: string;
+  playButton: string;
+  hireButton: string;
+  mainVideoUrl: string;
   chat: Array<ChatMessageType>;
 }
 
-export interface HowWeWorkType<T> extends ArticleType {
-  steps: Array<ArticleWithIdType>;
-  nextButton: T;
-  prevButton: T;
+export interface Testimonial<T> extends ArticleType {
+  steps: Array<T>;
+  nextButton: string;
+  prevButton: string;
 }
 
-export interface TeammateType extends ArticleWithIdType, Url {
+export interface HowWeWorkType<T> extends ArticleType {
+  steps: Array<T>;
+  nextButton: string;
+  prevButton: string;
+}
+
+export interface TeammateType extends ArticleWithIdType, Url, ProffAndAvatar {
   recruit: boolean;
-  proff: string;
-  avatar: AvatarType;
+  // proff: string;
+  // avatar: AvatarType;
   isactivatedurl: boolean;
 }
 
@@ -103,10 +115,11 @@ export interface GetInTouchType extends ArticleType {
 export interface DataType {
   _site: SEO;
   navigation: HeaderLinksType;
-  heroSection: HeroSectionType<string>;
-  howwework: HowWeWorkType<string>;
+  heroSection: HeroSectionType;
+  howwework: HowWeWorkType<ArticleWithIdType>;
   whatweoffer: WhatWeOfferType;
   ourlittlestory: ArticleType;
+  testimonial: Testimonial<ArticleWithIdType & ProffAndAvatar>;
   getintouch: GetInTouchType;
 }
 

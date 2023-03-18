@@ -1,16 +1,14 @@
-.how-we-work {
+.testimonials {
   display: grid;
-  grid-template-columns: repeat(2, calc(50% - var(--gap-column-section) / 2));
+  align-self: center;
   column-gap: var(--gap-column-section);
   row-gap: var(--gap-column-section);
 }
 
 @media screen and (max-width: 960px) {
-  .how-we-work {
+  .testimonials {
     grid-template-columns: 100%;
     row-gap: var(--gap-five);
+    padding-inline: 1rem;
   }
 }
-
-@import url('./articles/articles.css');
-@import url('./steps/steps.css');

@@ -43,6 +43,9 @@ export const query = gql`
     ourlittlestory(locale: $locale) {
       ...OurlittlestoryRecordFragment
     }
+    testimonial(locale: $locale) {
+      ...TestimonialRecordFragment
+    }
     getintouch(locale: $locale) {
       ...GetintouchRecordFragment
     }
@@ -116,6 +119,18 @@ export const query = gql`
   fragment OurlittlestoryRecordFragment on OurlittlestoryRecord {
     title
     description
+  }
+  fragment TestimonialRecordFragment on TestimonialRecord {
+    steps {
+      id
+      avatar {
+        url
+      }
+      title
+      proff
+      description
+    }
+    title
   }
   fragment GetintouchRecordFragment on GetintouchRecord {
     title

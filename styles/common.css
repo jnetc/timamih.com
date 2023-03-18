@@ -43,6 +43,9 @@
   line-height: 1.3;
   transition: all var(--optimal) ease-in-out;
 }
+.description-section.center {
+  text-align: center;
+}
 
 .paragraph {
   font-size: 1.125em;
@@ -63,6 +66,10 @@
 .content-right {
   grid-column: 2;
   order: 2;
+}
+.content-center {
+  grid-column: 1 / -1;
+  max-width: 800px;
 }
 
 img.illustration {
