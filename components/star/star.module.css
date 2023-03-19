@@ -42,6 +42,31 @@
   bottom: -0%;
 }
 
+.module:global(.testimonial-top-left-acc) {
+  left: 5%;
+  top: 55%;
+}
+.module:global(.testimonial-top-left-sec) {
+  left: clamp(0%, 10vw, 10%);
+  top: clamp(10%, 10vw, 30%);
+}
+.module:global(.testimonial-bottom-left-acc) {
+  left: 10%;
+  bottom: 10%;
+}
+.module:global(.testimonial-top-right-acc) {
+  right: 20%;
+  top: 20%;
+}
+.module:global(.testimonial-top-right-sec) {
+  right: 5%;
+  top: 40%;
+}
+.module:global(.testimonial-bottom-right-acc) {
+  right: clamp(0%, 85vw, 25%);
+  bottom: -10%;
+}
+
 @keyframes shine {
   50% {
     transform: scale(0.5) rotate(180deg);
@@ -52,6 +77,11 @@
   }
 }
 
+@media screen and (max-width: 1000px) {
+  .module:global(.testimonial-top-left-acc) {
+    display: none;
+  }
+}
 @media screen and (max-width: 480px) {
   .module:global(.action-star) {
     left: -2rem;

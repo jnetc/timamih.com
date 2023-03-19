@@ -12,7 +12,7 @@
   grid-template-columns: auto auto;
   grid-template-rows: var(--gap-two) auto;
   row-gap: var(--gap-two);
-  padding-block-start: var(--gap-two);
+  /* padding-block-start: var(--gap-two); */
 }
 
 .step-dots,
@@ -131,6 +131,21 @@
   stroke-dashoffset: 90;
   stroke-dasharray: 42;
   transition-delay: 0.3s;
+}
+
+/* Testimonials */
+.testimonials .rect-button.complete {
+  opacity: 0;
+}
+.testimonials .rect-button.complete .polyline-right {
+  stroke-dashoffset: 90;
+  stroke-dasharray: 64;
+}
+.testimonials .rect-button.complete .line1-right,
+.testimonials .rect-button.complete .line2-right,
+.testimonials .rect-button.complete .line3-right {
+  stroke-dasharray: 70;
+  stroke-dasharray: 95;
 }
 
 @media screen and (max-width: 960px) {

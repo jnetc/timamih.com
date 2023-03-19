@@ -2,6 +2,7 @@ import { useStore } from '@Hooks/useStore';
 import { NextIcon } from './NextIcon';
 // Type
 import { NextButtonProps } from '@Types';
+
 export const NextButton = ({ currentStep, amountSteps, handler }: NextButtonProps) => {
   const { language } = useStore();
   return (

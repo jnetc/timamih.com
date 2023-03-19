@@ -1,4 +1,7 @@
 import Image from 'next/image';
+// Component
+import { Quote } from '@Components/testimonials/svg/Quote';
+// Types
 import type { ArticleWithIdType, ProffAndAvatar } from '@Types';
 
 export const ClientResponse = ({ data, active }: { data: ArticleWithIdType & ProffAndAvatar; active: boolean }) => {
@@ -11,7 +14,11 @@ export const ClientResponse = ({ data, active }: { data: ArticleWithIdType & Pro
         <h1 className="slider-article__title">{data.title}</h1>
         <span className="slider-article__proff">{data.proff}</span>
       </div>
-      <p className="description-section center">{data.description}</p>
+      <p className="description-section center quotes">
+        <Quote quoteClass="top" />
+        {data.description}
+        <Quote quoteClass="bottom" />
+      </p>
     </article>
   );
 };

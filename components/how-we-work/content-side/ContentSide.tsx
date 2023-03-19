@@ -1,7 +1,6 @@
 import { useState } from 'react';
 // Hook
 import { useStore } from '@Hooks/useStore';
-// import { useSliderStep } from '@Hooks/useSliderStep';
 // Component
 import { Articles } from '@Slider/articles/Articles';
 import { StepDots } from '@Slider/steps/StepDots';
@@ -13,16 +12,12 @@ export const ContentSide = () => {
   const { data } = useStore();
   const [moveStep, setMoveStep] = useState({ num: 0, size: 0 });
 
-  // const hendlerStepHook = useSliderStep(data, 'howwework', 'next')
-
   // Check data for destruction
   if (!data) return null;
   const { steps } = data.howwework;
 
   const stepsSum = steps.length - 1 || 0;
   const eachStepSize = 100;
-
-  console.log(steps);
 
   const stepHandler = (direction: 'next' | 'prev') => {
     let currentStep = 0;

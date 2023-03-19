@@ -6,7 +6,7 @@ export const Star = ({
   duration,
 }: {
   color: 'accent' | 'shade' | 'secondary';
-  size: 24 | 32 | 36 | 48 | 56;
+  size: 16 | 24 | 32 | 36 | 48 | 56;
   customClass: string;
   duration: 10 | 14 | 18 | 22 | 13;
 }) => {
@@ -14,6 +14,7 @@ export const Star = ({
     <svg
       width={size}
       height={size}
+      style={{ height: `${size}px`, width: `${size}px` }}
       viewBox="0 0 65 65"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

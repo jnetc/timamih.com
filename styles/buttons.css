@@ -5,8 +5,7 @@
   font-size: 1.225rem;
   text-transform: uppercase;
   border-radius: 1rem;
-  box-shadow: 0.75rem 0.75rem 0 hsla(var(--accent-shade) / 0.1),
-    0.75rem 0.75rem 1.5rem hsla(var(--accent-shade) / 0.1);
+  box-shadow: 0.75rem 0.75rem 0 hsla(var(--accent-shade) / 0.1), 0.75rem 0.75rem 1.5rem hsla(var(--accent-shade) / 0.1);
 }
 .rect-button,
 .hire-button,
@@ -32,8 +31,7 @@
   border-radius: 0.725rem;
   color: var(--secondary-color);
   text-transform: capitalize;
-  box-shadow: 0.5rem 0.5rem 0 hsla(var(--accent-shade) / 0.1),
-    0.5rem 0.5rem 1.5rem hsla(var(--accent-shade) / 0.1);
+  box-shadow: 0.5rem 0.5rem 0 hsla(var(--accent-shade) / 0.1), 0.5rem 0.5rem 1.5rem hsla(var(--accent-shade) / 0.1);
 }
 .rect-button {
   fill: var(--secondary-color);
@@ -48,13 +46,11 @@
   border-color: hsla(var(--accent-shade) / 0.5);
 }
 .intl-button:active {
-  box-shadow: 0.25rem 0.25rem 0 hsla(var(--accent-shade) / 0.3),
-    0.25rem 0.25rem 1rem hsla(var(--accent-shade) / 0.3);
+  box-shadow: 0.25rem 0.25rem 0 hsla(var(--accent-shade) / 0.3), 0.25rem 0.25rem 1rem hsla(var(--accent-shade) / 0.3);
 }
 .rect-button:active,
 .hire-button:active {
-  box-shadow: 0.5rem 0.5rem 0 hsla(var(--accent-shade) / 0.3),
-    0.5rem 0.5rem 1rem hsla(var(--accent-shade) / 0.3);
+  box-shadow: 0.5rem 0.5rem 0 hsla(var(--accent-shade) / 0.3), 0.5rem 0.5rem 1rem hsla(var(--accent-shade) / 0.3);
 }
 .rect-button:hover,
 .rect-button:active,
@@ -83,6 +79,7 @@
   user-select: none;
   transition: all var(--optimal) ease-in-out;
 }
+
 .rect-button.move {
   opacity: 0;
   pointer-events: none;
@@ -111,12 +108,10 @@
   background-color: var(--primary-color);
 }
 .play-button {
-  box-shadow: 0.75rem 0.75rem 0 hsla(var(--accent-shade) / 0.1),
-    0.75rem 0.75rem 1.5rem hsla(var(--accent-shade) / 0.1);
+  box-shadow: 0.75rem 0.75rem 0 hsla(var(--accent-shade) / 0.1), 0.75rem 0.75rem 1.5rem hsla(var(--accent-shade) / 0.1);
 }
 .small-button {
-  box-shadow: 0.5rem 0.5rem 0 hsla(var(--accent-shade) / 0.1),
-    0.5rem 0.5rem 1rem hsla(var(--accent-shade) / 0.1);
+  box-shadow: 0.5rem 0.5rem 0 hsla(var(--accent-shade) / 0.1), 0.5rem 0.5rem 1rem hsla(var(--accent-shade) / 0.1);
 }
 
 .play-button:hover,
@@ -124,14 +119,12 @@
   border-color: var(--accent-color);
 }
 .small-button:active {
-  box-shadow: 0.25rem 0.25rem 0 hsla(var(--accent-shade) / 0.3),
-    0.25rem 0.25rem 1rem hsla(var(--accent-shade) / 0.3);
+  box-shadow: 0.25rem 0.25rem 0 hsla(var(--accent-shade) / 0.3), 0.25rem 0.25rem 1rem hsla(var(--accent-shade) / 0.3);
 }
 
 .play-button:active {
   border-color: var(--accent-color);
-  box-shadow: 0.5rem 0.5rem 0 hsla(var(--accent-shade) / 0.3),
-    0.5rem 0.5rem 1rem hsla(var(--accent-shade) / 0.3);
+  box-shadow: 0.5rem 0.5rem 0 hsla(var(--accent-shade) / 0.3), 0.5rem 0.5rem 1rem hsla(var(--accent-shade) / 0.3);
 }
 
 .click:active {

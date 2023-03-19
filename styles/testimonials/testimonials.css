@@ -1,8 +1,10 @@
 .testimonials {
   display: grid;
+  width: 100%;
   align-self: center;
   column-gap: var(--gap-column-section);
   row-gap: var(--gap-column-section);
+  position: relative;
 }
 
 @media screen and (max-width: 960px) {
@@ -11,4 +13,23 @@
     row-gap: var(--gap-five);
     padding-inline: 1rem;
   }
+}
+
+.quote {
+  width: 4rem;
+  position: absolute;
+}
+.quote.top {
+  top: -15%;
+  left: 0;
+}
+.quote.bottom {
+  right: 0%;
+  bottom: -15%;
+  transform: rotate(0.5turn);
+}
+.quote svg {
+  width: 100%;
+  height: 100%;
+  fill: var(--accent-color);
 }
