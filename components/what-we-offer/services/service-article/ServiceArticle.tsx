@@ -5,7 +5,7 @@ import { ServiceArticleType } from '@Types';
 
 export const ServiceArticle = ({ data, handler }: ServiceArticleType) => {
   const { language } = useStore();
-  const subPriceTxt = { en: 'from', ru: 'от', fi: 'alkaa' };
+  const subPriceTxt = { en: 'from', ru: 'от', fi: 'alkaen' };
 
   return (
     <article className="service-article">
