@@ -61,11 +61,12 @@ const Home: NextPage = ({ data, language, languages }: InferGetStaticPropsType<t
         <meta name="twitter:image" content={assignType._site.globalSeo.fallbackSeo.image.url} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       </Head>
-      <Script strategy="afterInteractive" src={`https://www.googletagmanager.com/gtag/js?id=G-${googleTokken}`} />
+      <Script strategy="afterInteractive" async src={`https://www.googletagmanager.com/gtag/js?id=G-${googleTokken}`} />
           
       <Script
         id="google-analytics"
         strategy="afterInteractive"
+        async
         dangerouslySetInnerHTML={{
           __html: `
            window.dataLayer = window.dataLayer || [];
