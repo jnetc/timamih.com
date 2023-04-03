@@ -1,5 +1,6 @@
 import type { NextPage, GetStaticProps, InferGetStaticPropsType } from 'next';
 import { useState } from 'react';
+import Script from 'next/script';
 import dynamic from 'next/dynamic';
 
 import Head from 'next/head';
@@ -22,6 +23,8 @@ const Footer = dynamic(() => import('@Components/footer'), { ssr: false });
 
 const Home: NextPage = ({ data, language, languages }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const [darkTheme, switchTheme] = useState(false);
+
+  const googleTokken = process.env.NEXT_PUBLIC_NEXT_GOOGLE_ANALYTICS_TOKEN as string;
 
   if (!data) {
     return <main>Sorry! This page not found.</main>;
@@ -58,7 +61,20 @@ const Home: NextPage = ({ data, language, languages }: InferGetStaticPropsType<t
         <meta name="twitter:image" content={assignType._site.globalSeo.fallbackSeo.image.url} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       </Head>
-
+      <Script strategy="afterInteractive" src={`https://www.googletagmanager.com/gtag/js?id=G-${googleTokken}`} />
+          
+      <Script
+        id="google-analytics"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+           window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-${googleTokken}');
+        `,
+        }}
+      />
       <Navigation />
       <main>
         <HeroSection />
