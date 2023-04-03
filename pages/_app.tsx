@@ -1,4 +1,5 @@
 import type { AppProps } from 'next/app';
+import Script from 'next/script';
 import Head from 'next/head';
 // STYLES
 import '@Styles/fonts.css';
@@ -39,6 +40,21 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="google" content="notranslate" />
         <meta name="google-site-verification" content="L8dbpFSbccZFtsiSdtcp3oBO2RwMGy3Kpnr2TQjTXEA" />
       </Head>
+      <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-SK9EPRT0PE" />
+          
+      <Script
+        id="google-analytics"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+           window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-SK9EPRT0PE');
+        `,
+        }}
+      />
       <Component {...pageProps} />
     </>
   );
