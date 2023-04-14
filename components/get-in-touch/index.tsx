@@ -13,7 +13,7 @@ const GetInTouch = () => {
   return (
     <section id="get-in-touch" className="get-in-touch">
       <header className="section-header">
-        <h1 className="section-title">{title}</h1>
+        <h2 className="section-title">{title}</h2>
         <p className="description-section">{description}</p>
       </header>
       <Contacts />

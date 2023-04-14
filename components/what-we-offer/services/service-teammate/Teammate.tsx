@@ -40,12 +40,12 @@ export const ServiceTeammate = ({ data }: { data: TeammateType }) => {
           <Image src={data.avatar.url} blurDataURL={data.avatar.blurUpThumb} alt={data.title} fill={true} sizes="100vw" unoptimized />
         </div>
       )}
-      <h1 className="teammate-name" itemProp="name">
+      <h3 className="teammate-name" itemProp="name">
         {data.title}
-      </h1>
-      <h2 className="teammate-proff" itemProp="jobTitle">
+      </h3>
+      <h4 className="teammate-proff" itemProp="jobTitle">
         {data.proff}
-      </h2>
+      </h4>
       <p className="teammate-desc" itemProp="description">
         {data.description}
       </p>

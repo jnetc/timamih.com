@@ -13,7 +13,7 @@ const HowWeWork = () => {
 
   return (
     <section id="how-we-work" className="how-we-work">
-      <h1 className="section-title animated">{data?.howwework.title}</h1>
+      <h2 className="section-title animated">{data?.howwework.title}</h2>
       <ContentSide />
       <Image
         src={`/images/steps ${switchTheme}.svg`}

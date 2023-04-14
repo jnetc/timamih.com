@@ -41,6 +41,14 @@ export function createSchema(data: DataType) {
     paymentAccepted: 'Cash, Credit Card',
     priceRange: '50€ - 1900€',
 
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      bestRating: '5.0',
+      ratingValue: '4.9',
+      worstRating: '1.0',
+      reviewCount: '7',
+    },
+
     image: [
       'https://timamih.com/images/1x1/logo.png',
       'https://timamih.com/images/4x3/logo.png',

@@ -10,9 +10,9 @@ export const ServiceArticle = ({ data, handler }: ServiceArticleType) => {
   return (
     <article className="service-article">
       <meta itemProp="serviceType" content={data.title} />
-      <h1 className="service-title" itemProp="name">
+      <h3 className="service-title" itemProp="name">
         {data.title}
-      </h1>
+      </h3>
       <p className="description-section" itemProp="description">
         {data.description}
       </p>

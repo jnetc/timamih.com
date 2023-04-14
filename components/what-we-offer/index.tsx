@@ -9,7 +9,7 @@ const WhatWeOffer = () => {
 
   return (
     <section id="what-we-offer" className="what-we-offer">
-      <h1 className="section-title animated">{data?.whatweoffer.title}</h1>
+      <h2 className="section-title animated">{data?.whatweoffer.title}</h2>
       <Services />
     </section>
   );

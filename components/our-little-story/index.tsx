@@ -16,7 +16,7 @@ const OurLittleStory = () => {
 
   return (
     <section id="who-we-are" className="our-little-story">
-      <h1 className="section-title animated">{data?.ourlittlestory.title}</h1>
+      <h2 className="section-title animated">{data?.ourlittlestory.title}</h2>
       <div className="story animated">{story}</div>
     </section>
   );
