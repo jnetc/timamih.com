@@ -12,6 +12,10 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="HandheldFriendly" content="true" />
         <meta name="MobileOptimized" content="width" />
 
+        {/* Robots rules */}
+        <meta name="robots" content="index,follow"/>
+        <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
+
         {/* App PWA */}
         <meta name="application-name" content="timamih.com" />
         <meta name="mobile-web-app-capable" content="yes" />
@@ -36,7 +40,6 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="geo.placename" content="Helsinki" />
 
         <meta name="generator" content="next.js" />
-        <meta name="google" content="notranslate" />
         <meta name="google-site-verification" content="L8dbpFSbccZFtsiSdtcp3oBO2RwMGy3Kpnr2TQjTXEA" />
       </Head>
       <Component {...pageProps} />
