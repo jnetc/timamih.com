@@ -1,5 +1,5 @@
 .hero-section {
-  min-height: 1000px;
+  /* min-height: 1000px; */
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -10,14 +10,15 @@
   .hero-section {
     min-height: calc(200vh - var(--gap-one) - var(--gap-three));
     flex-flow: column;
+    row-gap: 15rem;
+    margin-block-end: 10rem;
   }
 }
 
-@media only screen and (orientation: landscape) and (max-device-height: 780px) {
+/* @media only screen and (orientation: landscape) and (max-device-height: 780px) {
   .hero-section {
-    row-gap: 10rem;
   }
-}
+} */
 
 @import url('./hero-left-side.css');
 @import url('./hero-right-side.css');
