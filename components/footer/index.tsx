@@ -10,7 +10,7 @@ const Footer = () => {
       <p>TimaMih Tmi © {year} </p>
       <p>{data?.getintouch.tunnus}</p>
       <p>
-        Designed by <a href="https://devan.fi">devan.fi</a>
+        Designed by <a href="https://www.devan.fi">devan.fi</a>
       </p>
     </footer>
   );
