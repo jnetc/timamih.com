@@ -1,13 +1,9 @@
 import Image from 'next/image';
 import { useCallback } from 'react';
-// Hook
-import { useStore } from '@Hooks/useStore';
 // Types
 import { TeammateType } from '@Types';
 
 export const ServiceTeammate = ({ data }: { data: TeammateType }) => {
-  const { language } = useStore();
-
   const generateUrl = useCallback((url: string) => {
     const httpUrlExp = new RegExp(`https:\/\/+[a-z]+[.]+[a-z]{2,5}`, `gm`);
     const wwwUrlExp = new RegExp(`^www[.]+[a-z]+[.]+[a-z]{2,5}`, `gm`);
@@ -30,7 +26,7 @@ export const ServiceTeammate = ({ data }: { data: TeammateType }) => {
 
   return (
     <article className="service-teammate" itemScope itemType="https://schema.org/Person">
-      {data.recruit && <span className="teammate-recruit">{recruit[language]}</span>}
+      {data.recruit && <span className="teammate-recruit">{data.labelName}</span>}
       {data.isactivatedurl ? (
         <a className="teammate-avatar" href={generateUrl(data.url)} itemProp="image">
           <Image
@@ -65,10 +61,4 @@ export const ServiceTeammate = ({ data }: { data: TeammateType }) => {
       </p>
     </article>
   );
-};
-
-const recruit = {
-  en: 'active',
-  ru: 'активный',
-  fi: 'aktiivinen',
 };

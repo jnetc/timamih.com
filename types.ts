@@ -60,6 +60,7 @@ export interface HowWeWorkType<T> extends ArticleType {
 
 export interface TeammateType extends ArticleWithIdType, Url {
   recruit: boolean;
+  labelName: string;
   proff: string;
   avatar: AvatarType;
   isactivatedurl: boolean;

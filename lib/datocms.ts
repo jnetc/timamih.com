@@ -13,7 +13,15 @@ interface Data {
   nav: Navigation<string>;
 }
 
-export function request({ query, variables, preview }: { query: string; variables: {}; preview?: boolean }): Promise<Data> {
+export function request({
+  query,
+  variables,
+  preview,
+}: {
+  query: string;
+  variables: {};
+  preview?: boolean;
+}): Promise<Data> {
   const endpoint = preview ? `https://graphql.datocms.com/preview` : `https://graphql.datocms.com/`;
   const client = new GraphQLClient(endpoint, {
     headers: {
@@ -101,6 +109,7 @@ export const query = gql`
       teammates {
         id
         recruit
+        labelName
         title
         proff
         description
