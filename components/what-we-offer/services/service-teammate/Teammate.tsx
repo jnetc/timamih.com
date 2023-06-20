@@ -33,11 +33,25 @@ export const ServiceTeammate = ({ data }: { data: TeammateType }) => {
       {data.recruit && <span className="teammate-recruit">{recruit[language]}</span>}
       {data.isactivatedurl ? (
         <a className="teammate-avatar" href={generateUrl(data.url)} itemProp="image">
-          <Image src={data.avatar.url} blurDataURL={data.avatar.blurUpThumb} alt={data.title} fill={true} sizes="100vw" unoptimized />
+          <Image
+            src={data.avatar.url}
+            blurDataURL={data.avatar.blurUpThumb}
+            alt={data.title}
+            fill={true}
+            sizes="100vw"
+            unoptimized
+          />
         </a>
       ) : (
         <div className="teammate-avatar" itemProp="image">
-          <Image src={data.avatar.url} blurDataURL={data.avatar.blurUpThumb} alt={data.title} fill={true} sizes="100vw" unoptimized />
+          <Image
+            src={data.avatar.url}
+            blurDataURL={data.avatar.blurUpThumb}
+            alt={data.title}
+            fill={true}
+            sizes="100vw"
+            unoptimized
+          />
         </div>
       )}
       <h3 className="teammate-name" itemProp="name">
@@ -54,7 +68,7 @@ export const ServiceTeammate = ({ data }: { data: TeammateType }) => {
 };
 
 const recruit = {
-  en: 'recruit',
-  ru: 'рекрут',
-  fi: 'rekryytti',
+  en: 'active',
+  ru: 'активный',
+  fi: 'aktiivinen',
 };
