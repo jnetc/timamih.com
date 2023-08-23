@@ -2,7 +2,7 @@ import { useRef, useState, useEffect } from 'react';
 // Hook
 import { useOutsideClick } from '@Hooks/useOutsideClick';
 // Component
-import { TeammateGroup } from './service-teammate/Teammate-group';
+// import { TeammateGroup } from './service-teammate/Teammate-group';
 import { ServiceArticle } from './service-article/ServiceArticle';
 // Type
 import { ServiceContentType } from '@Types';
@@ -17,7 +17,7 @@ export const ServiceContent = ({ data }: { data: ServiceContentType }) => {
     setShowTeam(true);
   };
 
-  const closeTeammates = () => setShowTeam(false);
+  // const closeTeammates = () => setShowTeam(false);
 
   useOutsideClick(ref, setShowTeam);
 
@@ -32,7 +32,7 @@ export const ServiceContent = ({ data }: { data: ServiceContentType }) => {
   return (
     <div ref={ref} className={`service-content animated ${showTeam ? 'show-teammates show' : 'hide-teammates show'}`}>
       <ServiceArticle data={article} handler={openTeammates} />
-      <TeammateGroup teammates={teammates} handler={closeTeammates} />
+      {/* <TeammateGroup teammates={teammates} handler={closeTeammates} /> */}
 
       <span className={`background-article`} style={{ visibility: 'hidden', animationDuration: '0s' }} />
     </div>

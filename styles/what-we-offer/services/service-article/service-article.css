@@ -2,7 +2,7 @@
   width: 100%;
   height: min-content;
   display: grid;
-  grid-template-columns: auto 1fr;
+  /* grid-template-columns: auto 1fr; */
   position: relative;
   transform: rotate3d(0, 1, 0, 0) translate3d(0, 0, 0);
   z-index: 5;
@@ -22,7 +22,6 @@
 }
 .service-price {
   justify-self: flex-end;
-  align-self: flex-end;
   display: flex;
   position: relative;
   align-items: center;
