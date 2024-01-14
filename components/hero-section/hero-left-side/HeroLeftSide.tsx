@@ -43,7 +43,7 @@ export const HeroLeftSide = () => {
         <Underline />
       </h1>
       <p className="hero-left__desc">{description}</p>
-      <div className="hero-left__action-buttons">
+      {/* <div className="hero-left__action-buttons">
         <PlayModalStore.Provider
           value={{
             modal: modalState,
@@ -57,7 +57,7 @@ export const HeroLeftSide = () => {
         <p>{playButton}</p>
         <Star color="secondary" size={24} duration={10} customClass={'action-star'} />
         <Arrow />
-      </div>
+      </div> */}
     </div>
   );
 };
