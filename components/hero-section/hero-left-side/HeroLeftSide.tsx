@@ -1,23 +1,23 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 // Hook
 import { useStore } from '@Hooks/useStore';
-import { PlayModalStore, usePlayModalStore } from '@Hooks/usePlayModalStore';
+// import { PlayModalStore, usePlayModalStore } from '@Hooks/usePlayModalStore';
 // SVG
 import { Underline } from './svg/Underline';
 import { Star } from '@Components/star';
-import { Arrow } from './svg/Arrow';
+// import { Arrow } from './svg/Arrow';
 // Componenent
-import { PlayButton } from '@Components/buttons/play';
-import { PlayVideoModal } from '@Components/modals/play-video/PlayVideoModal';
+// import { PlayButton } from '@Components/buttons/play';
+// import { PlayVideoModal } from '@Components/modals/play-video/PlayVideoModal';
 
 export const HeroLeftSide = () => {
   const { data } = useStore();
-  const { modal } = usePlayModalStore();
-  const [modalState, setModalState] = useState(modal);
+  // const { modal } = usePlayModalStore();
+  // const [modalState, setModalState] = useState(modal);
 
   // Check data for destruction
   if (!data) return null;
-  const { description, label, playButton, mainVideoUrl, title } = data.heroSection;
+  const { description, label, title } = data.heroSection;
 
   const splittingTitle = title.split(',').map((titl, idx) => {
     if (idx === 0) {
